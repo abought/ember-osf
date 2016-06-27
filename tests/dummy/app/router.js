@@ -62,6 +62,12 @@ Router.map(function() {
     this.route('prereg');
     this.route('allnodes');
     this.route('usernodes');
+
+    this.route('ember-page');
+
+    // Catch-all 404 route: if a route can't be resolved, ask the server if it's a known backend route
+    // THIS SHOULD BE THE LAST ROUTE IN THE LIST
+    this.route('not-found', { path: '/*path' });
 });
 
 export default Router;
