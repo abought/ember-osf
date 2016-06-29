@@ -1,0 +1,1382 @@
+{
+    "project": {
+        "name": "Ember OSF",
+        "description": "Ember components for interacting with the Open Science Framework",
+        "version": "0.0.1",
+        "url": "https://github.com/CenterForOpenScience/ember-osf",
+        "logo": "https://cos.io/static/img/icons/cos_wide.png"
+    },
+    "files": {
+        "addon/adapters/osf-adapter.js": {
+            "name": "addon/adapters/osf-adapter.js",
+            "modules": {},
+            "classes": {},
+            "fors": {},
+            "namespaces": {}
+        },
+        "addon/components/file-browser-tree/component.js": {
+            "name": "addon/components/file-browser-tree/component.js",
+            "modules": {},
+            "classes": {},
+            "fors": {},
+            "namespaces": {}
+        },
+        "addon/mixins/fetch-all-route.js": {
+            "name": "addon/mixins/fetch-all-route.js",
+            "modules": {},
+            "classes": {},
+            "fors": {},
+            "namespaces": {}
+        },
+        "addon/mixins/file-cache-bypass.js": {
+            "name": "addon/mixins/file-cache-bypass.js",
+            "modules": {},
+            "classes": {},
+            "fors": {},
+            "namespaces": {}
+        },
+        "addon/mixins/infinity-custom.js": {
+            "name": "addon/mixins/infinity-custom.js",
+            "modules": {
+                "ember-osf/mixins/infinity-custom": 1
+            },
+            "classes": {
+                "EmberOSF.InfinityCustomMixin": 1
+            },
+            "fors": {},
+            "namespaces": {
+                "EmberOSF": 1
+            }
+        },
+        "addon/mixins/node-actions.js": {
+            "name": "addon/mixins/node-actions.js",
+            "modules": {},
+            "classes": {},
+            "fors": {},
+            "namespaces": {}
+        },
+        "addon/mixins/paginated-route.js": {
+            "name": "addon/mixins/paginated-route.js",
+            "modules": {},
+            "classes": {},
+            "fors": {},
+            "namespaces": {}
+        },
+        "addon/mixins/registration-actions.js": {
+            "name": "addon/mixins/registration-actions.js",
+            "modules": {},
+            "classes": {},
+            "fors": {},
+            "namespaces": {}
+        },
+        "addon/models/collection.js": {
+            "name": "addon/models/collection.js",
+            "modules": {},
+            "classes": {},
+            "fors": {},
+            "namespaces": {}
+        },
+        "addon/models/comment-report.js": {
+            "name": "addon/models/comment-report.js",
+            "modules": {},
+            "classes": {},
+            "fors": {},
+            "namespaces": {}
+        },
+        "addon/models/comment.js": {
+            "name": "addon/models/comment.js",
+            "modules": {},
+            "classes": {},
+            "fors": {},
+            "namespaces": {}
+        },
+        "addon/models/contributor.js": {
+            "name": "addon/models/contributor.js",
+            "modules": {},
+            "classes": {},
+            "fors": {},
+            "namespaces": {}
+        },
+        "addon/models/draft-registration.js": {
+            "name": "addon/models/draft-registration.js",
+            "modules": {},
+            "classes": {},
+            "fors": {},
+            "namespaces": {}
+        },
+        "addon/models/file-provider.js": {
+            "name": "addon/models/file-provider.js",
+            "modules": {},
+            "classes": {},
+            "fors": {},
+            "namespaces": {}
+        },
+        "addon/models/file-version.js": {
+            "name": "addon/models/file-version.js",
+            "modules": {},
+            "classes": {},
+            "fors": {},
+            "namespaces": {}
+        },
+        "addon/models/file.js": {
+            "name": "addon/models/file.js",
+            "modules": {},
+            "classes": {},
+            "fors": {},
+            "namespaces": {}
+        },
+        "addon/models/institution.js": {
+            "name": "addon/models/institution.js",
+            "modules": {},
+            "classes": {},
+            "fors": {},
+            "namespaces": {}
+        },
+        "addon/models/log.js": {
+            "name": "addon/models/log.js",
+            "modules": {},
+            "classes": {},
+            "fors": {},
+            "namespaces": {}
+        },
+        "addon/models/metaschema.js": {
+            "name": "addon/models/metaschema.js",
+            "modules": {},
+            "classes": {},
+            "fors": {},
+            "namespaces": {}
+        },
+        "addon/models/node-link.js": {
+            "name": "addon/models/node-link.js",
+            "modules": {},
+            "classes": {},
+            "fors": {},
+            "namespaces": {}
+        },
+        "addon/models/node.js": {
+            "name": "addon/models/node.js",
+            "modules": {},
+            "classes": {},
+            "fors": {},
+            "namespaces": {}
+        },
+        "addon/models/registration.js": {
+            "name": "addon/models/registration.js",
+            "modules": {},
+            "classes": {},
+            "fors": {},
+            "namespaces": {}
+        },
+        "addon/models/user.js": {
+            "name": "addon/models/user.js",
+            "modules": {},
+            "classes": {},
+            "fors": {},
+            "namespaces": {}
+        },
+        "addon/services/file-manager.js": {
+            "name": "addon/services/file-manager.js",
+            "modules": {},
+            "classes": {
+                "file-manager": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "addon/utils/array-items-are-equal.js": {
+            "name": "addon/utils/array-items-are-equal.js",
+            "modules": {},
+            "classes": {},
+            "fors": {},
+            "namespaces": {}
+        },
+        "addon/utils/serialize-relationship.js": {
+            "name": "addon/utils/serialize-relationship.js",
+            "modules": {},
+            "classes": {},
+            "fors": {},
+            "namespaces": {}
+        }
+    },
+    "modules": {
+        "ember-osf/mixins/infinity-custom": {
+            "name": "ember-osf/mixins/infinity-custom",
+            "submodules": {},
+            "elements": {},
+            "classes": {
+                "EmberOSF.InfinityCustomMixin": 1,
+                "file-manager": 1
+            },
+            "fors": {},
+            "namespaces": {},
+            "tag": "module",
+            "file": "addon/services/file-manager.js",
+            "line": 3,
+            "description": "A custom overlay on ember-infinity that supports loading infinite and paginated relationships\nFor the most part, the API and semantics are identical to ember infinity, except that the means of configuring the store find method is more flexible\n (supporting relationship queries that do not operate via store methods)"
+        }
+    },
+    "classes": {
+        "EmberOSF.InfinityCustomMixin": {
+            "name": "EmberOSF.InfinityCustomMixin",
+            "shortname": "EmberOSF.InfinityCustomMixin",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "ember-osf/mixins/infinity-custom",
+            "namespace": "EmberOSF",
+            "file": "addon/mixins/infinity-custom.js",
+            "line": 6,
+            "description": "A custom overlay on ember-infinity that supports loading infinite and paginated relationships\nFor the most part, the API and semantics are identical to ember infinity, except that the means of configuring the store find method is more flexible\n (supporting relationship queries that do not operate via store methods)",
+            "extends": "Ember.Mixin, InfinityRoute"
+        },
+        "file-manager": {
+            "name": "file-manager",
+            "shortname": "file-manager",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "ember-osf/mixins/infinity-custom",
+            "namespace": "",
+            "file": "addon/services/file-manager.js",
+            "line": 3,
+            "description": "An Ember service for doing things to files.\nEssentially a wrapper for the Waterbutler API.\nhttp://waterbutler.readthedocs.io/",
+            "extends": "Ember.Service"
+        }
+    },
+    "elements": {},
+    "classitems": [
+        {
+            "file": "addon/adapters/osf-adapter.js",
+            "line": 31,
+            "description": "Construct a URL for a relationship create/update/delete. Has the same\nsignature as buildURL, with the addition of a 'relationship' param",
+            "itemtype": "method",
+            "name": "_buildRelationshipURL",
+            "params": [
+                {
+                    "name": "relationship",
+                    "description": "the relationship to build a url for",
+                    "type": "String"
+                }
+            ],
+            "return": {
+                "description": "a URL",
+                "type": "String"
+            },
+            "class": "EmberOSF.InfinityCustomMixin"
+        },
+        {
+            "file": "addon/components/file-browser-tree/component.js",
+            "line": 4,
+            "description": "A row could represent a node, file-provider, or file, each of which has a\ndifferent interface. RowProxy provides a consistent interface for everything\nthe file browser needs to know.\n\nImportant: Use `row.content` when passing a row model outside file-browser",
+            "class": "EmberOSF.InfinityCustomMixin"
+        },
+        {
+            "file": "addon/components/file-browser-tree/component.js",
+            "line": 22,
+            "description": "Load all this row's children. Concatenates `content.files` (if it exists)\nwith `content.children` (if it exists) and puts the result in\n`childTrees`.\n\nHas about the same result as:\n`childTrees: Ember.computed.union('content.files', 'content.children')`\nbut it sets `isLoading` to `true` when it starts and to `false` when it's\ndone. Computed properties don't expose the underlying promises, and a\nloading indicator seems important.\n\nTODO: But this counters ember's binding magic... If the file/node models\nchange, the tree won't automatically update. Could add another observer\non `files` and `children`, but it would be nice to find another way to\nupdate `isLoading` and get rid of this method entirely",
+            "class": "EmberOSF.InfinityCustomMixin"
+        },
+        {
+            "file": "addon/mixins/fetch-all-route.js",
+            "line": 1,
+            "description": "The FetchAllRouteMixin supports loading *all* records from a specified model or relationship.\nEssentially, it un-paginates an API\n\nThis may be useful for select applications (such as frontend-powered search boxes), but is strongly discouraged\nfor most applications. Consider using available pagination functionality instead.",
+            "class": "EmberOSF.InfinityCustomMixin"
+        },
+        {
+            "file": "addon/mixins/fetch-all-route.js",
+            "line": 17,
+            "description": "If a string is provided, will set infinite fetch on the relationship with the specified name,\nfrom the model specified in the route's model hook",
+            "itemtype": "property",
+            "name": "relationshipToFetch",
+            "type": "String",
+            "default": "null",
+            "class": "EmberOSF.InfinityCustomMixin"
+        },
+        {
+            "file": "addon/mixins/fetch-all-route.js",
+            "line": 27,
+            "description": "Relationship querying reloads the relationship, so it can not be used as an in-place storage for the de-paginated list of records\nAs an ugly workaround, provide a new storage place that will not reflect mutations or updates to the list",
+            "itemtype": "property",
+            "name": "allRelated",
+            "class": "EmberOSF.InfinityCustomMixin"
+        },
+        {
+            "file": "addon/mixins/fetch-all-route.js",
+            "line": 35,
+            "description": "Sets up fetch-all query for a relationship field.",
+            "params": [
+                {
+                    "name": "controller",
+                    "description": ""
+                },
+                {
+                    "name": "model",
+                    "description": ""
+                }
+            ],
+            "class": "EmberOSF.InfinityCustomMixin"
+        },
+        {
+            "file": "addon/mixins/fetch-all-route.js",
+            "line": 63,
+            "description": "Event listener that fetches more results automatically\nAs written, this does not handle fetch errors, and will not retry once an error is encountered",
+            "class": "EmberOSF.InfinityCustomMixin"
+        },
+        {
+            "file": "addon/mixins/fetch-all-route.js",
+            "line": 71,
+            "description": "Model queries pass unchanged, but relationship queries require custom transformations to work with Ember-infinity\n\nember-data-has-many-query returns a DS.ManyArray, but Ember-infinity will not work unless given an ArrayProxy instance (with .content)",
+            "itemtype": "method",
+            "name": "afterInfinityModel",
+            "params": [
+                {
+                    "name": "infinityModelPromiseResult",
+                    "description": ""
+                }
+            ],
+            "return": {
+                "description": "",
+                "type": "*"
+            },
+            "class": "EmberOSF.InfinityCustomMixin"
+        },
+        {
+            "file": "addon/mixins/fetch-all-route.js",
+            "line": 94,
+            "description": "Convenience method for clickable buttons, mainly for use with debugging",
+            "class": "EmberOSF.InfinityCustomMixin"
+        },
+        {
+            "file": "addon/mixins/file-cache-bypass.js",
+            "line": 3,
+            "description": "This is a hack to resolve a server-side race condition.\nAfter creating/modifying/deleting a file through Waterbutler, it can take\na fraction of a second for the API's cache to properly update, and\ntrying to reload the file model in that time can return stale data.\n\nThis adapter mixin appends a nonce to requests that are likely to run into\nthat race condition, forcing a cache miss.",
+            "class": "EmberOSF.InfinityCustomMixin"
+        },
+        {
+            "file": "addon/mixins/infinity-custom.js",
+            "line": 17,
+            "description": "Repurpose an ember-infinity hook to override the method used for queries",
+            "type": "{function}",
+            "default": "this.store.query",
+            "class": "EmberOSF.InfinityCustomMixin",
+            "module": "ember-osf/mixins/infinity-custom"
+        },
+        {
+            "file": "addon/mixins/infinity-custom.js",
+            "line": 24,
+            "description": "Use the infinityModel method in the place of `this.store.find('model')` to\ninitialize the Infinity Model for your route.",
+            "itemtype": "method",
+            "name": "infinityModel",
+            "params": [
+                {
+                    "name": "modelName",
+                    "description": "The name of the model.",
+                    "type": "String"
+                },
+                {
+                    "name": "options",
+                    "description": "Optional, the perPage and startingPage to load from.",
+                    "type": "Object"
+                },
+                {
+                    "name": "boundParams",
+                    "description": "Optional, any route properties to be included as additional params.",
+                    "type": "Object"
+                }
+            ],
+            "return": {
+                "description": "",
+                "type": "Ember.RSVP.Promise"
+            },
+            "class": "EmberOSF.InfinityCustomMixin",
+            "module": "ember-osf/mixins/infinity-custom"
+        },
+        {
+            "file": "addon/mixins/infinity-custom.js",
+            "line": 68,
+            "description": "request the next page from the adapter",
+            "access": "private",
+            "tagname": "",
+            "itemtype": "method",
+            "name": "_requestNextPage",
+            "return": {
+                "description": "A Promise that resolves the next page of objects",
+                "type": "Ember.RSVP.Promise"
+            },
+            "class": "EmberOSF.InfinityCustomMixin",
+            "module": "ember-osf/mixins/infinity-custom"
+        },
+        {
+            "file": "addon/mixins/node-actions.js",
+            "line": 8,
+            "class": "file-manager",
+            "module": "ember-osf/mixins/infinity-custom"
+        },
+        {
+            "file": "addon/mixins/paginated-route.js",
+            "line": 14,
+            "description": "Allow configuration of the backend URL parameter used for page #",
+            "itemtype": "property",
+            "name": "pageParam",
+            "type": "String",
+            "default": "\"page\"",
+            "class": "file-manager",
+            "module": "ember-osf/mixins/infinity-custom"
+        },
+        {
+            "file": "addon/mixins/paginated-route.js",
+            "line": 22,
+            "description": "Allow configuration of the backend URL parameter for number of results per page",
+            "itemtype": "property",
+            "name": "perPageParam",
+            "type": "String",
+            "default": "\"page[size]\"",
+            "class": "file-manager",
+            "module": "ember-osf/mixins/infinity-custom"
+        },
+        {
+            "file": "addon/mixins/paginated-route.js",
+            "line": 30,
+            "itemtype": "method",
+            "name": "queryForPage  Fetch a route-specified page of results from an external API",
+            "params": [
+                {
+                    "name": "modelName",
+                    "description": "The name of the model to query in the store"
+                },
+                {
+                    "name": "routeParams",
+                    "description": "Parameters dictionary available to the model hook; must be passed in manually"
+                },
+                {
+                    "name": "userParams",
+                    "description": "Additional user-specified query parameters"
+                }
+            ],
+            "return": {
+                "description": "",
+                "type": "Promise"
+            },
+            "class": "file-manager",
+            "module": "ember-osf/mixins/infinity-custom"
+        },
+        {
+            "file": "addon/mixins/registration-actions.js",
+            "line": 9,
+            "class": "file-manager",
+            "module": "ember-osf/mixins/infinity-custom"
+        },
+        {
+            "file": "addon/models/collection.js",
+            "line": 6,
+            "description": "Model for OSF APIv2 collections\nFor field and usage information, see:\n https://api.osf.io/v2/docs/#!/v2/Collection_List_GET",
+            "class": "file-manager",
+            "module": "ember-osf/mixins/infinity-custom"
+        },
+        {
+            "file": "addon/models/comment-report.js",
+            "line": 5,
+            "description": "Model for OSF APIv2 comment reports. Primarily accessed via relationship fields.\nFor field and usage information, see:\n   https://api.osf.io/v2/docs/#!/v2/Comment_Reports_List_GET",
+            "class": "file-manager",
+            "module": "ember-osf/mixins/infinity-custom"
+        },
+        {
+            "file": "addon/models/comment.js",
+            "line": 5,
+            "description": "Model for OSF APIv2 comments. This model may be used with one of several API endpoints. It may be queried directly,\n or accessed via relationship fields.\nFor field and usage information, see:\n   https://api.osf.io/v2/docs/#!/v2/Comment_Detail_GET\n   https://api.osf.io/v2/docs/#!/v2/Node_Comments_List_GET\n   https://api.osf.io/v2/docs/#!/v2/Registration_Comments_List_GET",
+            "class": "file-manager",
+            "module": "ember-osf/mixins/infinity-custom"
+        },
+        {
+            "file": "addon/models/contributor.js",
+            "line": 5,
+            "description": "Model for OSF APIv2 contributors. Primarily accessed via relationship fields.\nFor field and usage information, see:\n   https://api.osf.io/v2/docs/#!/v2/Node_Contributors_List_GET",
+            "class": "file-manager",
+            "module": "ember-osf/mixins/infinity-custom"
+        },
+        {
+            "file": "addon/models/draft-registration.js",
+            "line": 4,
+            "description": "Model for OSF APIv2 draft registrations.\nThis model represents draft registration data and can be accessed as a relationship of a node.\nFor information on how to interact with a node's draft registrations, see:\n   https://api.osf.io/v2/docs/#!/v2/Node_Draft_Registrations_List_GET\n   https://api.osf.io/v2/docs/#!/v2/Node_Draft_Registration_Detail_GET",
+            "class": "file-manager",
+            "module": "ember-osf/mixins/infinity-custom"
+        },
+        {
+            "file": "addon/models/file-provider.js",
+            "line": 6,
+            "description": "Model for OSF APIv2 file providers. Primarily used in relationship fields.\nThis model is used for basic file provider metadata. To interact with file contents directly, see the `file-manager` service.\nFor field and usage information, see:\n   https://api.osf.io/v2/docs/#!/v2/Node_Providers_List_GET\n   https://api.osf.io/v2/docs/#!/v2/Node_Provider_Detail_GET\n   https://api.osf.io/v2/docs/#!/v2/Registration_Providers_List_GET",
+            "class": "file-manager",
+            "module": "ember-osf/mixins/infinity-custom"
+        },
+        {
+            "file": "addon/models/file-version.js",
+            "line": 5,
+            "description": "Model for OSF APIv2 file versions. Primarily used in relationship fields.\nThis model is used for basic file version metadata. To interact with file contents directly, see the `file-manager` service.\nFor field and usage information, see:\n   https://api.osf.io/v2/docs/#!/v2/File_Versions_List_GET\n   https://api.osf.io/v2/docs/#!/v2/File_Version_Detail_GET",
+            "class": "file-manager",
+            "module": "ember-osf/mixins/infinity-custom"
+        },
+        {
+            "file": "addon/models/file.js",
+            "line": 6,
+            "description": "Model for OSF APIv2 files. This model may be used with one of several API endpoints. It may be queried directly,\n or (more commonly) accessed via relationship fields.\nThis model is used for basic file metadata. To interact with file contents directly, see the `file-manager` service.\nFor field and usage information, see:\n   https://api.osf.io/v2/docs/#!/v2/File_Detail_GET\n   https://api.osf.io/v2/docs/#!/v2/Node_Files_List_GET\n   https://api.osf.io/v2/docs/#!/v2/Node_File_Detail_GET\n   https://api.osf.io/v2/docs/#!/v2/Registration_Files_List_GET\n   https://api.osf.io/v2/docs/#!/v2/Registration_File_Detail_GET",
+            "class": "file-manager",
+            "module": "ember-osf/mixins/infinity-custom"
+        },
+        {
+            "file": "addon/models/institution.js",
+            "line": 5,
+            "description": "Model for OSF APIv2 institutions. This model may be used with one of several API endpoints. It may be queried directly,\n or accessed via relationship fields.\nFor field and usage information, see:\n   https://api.osf.io/v2/docs/#!/v2/Institution_List_GET\n   https://api.osf.io/v2/docs/#!/v2/Institution_Detail_GET\n   https://api.osf.io/v2/docs/#!/v2/Node_Institutions_List_GET\n   https://api.osf.io/v2/docs/#!/v2/Registration_Institutions_List_GET\n   https://api.osf.io/v2/docs/#!/v2/User_Institutions_GET",
+            "class": "file-manager",
+            "module": "ember-osf/mixins/infinity-custom"
+        },
+        {
+            "file": "addon/models/log.js",
+            "line": 5,
+            "description": "Model for OSF APIv2 log entries. This model may be used with one of several API endpoints. It may be queried directly,\n or accessed via relationship fields.\nFor field and usage information, see:\n   https://api.osf.io/v2/docs/#!/v2/Node_Log_Detail_GET\n   https://api.osf.io/v2/docs/#!/v2/Node_Log_List_GET\n   https://api.osf.io/v2/docs/#!/v2/Registration_Log_List_GET",
+            "class": "file-manager",
+            "module": "ember-osf/mixins/infinity-custom"
+        },
+        {
+            "file": "addon/models/metaschema.js",
+            "line": 4,
+            "description": "Model for OSF APIv2 metaschemas.\nThis model describes metaschemas and can be directly queried.\nFor information on how to retrieve metaschemas see:\n   https://api.osf.io/v2/docs/#!/v2/Meta_Schemas_List_GET\n   https://api.osf.io/v2/docs/#!/v2/Meta_Schema_Detail_GET",
+            "class": "file-manager",
+            "module": "ember-osf/mixins/infinity-custom"
+        },
+        {
+            "file": "addon/models/node-link.js",
+            "line": 5,
+            "description": "Model for OSF APIv2 node links. This model may refer to one of several API endpoints. It may be queried directly,\n or accessed via relationship fields.\nFor field and usage information, see:\n   https://api.osf.io/v2/docs/#!/v2/Node_Links_List_GET\n   https://api.osf.io/v2/docs/#!/v2/Node_Links_Detail_GET\n   https://api.osf.io/v2/docs/#!/v2/Registration_Node_Links_List_GET\n   https://api.osf.io/v2/docs/#!/v2/Registration_Node_Links_Detail_GET",
+            "class": "file-manager",
+            "module": "ember-osf/mixins/infinity-custom"
+        },
+        {
+            "file": "addon/models/node.js",
+            "line": 9,
+            "description": "Model for OSF APIv2 nodes. This model may be used with one of several API endpoints. It may be queried directly,\n or accessed via relationship fields.\nFor field and usage information, see:\n   https://api.osf.io/v2/docs/#!/v2/Node_List_GET\n   https://api.osf.io/v2/docs/#!/v2/Node_Detail_GET\n   https://api.osf.io/v2/docs/#!/v2/Node_Children_List_GET\n   https://api.osf.io/v2/docs/#!/v2/Linked_Nodes_List_GET\n   https://api.osf.io/v2/docs/#!/v2/Node_Forks_List_GET\n   https://api.osf.io/v2/docs/#!/v2/User_Nodes_GET",
+            "class": "file-manager",
+            "module": "ember-osf/mixins/infinity-custom"
+        },
+        {
+            "file": "addon/models/registration.js",
+            "line": 5,
+            "description": "Model for OSF APIv2 registrations. This model may be used with one of several API endpoints. It may be queried directly,\n or accessed via relationship fields.\nFor field and usage information, see:\n   https://api.osf.io/v2/docs/#!/v2/Registration_List_GET\n   https://api.osf.io/v2/docs/#!/v2/Registration_Detail_GET\n   https://api.osf.io/v2/docs/#!/v2/Registration_Children_List_GET\n   https://api.osf.io/v2/docs/#!/v2/User_Registrations_GET",
+            "class": "file-manager",
+            "module": "ember-osf/mixins/infinity-custom"
+        },
+        {
+            "file": "addon/models/user.js",
+            "line": 5,
+            "description": "Model for OSF APIv2 users. This model may be used with one of several API endpoints. It may be queried directly,\n or accessed via relationship fields.\nFor field and usage information, see:\n   https://api.osf.io/v2/docs/#!/v2/User_List_GET\n   https://api.osf.io/v2/docs/#!/v2/User_Detail_GET\n   https://api.osf.io/v2/docs/#!/v2/Institution_User_List_GET",
+            "class": "file-manager",
+            "module": "ember-osf/mixins/infinity-custom"
+        },
+        {
+            "file": "addon/services/file-manager.js",
+            "line": 16,
+            "description": "Get a URL to download the given file.",
+            "itemtype": "method",
+            "name": "getDownloadUrl",
+            "params": [
+                {
+                    "name": "file",
+                    "description": "A `file` model",
+                    "type": "File"
+                },
+                {
+                    "name": "options",
+                    "description": "Options hash",
+                    "type": "Object",
+                    "optional": true,
+                    "props": [
+                        {
+                            "name": "query",
+                            "description": "Key-value hash of query parameters to\nadd to the URL.",
+                            "type": "Object",
+                            "optional": true,
+                            "props": [
+                                {
+                                    "name": "version",
+                                    "description": "`file-version` ID",
+                                    "type": "Object",
+                                    "optional": true
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "return": {
+                "description": "Download URL",
+                "type": "String"
+            },
+            "class": "file-manager",
+            "module": "ember-osf/mixins/infinity-custom"
+        },
+        {
+            "file": "addon/services/file-manager.js",
+            "line": 44,
+            "description": "Download the contents of the given file.",
+            "itemtype": "method",
+            "name": "getContents",
+            "params": [
+                {
+                    "name": "file",
+                    "description": "A `file` model with `isFolder == false`.",
+                    "type": "File"
+                },
+                {
+                    "name": "options",
+                    "description": "Options hash",
+                    "type": "Object",
+                    "optional": true,
+                    "props": [
+                        {
+                            "name": "query",
+                            "description": "Key-value hash of query parameters to\nadd to the request URL.",
+                            "type": "Object",
+                            "optional": true
+                        },
+                        {
+                            "name": "data",
+                            "description": "Payload to be sent.",
+                            "type": "Object",
+                            "optional": true
+                        }
+                    ]
+                }
+            ],
+            "return": {
+                "description": "Promise that resolves to the file contents or rejects\nwith an error message.",
+                "type": "Promise"
+            },
+            "class": "file-manager",
+            "module": "ember-osf/mixins/infinity-custom"
+        },
+        {
+            "file": "addon/services/file-manager.js",
+            "line": 61,
+            "description": "Upload a new version of an existing file.",
+            "itemtype": "method",
+            "name": "updateContents",
+            "params": [
+                {
+                    "name": "file",
+                    "description": "A `file` model with `isFolder == false`.",
+                    "type": "File"
+                },
+                {
+                    "name": "contents",
+                    "description": "A native `File` object or another appropriate\npayload for uploading.",
+                    "type": "Object"
+                },
+                {
+                    "name": "options",
+                    "description": "Options hash",
+                    "type": "Object",
+                    "optional": true,
+                    "props": [
+                        {
+                            "name": "query",
+                            "description": "Key-value hash of query parameters to\nadd to the request URL.",
+                            "type": "Object",
+                            "optional": true
+                        },
+                        {
+                            "name": "data",
+                            "description": "Payload to be sent.",
+                            "type": "Object",
+                            "optional": true
+                        }
+                    ]
+                }
+            ],
+            "return": {
+                "description": "Promise that resolves to the updated `file` model or\nrejects with an error message.",
+                "type": "Promise"
+            },
+            "class": "file-manager",
+            "module": "ember-osf/mixins/infinity-custom"
+        },
+        {
+            "file": "addon/services/file-manager.js",
+            "line": 87,
+            "description": "Check out a file, so only the current user can modify it.",
+            "itemtype": "method",
+            "name": "checkOut",
+            "params": [
+                {
+                    "name": "file",
+                    "description": "`file` model with `isFolder == false`.",
+                    "type": "File"
+                }
+            ],
+            "return": {
+                "description": "Promise that resolves on success or rejects with an\nerror message.",
+                "type": "Promise"
+            },
+            "class": "file-manager",
+            "module": "ember-osf/mixins/infinity-custom"
+        },
+        {
+            "file": "addon/services/file-manager.js",
+            "line": 106,
+            "description": "Check in a file, so anyone with permission can modify it.",
+            "itemtype": "method",
+            "name": "checkOut",
+            "params": [
+                {
+                    "name": "file",
+                    "description": "`file` model with `isFolder == false`.",
+                    "type": "File"
+                }
+            ],
+            "return": {
+                "description": "Promise that resolves on success or rejects with an\nerror message.",
+                "type": "Promise"
+            },
+            "class": "file-manager",
+            "module": "ember-osf/mixins/infinity-custom"
+        },
+        {
+            "file": "addon/services/file-manager.js",
+            "line": 124,
+            "description": "Create a new folder",
+            "itemtype": "method",
+            "name": "addSubfolder",
+            "params": [
+                {
+                    "name": "folder",
+                    "description": "Location of the new folder, a `file` model with\n`isFolder == true`.",
+                    "type": "File"
+                },
+                {
+                    "name": "name",
+                    "description": "Name of the folder to create.",
+                    "type": "String"
+                },
+                {
+                    "name": "options",
+                    "description": "Options hash",
+                    "type": "Object",
+                    "optional": true,
+                    "props": [
+                        {
+                            "name": "query",
+                            "description": "Key-value hash of query parameters to\nadd to the request URL.",
+                            "type": "Object",
+                            "optional": true
+                        },
+                        {
+                            "name": "data",
+                            "description": "Payload to be sent.",
+                            "type": "Object",
+                            "optional": true
+                        }
+                    ]
+                }
+            ],
+            "return": {
+                "description": "Promise that resolves to the new folder's model or\nrejects with an error message.",
+                "type": "Promise"
+            },
+            "class": "file-manager",
+            "module": "ember-osf/mixins/infinity-custom"
+        },
+        {
+            "file": "addon/services/file-manager.js",
+            "line": 155,
+            "description": "Upload a file",
+            "itemtype": "method",
+            "name": "uploadFile",
+            "params": [
+                {
+                    "name": "folder",
+                    "description": "Location of the new file, a `file` model with\n`isFolder == true`.",
+                    "type": "File"
+                },
+                {
+                    "name": "name",
+                    "description": "Name of the new file.",
+                    "type": "String"
+                },
+                {
+                    "name": "contents",
+                    "description": "A native `File` object or another appropriate\npayload for uploading.",
+                    "type": "Object"
+                },
+                {
+                    "name": "options",
+                    "description": "Options hash",
+                    "type": "Object",
+                    "optional": true,
+                    "props": [
+                        {
+                            "name": "query",
+                            "description": "Key-value hash of query parameters to\nadd to the request URL.",
+                            "type": "Object",
+                            "optional": true
+                        },
+                        {
+                            "name": "data",
+                            "description": "Payload to be sent.",
+                            "type": "Object",
+                            "optional": true
+                        }
+                    ]
+                }
+            ],
+            "return": {
+                "description": "Promise that resolves to the new file's model or\nrejects with an error message.",
+                "type": "Promise"
+            },
+            "class": "file-manager",
+            "module": "ember-osf/mixins/infinity-custom"
+        },
+        {
+            "file": "addon/services/file-manager.js",
+            "line": 184,
+            "description": "Rename a file or folder",
+            "itemtype": "method",
+            "name": "rename",
+            "params": [
+                {
+                    "name": "file",
+                    "description": "`file` model to rename.",
+                    "type": "File"
+                },
+                {
+                    "name": "newName",
+                    "description": "New name for the file.",
+                    "type": "String"
+                },
+                {
+                    "name": "options",
+                    "description": "Options hash",
+                    "type": "Object",
+                    "optional": true,
+                    "props": [
+                        {
+                            "name": "query",
+                            "description": "Key-value hash of query parameters to\nadd to the request URL.",
+                            "type": "Object",
+                            "optional": true
+                        },
+                        {
+                            "name": "data",
+                            "description": "Payload to be sent.",
+                            "type": "Object",
+                            "optional": true
+                        }
+                    ]
+                }
+            ],
+            "return": {
+                "description": "Promise that resolves to the updated `file` model or\nrejects with an error message.",
+                "type": "Promise"
+            },
+            "class": "file-manager",
+            "module": "ember-osf/mixins/infinity-custom"
+        },
+        {
+            "file": "addon/services/file-manager.js",
+            "line": 205,
+            "description": "Move (or copy) a file or folder",
+            "itemtype": "method",
+            "name": "move",
+            "params": [
+                {
+                    "name": "file",
+                    "description": "`file` model to move.",
+                    "type": "File"
+                },
+                {
+                    "name": "targetFolder",
+                    "description": "Where to move the file, a `file` model with\n`isFolder == true`.",
+                    "type": "File"
+                },
+                {
+                    "name": "options",
+                    "description": "Options hash",
+                    "type": "Object",
+                    "optional": true,
+                    "props": [
+                        {
+                            "name": "query",
+                            "description": "Key-value hash of query parameters to\nadd to the request URL.",
+                            "type": "Object",
+                            "optional": true
+                        },
+                        {
+                            "name": "data",
+                            "description": "Payload to be sent.",
+                            "type": "Object",
+                            "optional": true,
+                            "props": [
+                                {
+                                    "name": "rename",
+                                    "description": "If specified, also rename the file\nto the given name.",
+                                    "type": "String",
+                                    "optional": true
+                                },
+                                {
+                                    "name": "resource",
+                                    "description": "Optional node ID. If specified,\nmove the file to that node.",
+                                    "type": "String",
+                                    "optional": true
+                                },
+                                {
+                                    "name": "provider",
+                                    "description": "Optional provider name. If\nspecified, move the file to that provider.",
+                                    "type": "String",
+                                    "optional": true
+                                },
+                                {
+                                    "name": "action",
+                                    "description": "Either 'move' or 'copy'.",
+                                    "type": "String",
+                                    "optional": true,
+                                    "optdefault": "'move'"
+                                },
+                                {
+                                    "name": "conflict",
+                                    "description": "Specifies what to do if\na file of the same name already exists in the target folder. If 'keep',\nrename this file to avoid conflict. If replace, the existing file is\ndestroyed.",
+                                    "type": "String",
+                                    "optional": true,
+                                    "optdefault": "'replace'"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "return": {
+                "description": "Promise that resolves to the the updated (or newly\ncreated) `file` model or rejects with an error message.",
+                "type": "Promise"
+            },
+            "class": "file-manager",
+            "module": "ember-osf/mixins/infinity-custom"
+        },
+        {
+            "file": "addon/services/file-manager.js",
+            "line": 246,
+            "description": "Copy a file or folder.\nConvenience method for `move` with `options.copy == true`.",
+            "itemtype": "method",
+            "name": "copy",
+            "params": [
+                {
+                    "name": "file",
+                    "description": "`file` model to copy.",
+                    "type": "File"
+                },
+                {
+                    "name": "targetFolder",
+                    "description": "Where to copy the file, a `file` model with\n`isFolder == true`.",
+                    "type": "File"
+                },
+                {
+                    "name": "options",
+                    "description": "Options hash",
+                    "type": "Object",
+                    "optional": true,
+                    "props": [
+                        {
+                            "name": "query",
+                            "description": "Key-value hash of query parameters to\nadd to the request URL.",
+                            "type": "Object",
+                            "optional": true
+                        },
+                        {
+                            "name": "data",
+                            "description": "Payload to be sent.",
+                            "type": "Object",
+                            "optional": true,
+                            "props": [
+                                {
+                                    "name": "rename",
+                                    "description": "If specified, also rename the file\nto the given name.",
+                                    "type": "String",
+                                    "optional": true
+                                },
+                                {
+                                    "name": "resource",
+                                    "description": "Optional node ID. If specified,\nmove the file to that node.",
+                                    "type": "String",
+                                    "optional": true
+                                },
+                                {
+                                    "name": "provider",
+                                    "description": "Optional provider name. If\nspecified, move the file to that provider.",
+                                    "type": "String",
+                                    "optional": true
+                                },
+                                {
+                                    "name": "conflict",
+                                    "description": "Specifies what to do if\na file of the same name already exists in the target folder. If 'keep',\nrename this file to avoid conflict. If replace, the existing file is\ndestroyed.",
+                                    "type": "String",
+                                    "optional": true,
+                                    "optdefault": "'replace'"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "return": {
+                "description": "Promise that resolves to the the new `file` model or\nrejects with an error message.",
+                "type": "Promise"
+            },
+            "class": "file-manager",
+            "module": "ember-osf/mixins/infinity-custom"
+        },
+        {
+            "file": "addon/services/file-manager.js",
+            "line": 279,
+            "description": "Delete a file or folder",
+            "itemtype": "method",
+            "name": "deleteFile",
+            "params": [
+                {
+                    "name": "file",
+                    "description": "`file` model to delete.",
+                    "type": "File"
+                },
+                {
+                    "name": "options",
+                    "description": "Options hash",
+                    "type": "Object",
+                    "optional": true,
+                    "props": [
+                        {
+                            "name": "query",
+                            "description": "Key-value hash of query parameters to\nadd to the request URL.",
+                            "type": "Object",
+                            "optional": true
+                        },
+                        {
+                            "name": "data",
+                            "description": "Payload to be sent.",
+                            "type": "Object",
+                            "optional": true
+                        }
+                    ]
+                }
+            ],
+            "return": {
+                "description": "Promise that resolves on success or rejects with an\nerror message.",
+                "type": "Promise"
+            },
+            "class": "file-manager",
+            "module": "ember-osf/mixins/infinity-custom"
+        },
+        {
+            "file": "addon/services/file-manager.js",
+            "line": 305,
+            "description": "Check whether the given url corresponds to a model that is currently\nreloading after a file operation.\n\nUsed by `mixin:file-cache-bypass` to avoid a race condition where the\ncache might return stale, inaccurate data.",
+            "itemtype": "method",
+            "name": "isReloadingUrl",
+            "params": [
+                {
+                    "name": "url",
+                    "description": "",
+                    "type": "String"
+                }
+            ],
+            "return": {
+                "description": "`true` if `url` corresponds to a pending reload on a\nmodel immediately after a Waterbutler action, otherwise `false`.",
+                "type": "Boolean"
+            },
+            "class": "file-manager",
+            "module": "ember-osf/mixins/infinity-custom"
+        },
+        {
+            "file": "addon/services/file-manager.js",
+            "line": 321,
+            "description": "Hash set of URLs for `model.reload()` calls that are still pending.",
+            "itemtype": "property",
+            "name": "_reloadingUrls",
+            "access": "private",
+            "tagname": "",
+            "class": "file-manager",
+            "module": "ember-osf/mixins/infinity-custom"
+        },
+        {
+            "file": "addon/services/file-manager.js",
+            "line": 329,
+            "description": "Force-reload a model from the API.",
+            "itemtype": "method",
+            "name": "_reloadModel",
+            "access": "private",
+            "tagname": "",
+            "params": [
+                {
+                    "name": "model",
+                    "description": "`file` model or a `files` relationship",
+                    "type": "Object"
+                }
+            ],
+            "return": {
+                "description": "Promise that resolves to the reloaded model or\nrejects with an error message.",
+                "type": "Promise"
+            },
+            "class": "file-manager",
+            "module": "ember-osf/mixins/infinity-custom"
+        },
+        {
+            "file": "addon/services/file-manager.js",
+            "line": 363,
+            "description": "Make a Waterbutler request",
+            "itemtype": "method",
+            "name": "_waterbutlerRequest",
+            "access": "private",
+            "tagname": "",
+            "params": [
+                {
+                    "name": "method",
+                    "description": "HTTP method for the request.",
+                    "type": "String"
+                },
+                {
+                    "name": "url",
+                    "description": "Waterbutler URL.",
+                    "type": "String"
+                },
+                {
+                    "name": "options",
+                    "description": "Options hash",
+                    "type": "Object",
+                    "optional": true,
+                    "props": [
+                        {
+                            "name": "query",
+                            "description": "Key-value hash of query parameters to\nadd to the request URL.",
+                            "type": "Object",
+                            "optional": true
+                        },
+                        {
+                            "name": "data",
+                            "description": "Payload to be sent.",
+                            "type": "Object",
+                            "optional": true
+                        }
+                    ]
+                }
+            ],
+            "return": {
+                "description": "Promise that resolves to the data returned from the\nserver on success, or rejects with an error message.",
+                "type": "Promise"
+            },
+            "class": "file-manager",
+            "module": "ember-osf/mixins/infinity-custom"
+        },
+        {
+            "file": "addon/services/file-manager.js",
+            "line": 400,
+            "description": "Get the `file` model for a newly created file.",
+            "itemtype": "method",
+            "name": "_getNewFileInfo",
+            "access": "private",
+            "tagname": "",
+            "params": [
+                {
+                    "name": "parentFolder",
+                    "description": "Model for the new file's parent folder.",
+                    "type": "File"
+                },
+                {
+                    "name": "name",
+                    "description": "Name of the new file.",
+                    "type": "String"
+                }
+            ],
+            "return": {
+                "description": "Promise that resolves to the new file's model or\nrejects with an error message.",
+                "type": "Promise"
+            },
+            "class": "file-manager",
+            "module": "ember-osf/mixins/infinity-custom"
+        },
+        {
+            "file": "addon/utils/array-items-are-equal.js",
+            "line": 1,
+            "description": "Check that all of the items in a are in b, and that all of the items in b are\nin a.",
+            "itemtype": "method",
+            "name": "arrayItemsAreEqual",
+            "params": [
+                {
+                    "name": "a",
+                    "description": "the first array",
+                    "type": "Array"
+                },
+                {
+                    "name": "b",
+                    "description": "the second array",
+                    "type": "Array"
+                },
+                {
+                    "name": "compareItems",
+                    "description": "an optional function to use to compare array\nitems",
+                    "type": "Function"
+                }
+            ],
+            "return": {
+                "description": "",
+                "type": "Boolean"
+            },
+            "class": "",
+            "module": "ember-osf/mixins/infinity-custom"
+        },
+        {
+            "file": "addon/utils/serialize-relationship.js",
+            "line": 5,
+            "description": "Serialize the hasMany relationship of a record",
+            "itemtype": "method",
+            "name": "serializeHasMany",
+            "params": [
+                {
+                    "name": "relationship",
+                    "description": "Name of the relationship attribute as representd on the model",
+                    "type": "String"
+                },
+                {
+                    "name": "type",
+                    "description": "API type of the related resource being serialized",
+                    "type": "String"
+                },
+                {
+                    "name": "record",
+                    "description": "DS.Model instance to pull related data off of",
+                    "type": "DS.Model"
+                }
+            ],
+            "return": {
+                "description": "Serialized data",
+                "type": "Object"
+            },
+            "class": "",
+            "module": "ember-osf/mixins/infinity-custom"
+        }
+    ],
+    "warnings": [
+        {
+            "message": "replacing incorrect tag: returns with return",
+            "line": " addon/mixins/fetch-all-route.js:71"
+        },
+        {
+            "message": "replacing incorrect tag: returns with return",
+            "line": " addon/mixins/infinity-custom.js:68"
+        },
+        {
+            "message": "replacing incorrect tag: returns with return",
+            "line": " addon/mixins/paginated-route.js:30"
+        },
+        {
+            "message": "replacing incorrect tag: function with method",
+            "line": " addon/utils/array-items-are-equal.js:1"
+        },
+        {
+            "message": "Missing item type\nA row could represent a node, file-provider, or file, each of which has a\ndifferent interface. RowProxy provides a consistent interface for everything\nthe file browser needs to know.\n\nImportant: Use `row.content` when passing a row model outside file-browser",
+            "line": " addon/components/file-browser-tree/component.js:4"
+        },
+        {
+            "message": "Missing item type\nLoad all this row's children. Concatenates `content.files` (if it exists)\nwith `content.children` (if it exists) and puts the result in\n`childTrees`.\n\nHas about the same result as:\n`childTrees: Ember.computed.union('content.files', 'content.children')`\nbut it sets `isLoading` to `true` when it starts and to `false` when it's\ndone. Computed properties don't expose the underlying promises, and a\nloading indicator seems important.\n\nTODO: But this counters ember's binding magic... If the file/node models\nchange, the tree won't automatically update. Could add another observer\non `files` and `children`, but it would be nice to find another way to\nupdate `isLoading` and get rid of this method entirely",
+            "line": " addon/components/file-browser-tree/component.js:22"
+        },
+        {
+            "message": "Missing item type\nThe FetchAllRouteMixin supports loading *all* records from a specified model or relationship.\nEssentially, it un-paginates an API\n\nThis may be useful for select applications (such as frontend-powered search boxes), but is strongly discouraged\nfor most applications. Consider using available pagination functionality instead.",
+            "line": " addon/mixins/fetch-all-route.js:1"
+        },
+        {
+            "message": "Missing item type\nSets up fetch-all query for a relationship field.",
+            "line": " addon/mixins/fetch-all-route.js:35"
+        },
+        {
+            "message": "Missing item type\nEvent listener that fetches more results automatically\nAs written, this does not handle fetch errors, and will not retry once an error is encountered",
+            "line": " addon/mixins/fetch-all-route.js:63"
+        },
+        {
+            "message": "Missing item type\nConvenience method for clickable buttons, mainly for use with debugging",
+            "line": " addon/mixins/fetch-all-route.js:94"
+        },
+        {
+            "message": "Missing item type\nThis is a hack to resolve a server-side race condition.\nAfter creating/modifying/deleting a file through Waterbutler, it can take\na fraction of a second for the API's cache to properly update, and\ntrying to reload the file model in that time can return stale data.\n\nThis adapter mixin appends a nonce to requests that are likely to run into\nthat race condition, forcing a cache miss.",
+            "line": " addon/mixins/file-cache-bypass.js:3"
+        },
+        {
+            "message": "Missing item type\nRepurpose an ember-infinity hook to override the method used for queries",
+            "line": " addon/mixins/infinity-custom.js:17"
+        },
+        {
+            "message": "Missing item type",
+            "line": " addon/mixins/node-actions.js:8"
+        },
+        {
+            "message": "Missing item type",
+            "line": " addon/mixins/registration-actions.js:9"
+        },
+        {
+            "message": "Missing item type\nModel for OSF APIv2 collections\nFor field and usage information, see:\n https://api.osf.io/v2/docs/#!/v2/Collection_List_GET",
+            "line": " addon/models/collection.js:6"
+        },
+        {
+            "message": "Missing item type\nModel for OSF APIv2 comment reports. Primarily accessed via relationship fields.\nFor field and usage information, see:\n   https://api.osf.io/v2/docs/#!/v2/Comment_Reports_List_GET",
+            "line": " addon/models/comment-report.js:5"
+        },
+        {
+            "message": "Missing item type\nModel for OSF APIv2 comments. This model may be used with one of several API endpoints. It may be queried directly,\n or accessed via relationship fields.\nFor field and usage information, see:\n   https://api.osf.io/v2/docs/#!/v2/Comment_Detail_GET\n   https://api.osf.io/v2/docs/#!/v2/Node_Comments_List_GET\n   https://api.osf.io/v2/docs/#!/v2/Registration_Comments_List_GET",
+            "line": " addon/models/comment.js:5"
+        },
+        {
+            "message": "Missing item type\nModel for OSF APIv2 contributors. Primarily accessed via relationship fields.\nFor field and usage information, see:\n   https://api.osf.io/v2/docs/#!/v2/Node_Contributors_List_GET",
+            "line": " addon/models/contributor.js:5"
+        },
+        {
+            "message": "Missing item type\nModel for OSF APIv2 draft registrations.\nThis model represents draft registration data and can be accessed as a relationship of a node.\nFor information on how to interact with a node's draft registrations, see:\n   https://api.osf.io/v2/docs/#!/v2/Node_Draft_Registrations_List_GET\n   https://api.osf.io/v2/docs/#!/v2/Node_Draft_Registration_Detail_GET",
+            "line": " addon/models/draft-registration.js:4"
+        },
+        {
+            "message": "Missing item type\nModel for OSF APIv2 file providers. Primarily used in relationship fields.\nThis model is used for basic file provider metadata. To interact with file contents directly, see the `file-manager` service.\nFor field and usage information, see:\n   https://api.osf.io/v2/docs/#!/v2/Node_Providers_List_GET\n   https://api.osf.io/v2/docs/#!/v2/Node_Provider_Detail_GET\n   https://api.osf.io/v2/docs/#!/v2/Registration_Providers_List_GET",
+            "line": " addon/models/file-provider.js:6"
+        },
+        {
+            "message": "Missing item type\nModel for OSF APIv2 file versions. Primarily used in relationship fields.\nThis model is used for basic file version metadata. To interact with file contents directly, see the `file-manager` service.\nFor field and usage information, see:\n   https://api.osf.io/v2/docs/#!/v2/File_Versions_List_GET\n   https://api.osf.io/v2/docs/#!/v2/File_Version_Detail_GET",
+            "line": " addon/models/file-version.js:5"
+        },
+        {
+            "message": "Missing item type\nModel for OSF APIv2 files. This model may be used with one of several API endpoints. It may be queried directly,\n or (more commonly) accessed via relationship fields.\nThis model is used for basic file metadata. To interact with file contents directly, see the `file-manager` service.\nFor field and usage information, see:\n   https://api.osf.io/v2/docs/#!/v2/File_Detail_GET\n   https://api.osf.io/v2/docs/#!/v2/Node_Files_List_GET\n   https://api.osf.io/v2/docs/#!/v2/Node_File_Detail_GET\n   https://api.osf.io/v2/docs/#!/v2/Registration_Files_List_GET\n   https://api.osf.io/v2/docs/#!/v2/Registration_File_Detail_GET",
+            "line": " addon/models/file.js:6"
+        },
+        {
+            "message": "Missing item type\nModel for OSF APIv2 institutions. This model may be used with one of several API endpoints. It may be queried directly,\n or accessed via relationship fields.\nFor field and usage information, see:\n   https://api.osf.io/v2/docs/#!/v2/Institution_List_GET\n   https://api.osf.io/v2/docs/#!/v2/Institution_Detail_GET\n   https://api.osf.io/v2/docs/#!/v2/Node_Institutions_List_GET\n   https://api.osf.io/v2/docs/#!/v2/Registration_Institutions_List_GET\n   https://api.osf.io/v2/docs/#!/v2/User_Institutions_GET",
+            "line": " addon/models/institution.js:5"
+        },
+        {
+            "message": "Missing item type\nModel for OSF APIv2 log entries. This model may be used with one of several API endpoints. It may be queried directly,\n or accessed via relationship fields.\nFor field and usage information, see:\n   https://api.osf.io/v2/docs/#!/v2/Node_Log_Detail_GET\n   https://api.osf.io/v2/docs/#!/v2/Node_Log_List_GET\n   https://api.osf.io/v2/docs/#!/v2/Registration_Log_List_GET",
+            "line": " addon/models/log.js:5"
+        },
+        {
+            "message": "Missing item type\nModel for OSF APIv2 metaschemas.\nThis model describes metaschemas and can be directly queried.\nFor information on how to retrieve metaschemas see:\n   https://api.osf.io/v2/docs/#!/v2/Meta_Schemas_List_GET\n   https://api.osf.io/v2/docs/#!/v2/Meta_Schema_Detail_GET",
+            "line": " addon/models/metaschema.js:4"
+        },
+        {
+            "message": "Missing item type\nModel for OSF APIv2 node links. This model may refer to one of several API endpoints. It may be queried directly,\n or accessed via relationship fields.\nFor field and usage information, see:\n   https://api.osf.io/v2/docs/#!/v2/Node_Links_List_GET\n   https://api.osf.io/v2/docs/#!/v2/Node_Links_Detail_GET\n   https://api.osf.io/v2/docs/#!/v2/Registration_Node_Links_List_GET\n   https://api.osf.io/v2/docs/#!/v2/Registration_Node_Links_Detail_GET",
+            "line": " addon/models/node-link.js:5"
+        },
+        {
+            "message": "Missing item type\nModel for OSF APIv2 nodes. This model may be used with one of several API endpoints. It may be queried directly,\n or accessed via relationship fields.\nFor field and usage information, see:\n   https://api.osf.io/v2/docs/#!/v2/Node_List_GET\n   https://api.osf.io/v2/docs/#!/v2/Node_Detail_GET\n   https://api.osf.io/v2/docs/#!/v2/Node_Children_List_GET\n   https://api.osf.io/v2/docs/#!/v2/Linked_Nodes_List_GET\n   https://api.osf.io/v2/docs/#!/v2/Node_Forks_List_GET\n   https://api.osf.io/v2/docs/#!/v2/User_Nodes_GET",
+            "line": " addon/models/node.js:9"
+        },
+        {
+            "message": "Missing item type\nModel for OSF APIv2 registrations. This model may be used with one of several API endpoints. It may be queried directly,\n or accessed via relationship fields.\nFor field and usage information, see:\n   https://api.osf.io/v2/docs/#!/v2/Registration_List_GET\n   https://api.osf.io/v2/docs/#!/v2/Registration_Detail_GET\n   https://api.osf.io/v2/docs/#!/v2/Registration_Children_List_GET\n   https://api.osf.io/v2/docs/#!/v2/User_Registrations_GET",
+            "line": " addon/models/registration.js:5"
+        },
+        {
+            "message": "Missing item type\nModel for OSF APIv2 users. This model may be used with one of several API endpoints. It may be queried directly,\n or accessed via relationship fields.\nFor field and usage information, see:\n   https://api.osf.io/v2/docs/#!/v2/User_List_GET\n   https://api.osf.io/v2/docs/#!/v2/User_Detail_GET\n   https://api.osf.io/v2/docs/#!/v2/Institution_User_List_GET",
+            "line": " addon/models/user.js:5"
+        }
+    ]
+}
