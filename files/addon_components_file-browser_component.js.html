@@ -49,6 +49,7 @@
                                 <li><a href="../classes/current-user.html">current-user</a></li>
                                 <li><a href="../classes/DraftRegistration.html">DraftRegistration</a></li>
                                 <li><a href="../classes/dropzone-widget.html">dropzone-widget</a></li>
+                                <li><a href="../classes/elem-id.html">elem-id</a></li>
                                 <li><a href="../classes/FetchAllRouteMixin.html">FetchAllRouteMixin</a></li>
                                 <li><a href="../classes/File.html">File</a></li>
                                 <li><a href="../classes/file-browser.html">file-browser</a></li>
@@ -100,6 +101,7 @@
                                 <li><a href="../modules/authorizers.html">authorizers</a></li>
                                 <li><a href="../modules/components.html">components</a></li>
                                 <li><a href="../modules/ember-osf.html">ember-osf</a></li>
+                                <li><a href="../modules/helpers.html">helpers</a></li>
                                 <li><a href="../modules/mixins.html">mixins</a></li>
                                 <li><a href="../modules/models.html">models</a></li>
                                 <li><a href="../modules/serializers.html">serializers</a></li>
@@ -145,7 +147,6 @@ import Ember from &#x27;ember&#x27;;
 import layout from &#x27;./template&#x27;;
 
 import loadAll from &#x27;ember-osf/utils/load-relationship&#x27;;
-
 
 /**
  * @module ember-osf
@@ -220,9 +221,9 @@ function unwrapItem(item) {
  * Sample usage:
  * &#x60;&#x60;&#x60;javascript
  * {{file-browser
- * rootItem=item
-  * openFile=(action &#x27;openFile&#x27;)
-   * openNode=(action &#x27;openNode&#x27;)}}
+ *  rootItem=item
+ *  openFile=(action &#x27;openFile&#x27;)
+ *  openNode=(action &#x27;openNode&#x27;)}}
  * &#x60;&#x60;&#x60;
  * @class file-browser
  */

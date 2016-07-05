@@ -220,6 +220,17 @@
             "fors": {},
             "namespaces": {}
         },
+        "addon/helpers/elem-id.js": {
+            "name": "addon/helpers/elem-id.js",
+            "modules": {
+                "helpers": 1
+            },
+            "classes": {
+                "elem-id": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
         "addon/mixins/commentable.js": {
             "name": "addon/mixins/commentable.js",
             "modules": {
@@ -516,6 +527,7 @@
                 "authenticators": 1,
                 "authorizers": 1,
                 "components": 1,
+                "helpers": 1,
                 "mixins": 1,
                 "models": 1,
                 "serializers": 1,
@@ -545,6 +557,7 @@
                 "search-dropdown": 1,
                 "sign-up": 1,
                 "tags-widget": 1,
+                "elem-id": 1,
                 "CommentableMixin": 1,
                 "FetchAllRouteMixin": 1,
                 "FileCacheBypassMixin": 1,
@@ -663,6 +676,22 @@
             "file": "addon/components/tags-widget/component.js",
             "line": 9,
             "description": "Display information about an individual comment, including controls to edit, delete, and report.\nThis component is typically used as part of the `comment-pane` component; see that component for further information.\n\nSample usage:\n```javascript\n{{comment-detail\n  comment=comment\n  editComment=attrs.editComment\n  deleteComment=attrs.deleteComment\n  restoreComment=attrs.restoreComment\n  reportComment=attrs.reportComment}}\n```"
+        },
+        "helpers": {
+            "name": "helpers",
+            "submodules": {},
+            "elements": {},
+            "classes": {
+                "elem-id": 1
+            },
+            "fors": {},
+            "is_submodule": 1,
+            "namespaces": {},
+            "module": "ember-osf",
+            "namespace": "",
+            "file": "addon/helpers/elem-id.js",
+            "line": 8,
+            "description": "Generate a unique HTML element ID for this element. Given \"someid\" for component instance 123, returns \"ember123-someid\"\n\nUseful to ensure unique IDs, eg for when component is reused in page."
         },
         "mixins": {
             "name": "mixins",
@@ -947,8 +976,8 @@
             "submodule": "components",
             "namespace": "",
             "file": "addon/components/file-browser/component.js",
-            "line": 74,
-            "description": "File browser widget\n\nSample usage:\n```javascript\n{{file-browser\nrootItem=item\nopenFile=(action 'openFile')\nopenNode=(action 'openNode')}}\n```"
+            "line": 73,
+            "description": "File browser widget\n\nSample usage:\n```javascript\n{{file-browser\n rootItem=item\n openFile=(action 'openFile')\n openNode=(action 'openNode')}}\n```"
         },
         "file-browser-icon": {
             "name": "file-browser-icon",
@@ -1037,8 +1066,8 @@
             "submodule": "components",
             "namespace": "",
             "file": "addon/components/oauth-popup/component.js",
-            "line": 13,
-            "description": "Log a user in via OAuth2 in a popup window, without requiring a redirect\n\nSample usage:\n```javascript\n{{#oauth-popup \n  authUrl=authUrl\n  loginSuccess=(action 'loginSuccess')\n  loginFail=(action 'loginFail') as |popup|}}\n   <button class=\"btn btn-default login-button\" onclick={{action 'login' target=popup}} >\n      Login to OSF\n   </button>\n{{/oauth-popup}}\n```"
+            "line": 11,
+            "description": "Log a user in via OAuth2 in a popup window, without requiring a redirect\n\nSample usage:\n```javascript\n{{#oauth-popup\n  authUrl=authUrl\n  loginSuccess=(action 'loginSuccess')\n  loginFail=(action 'loginFail') as |popup|}}\n   <button class=\"btn btn-default login-button\" onclick={{action 'login' target=popup}} >\n      Login to OSF\n   </button>\n{{/oauth-popup}}\n```"
         },
         "osf-copyright": {
             "name": "osf-copyright",
@@ -1159,6 +1188,33 @@
             "file": "addon/components/tags-widget/component.js",
             "line": 9,
             "description": "Allow the user to view and manage tags.\nSee TaggableMixin for controller actions that can be used with this component.\n```javascript\n{{tags-widget\n  addATag=(action 'addATag')\n  removeATag=(action 'removeATag')\n  tags=model.tags}}\n```"
+        },
+        "elem-id": {
+            "name": "elem-id",
+            "shortname": "elem-id",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "ember-osf",
+            "submodule": "helpers",
+            "namespace": "",
+            "file": "addon/helpers/elem-id.js",
+            "line": 8,
+            "description": "Generate a unique HTML element ID for this element. Given \"someid\" for component instance 123, returns \"ember123-someid\"\n\nUseful to ensure unique IDs, eg for when component is reused in page.",
+            "params": [
+                {
+                    "name": "obj",
+                    "description": "The instance with ID to use",
+                    "type": "Ember.Object"
+                },
+                {
+                    "name": "suffix",
+                    "description": "The base attribute to name",
+                    "type": "Ember.suffix"
+                }
+            ]
         },
         "CommentableMixin": {
             "name": "CommentableMixin",
@@ -3574,34 +3630,5 @@
             "submodule": "services"
         }
     ],
-    "warnings": [
-        {
-            "message": "replacing incorrect tag: returns with return",
-            "line": " addon/mixins/commentable.js:32"
-        },
-        {
-            "message": "replacing incorrect tag: returns with return",
-            "line": " addon/mixins/commentable.js:51"
-        },
-        {
-            "message": "replacing incorrect tag: returns with return",
-            "line": " addon/mixins/commentable.js:60"
-        },
-        {
-            "message": "replacing incorrect tag: returns with return",
-            "line": " addon/mixins/commentable.js:70"
-        },
-        {
-            "message": "replacing incorrect tag: returns with return",
-            "line": " addon/mixins/commentable.js:80"
-        },
-        {
-            "message": "replacing incorrect tag: returns with return",
-            "line": " addon/serializers/osf-serializer.js:24"
-        },
-        {
-            "message": "replacing incorrect tag: returns with return",
-            "line": " addon/services/current-user.js:31"
-        }
-    ]
+    "warnings": []
 }

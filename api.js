@@ -38,6 +38,7 @@ YUI.add("yuidoc-meta", function(Y) {
         "comment-pane",
         "current-user",
         "dropzone-widget",
+        "elem-id",
         "file-browser",
         "file-browser-icon",
         "file-chooser component",
@@ -61,6 +62,7 @@ YUI.add("yuidoc-meta", function(Y) {
         "authorizers",
         "components",
         "ember-osf",
+        "helpers",
         "mixins",
         "models",
         "serializers",
@@ -90,6 +92,11 @@ YUI.add("yuidoc-meta", function(Y) {
         {
             "displayName": "ember-osf",
             "name": "ember-osf"
+        },
+        {
+            "displayName": "helpers",
+            "name": "helpers",
+            "description": "Generate a unique HTML element ID for this element. Given \"someid\" for component instance 123, returns \"ember123-someid\"\n\nUseful to ensure unique IDs, eg for when component is reused in page."
         },
         {
             "displayName": "mixins",
