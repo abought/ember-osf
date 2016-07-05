@@ -38,13 +38,72 @@
                 
                         <div id="api-tabview-panel">
                             <ul id="api-classes" class="apis classes">
-                                <li><a href="../classes/EmberOSF.InfinityCustomMixin.html">EmberOSF.InfinityCustomMixin</a></li>
+                                <li><a href="../classes/Collection.html">Collection</a></li>
+                                <li><a href="../classes/Comment.html">Comment</a></li>
+                                <li><a href="../classes/comment-detail.html">comment-detail</a></li>
+                                <li><a href="../classes/comment-form.html">comment-form</a></li>
+                                <li><a href="../classes/comment-pane.html">comment-pane</a></li>
+                                <li><a href="../classes/CommentableMixin.html">CommentableMixin</a></li>
+                                <li><a href="../classes/CommentReport.html">CommentReport</a></li>
+                                <li><a href="../classes/Contributor.html">Contributor</a></li>
+                                <li><a href="../classes/current-user.html">current-user</a></li>
+                                <li><a href="../classes/DraftRegistration.html">DraftRegistration</a></li>
+                                <li><a href="../classes/dropzone-widget.html">dropzone-widget</a></li>
+                                <li><a href="../classes/FetchAllRouteMixin.html">FetchAllRouteMixin</a></li>
+                                <li><a href="../classes/File.html">File</a></li>
+                                <li><a href="../classes/file-browser.html">file-browser</a></li>
+                                <li><a href="../classes/file-browser-icon.html">file-browser-icon</a></li>
+                                <li><a href="../classes/file-chooser component.html">file-chooser component</a></li>
                                 <li><a href="../classes/file-manager.html">file-manager</a></li>
+                                <li><a href="../classes/file-renderer.html">file-renderer</a></li>
+                                <li><a href="../classes/file-version.html">file-version</a></li>
+                                <li><a href="../classes/file-widget.html">file-widget</a></li>
+                                <li><a href="../classes/FileCacheBypassMixin.html">FileCacheBypassMixin</a></li>
+                                <li><a href="../classes/FileItemMixin.html">FileItemMixin</a></li>
+                                <li><a href="../classes/FileProvider.html">FileProvider</a></li>
+                                <li><a href="../classes/FileVersion.html">FileVersion</a></li>
+                                <li><a href="../classes/InfinityCustomMixin.html">InfinityCustomMixin</a></li>
+                                <li><a href="../classes/Institution.html">Institution</a></li>
+                                <li><a href="../classes/Log.html">Log</a></li>
+                                <li><a href="../classes/Metaschema.html">Metaschema</a></li>
+                                <li><a href="../classes/Node.html">Node</a></li>
+                                <li><a href="../classes/NodeActionsMixin.html">NodeActionsMixin</a></li>
+                                <li><a href="../classes/NodeLink.html">NodeLink</a></li>
+                                <li><a href="../classes/oauth-popup.html">oauth-popup</a></li>
+                                <li><a href="../classes/osf-copyright.html">osf-copyright</a></li>
+                                <li><a href="../classes/osf-footer.html">osf-footer</a></li>
+                                <li><a href="../classes/osf-mode-footer.html">osf-mode-footer</a></li>
+                                <li><a href="../classes/osf-navbar.html">osf-navbar</a></li>
+                                <li><a href="../classes/OsfAdapter.html">OsfAdapter</a></li>
+                                <li><a href="../classes/OsfLoginControllerMixin.html">OsfLoginControllerMixin</a></li>
+                                <li><a href="../classes/OsfLoginRouteMixin.html">OsfLoginRouteMixin</a></li>
+                                <li><a href="../classes/OsfModel.html">OsfModel</a></li>
+                                <li><a href="../classes/OsfSerializer.html">OsfSerializer</a></li>
+                                <li><a href="../classes/OsfTokenAuthenticator.html">OsfTokenAuthenticator</a></li>
+                                <li><a href="../classes/OsfTokenAuthorizer.html">OsfTokenAuthorizer</a></li>
+                                <li><a href="../classes/PaginatedControllerMixin.html">PaginatedControllerMixin</a></li>
+                                <li><a href="../classes/PaginatedRouteMixin.html">PaginatedRouteMixin</a></li>
+                                <li><a href="../classes/pagination-control.html">pagination-control</a></li>
+                                <li><a href="../classes/Registration.html">Registration</a></li>
+                                <li><a href="../classes/RegistrationActionsMixin.html">RegistrationActionsMixin</a></li>
+                                <li><a href="../classes/search-dropdown.html">search-dropdown</a></li>
+                                <li><a href="../classes/sign-up.html">sign-up</a></li>
+                                <li><a href="../classes/TaggableMixin.html">TaggableMixin</a></li>
+                                <li><a href="../classes/tags-widget.html">tags-widget</a></li>
+                                <li><a href="../classes/User.html">User</a></li>
                             </ul>
                 
                 
                             <ul id="api-modules" class="apis modules">
-                                <li><a href="../modules/ember-osf_mixins_infinity-custom.html">ember-osf/mixins/infinity-custom</a></li>
+                                <li><a href="../modules/adapters.html">adapters</a></li>
+                                <li><a href="../modules/authenticators.html">authenticators</a></li>
+                                <li><a href="../modules/authorizers.html">authorizers</a></li>
+                                <li><a href="../modules/components.html">components</a></li>
+                                <li><a href="../modules/ember-osf.html">ember-osf</a></li>
+                                <li><a href="../modules/mixins.html">mixins</a></li>
+                                <li><a href="../modules/models.html">models</a></li>
+                                <li><a href="../modules/serializers.html">serializers</a></li>
+                                <li><a href="../modules/services.html">services</a></li>
                             </ul>
                         </div>
                     </div>
@@ -82,9 +141,6 @@
 
 <div class="file">
     <pre class="code prettyprint linenums">
-/*
-  Base adapter class for all OSF APIv2 endpoints
- */
 import Ember from &#x27;ember&#x27;;
 import DS from &#x27;ember-data&#x27;;
 
@@ -92,8 +148,21 @@ import HasManyQuery from &#x27;ember-data-has-many-query&#x27;;
 import config from &#x27;ember-get-config&#x27;;
 import DataAdapterMixin from &#x27;ember-simple-auth/mixins/data-adapter-mixin&#x27;;
 
-let inflector = new Ember.Inflector(Ember.Inflector.defaultRules);
+import { singularize } from &#x27;ember-inflector&#x27;;
 
+/**
+ * @module ember-osf
+ * @submodule adapters
+ */
+
+/**
+ * Base adapter class for all OSF APIv2 endpoints
+ *
+ * @class OsfAdapter
+ * @extends DS.JSONAPIAdapter
+ * @uses HasManyQuery.RESTAdapterMixin
+ * @uses DataAdapterMixin
+ */
 export default DS.JSONAPIAdapter.extend(HasManyQuery.RESTAdapterMixin, DataAdapterMixin, {
     authorizer: &#x27;authorizer:osf-token&#x27;,
     host: config.OSF.apiUrl,
@@ -102,97 +171,270 @@ export default DS.JSONAPIAdapter.extend(HasManyQuery.RESTAdapterMixin, DataAdapt
         // Fix issue where CORS request failed on 301s: Ember does not seem to append trailing
         // slash to URLs for single documents, but DRF redirects to force a trailing slash
         var url = this._super(...arguments);
+        var options = (snapshot ? snapshot.adapterOptions : false) || {};
         if (requestType === &#x27;deleteRecord&#x27; || requestType === &#x27;updateRecord&#x27; || requestType === &#x27;findRecord&#x27;) {
             if (snapshot.record.get(&#x27;links.self&#x27;)) {
                 url = snapshot.record.get(&#x27;links.self&#x27;);
             }
+        } else if (options.url) {
+            url = options.url;
         }
+
         if (url.lastIndexOf(&#x27;/&#x27;) !== url.length - 1) {
             url += &#x27;/&#x27;;
         }
         return url;
     },
     /**
-     * Construct a URL for a relationship create/update/delete. Has the same
-     * signature as buildURL, with the addition of a &#x27;relationship&#x27; param
+     * Construct a URL for a relationship create/update/delete.
      *
      * @method _buildRelationshipURL
+     * @private
+     * @param {DS.Snapshot} snapshot
      * @param {String} relationship the relationship to build a url for
      * @return {String} a URL
      **/
-    _buildRelationshipURL(modelName, id, snapshot, requestType, query, relationship) { // jshint ignore:line
+    _buildRelationshipURL(snapshot, relationship) {
         var links = relationship ? snapshot.record.get(
             &#x60;relationshipLinks.${Ember.String.underscore(relationship)}.links&#x60;
         ) : false;
         if (links &amp;&amp; (links.self || links.related)) {
             return links.self ? links.self.href : links.related.href;
-        } else {
-            return this.buildURL(...arguments);
         }
+        return null;
     },
-    _serializeHasMany(serialized) {
-        if (serialized.length &gt; 1) {
-            serialized = {
-                data: serialized.map(function(record) {
-                    var data = record.data;
-                    return data;
-                })
-            };
-        } else {
-            serialized = serialized[0];
-        }
-        return serialized;
-    },
-    _handleManyRequest(store, type, snapshot, query, relationship, serializer) {
-        var relationMeta = snapshot.record[relationship].meta();
-        var serialized = snapshot.hasMany(relationship)
-            .filter(each =&gt; each.record.isNewOrDirty())
-            .map(each =&gt; serializer.serialize(each));
-        var options = Ember.merge({
-                requestType: () =&gt; &#x27;PATCH&#x27;,
-                isBulk: serialized =&gt; serialized.length &gt; 1,
-                url: this._buildRelationshipURL(type.modelName, snapshot.id, snapshot, &#x27;updateRecord&#x27;, query, relationship),
-                serialized: this._serializeHasMany
-            },
-            relationMeta.options.updateRequest
-        );
-        return this.ajax(options.url, options.requestType(snapshot, relationship), {
-            data: options.serialized(serialized),
-            isBulk: options.isBulk(serialized)
-        }).then(() =&gt; snapshot.record.clearDirtyRelationship(relationMeta));
-
-    },
-    updateRecord(store, type, snapshot, _, query) {
-        var promises = null;
-        var dirtyRelationships = snapshot.record.get(&#x27;dirtyRelationships&#x27;);
-        if (dirtyRelationships.length) {
-            promises = dirtyRelationships.map(relationship =&gt; {
-                var relationMeta = snapshot.record[relationship].meta();
-                var serialized;
-                if (relationMeta.options.serializer) {
-                    serialized = relationMeta.options.serializer(snapshot.record);
-                } else {
-                    var serializer = store.serializerFor(inflector.singularize(relationMeta.type));
-                    if (relationMeta.kind === &#x27;hasMany&#x27;) {
-                        return this._handleManyRequest(store, type, snapshot, query, relationship, serializer);
-                    }
-                    serialized = serializer.serialize(snapshot.belongsTo(relationship));
-                }
-                var url = this._buildRelationshipURL(type.modelName, snapshot.id, snapshot, &#x27;updateRecord&#x27;, query, relationship);
-                return this.ajax(url, &#x27;PATCH&#x27;, {
-                    data: serialized
-                }).then(() =&gt; snapshot.record.clearDirtyRelationship(relationship));
-            });
-        }
-        if (Object.keys(snapshot.record.changedAttributes()).length) {
-            if (promises) {
-                return this._super(...arguments).then(response =&gt; Ember.RSVP.allSettled(promises).then(() =&gt; response));
+    /**
+     * Handle creation of related resources
+     *
+     * @method _createRelated
+     * @private
+     * @param {DS.Store} store
+     * @param {DS.Snapshot} snapshot snapshot of inverse record
+     * @param {DS.Snapshot[]} createdSnapshots
+     * @param {String} relationship
+     * @param {String} url
+     * @param {Boolean} isBulk
+     **/
+    _createRelated(store, snapshot, createdSnapshots, relationship, url, isBulk = false) { // jshint ignore:line
+        // TODO support bulk create?
+        // if (isBulk) {
+        //
+        // }
+        return createdSnapshots.map(s =&gt; s.record.save({
+            adapterOptions: {
+                nested: true,
+                url: url
             }
-            return this._super(...arguments);
-        } else if (promises) {
-            return Ember.RSVP.allSettled(promises).then(() =&gt; null);
+        }).then(res =&gt; {
+            createdSnapshots.forEach(s =&gt; snapshot.record.resolveRelationship(relationship).addCanonicalRecord(s));
+            return res;
+        }));
+    },
+    /**
+     * Handle add(s) of related resources. This differs from CREATEs in that the related
+     * record is already saved and is just being associated with the inverse record.
+     *
+     * @method _addRelated
+     * @private
+     * @param {DS.Store} store
+     * @param {DS.Snapshot} snapshot snapshot of inverse record
+     * @param {DS.Snapshot[]} addedSnapshots
+     * @param {String} relationship
+     * @param {String} url
+     * @param {Boolean} isBulk
+     **/
+    _addRelated(store, snapshot, addedSnapshots, relationship, url, isBulk = false) {
+        return this._doRelatedRequest(store, snapshot, addedSnapshots, relationship, url, &#x27;POST&#x27;, isBulk).then(res =&gt; {
+            addedSnapshots.forEach(function(s) {
+                snapshot.record.resolveRelationship(relationship).addCanonicalRecord(s);
+            });
+            return res;
+        });
+    },
+    /**
+     * Handle update(s) of related resources
+     *
+     * @method _updateRelated
+     * @private
+     * @param {DS.Store} store
+     * @param {DS.Snapshot} snapshot snapshot of inverse record
+     * @param {DS.Snapshot[]} updatedSnapshots
+     * @param {String} relationship
+     * @param {String} url
+     * @param {Boolean} isBulk
+     **/
+    _updateRelated(store, snapshot, updatedSnapshots, relationship, url, isBulk = false) {
+        return this._doRelatedRequest(store, snapshot, updatedSnapshots, relationship, url, &#x27;PATCH&#x27;, isBulk).then(res =&gt; {
+            var relatedType = singularize(snapshot.record[relationship].meta().type);
+            res.data.forEach(item =&gt; {
+                var record = store.push(store.normalize(relatedType, item));
+                snapshot.record.resolveRelationship(relationship).addCanonicalRecord(record._internalModel.createSnapshot());
+            });
+            return res;
+        });
+    },
+    /**
+     * Handle removal of related resources. This differs from DELETEs in that the related
+     * record is not deleted, just dissociated from the inverse record.
+     *
+     * @method _removeRelated
+     * @private
+     * @param {DS.Store} store
+     * @param {DS.Snapshot} snapshot snapshot of inverse record
+     * @param {DS.Snapshot[]} removedSnapshots
+     * @param {String} relationship
+     * @param {String} url
+     * @param {Boolean} isBulk
+     **/
+    _removeRelated(store, snapshot, removedSnapshots, relationship, url, isBulk = false) {
+        return this._doRelatedRequest(store, snapshot, removedSnapshots, relationship, url, &#x27;DELETE&#x27;, isBulk).then(res =&gt; {
+            removedSnapshots.forEach(s =&gt; snapshot.record.resolveRelationship(relationship).removeCanonicalRecord(s));
+            return res || [];
+        });
+    },
+    /**
+     * Handle deletion of related resources
+     *
+     * @method _deleteRelated
+     * @private
+     * @param {DS.Store} store
+     * @param {DS.Snapshot} snapshot snapshot of inverse record
+     * @param {DS.Snapshot[]} deletedSnapshots
+     * @param {String} relationship
+     * @param {String} url
+     * @param {Boolean} isBulk
+     **/
+    _deleteRelated(store, snapshot, deletedSnapshots, relationship, url, isBulk = false) { // jshint ignore:line
+        if (isBulk) {
+            return this._removeRelated(...arguments).then(() =&gt; {
+                deletedSnapshots.forEach(s =&gt; s.record.unloadRecord());
+            });
         } else {
-            return new Ember.RSVP.Promise((resolve) =&gt; resolve(null));
+            return Ember.RSVP.allSettled(deletedSnapshots.map(r =&gt; r.record.unloadRecord()));
+        }
+    },
+    /**
+     * A helper for making _*Related requests
+     *
+     * @method _doRelatedRequest
+     * @private
+     * @param {DS.Store} store
+     * @param {DS.Snapshot} snapshot snapshot of inverse record
+     * @param {DS.Snapshot[]} relatedSnapshots
+     * @param {String} relationship
+     * @param {String} url
+     * @param {String} requestMethod
+     * @param {Boolean} isBulk
+     **/
+    _doRelatedRequest(store, snapshot, relatedSnapshots, relationship, url, requestMethod, isBulk = false) {
+        var data = {};
+        var relatedMeta = snapshot.record[relationship].meta();
+        var type = singularize(relatedMeta.type);
+        var serializer = store.serializerFor(type);
+        if (relatedMeta.options.serializerType) {
+            serializer = store.serializerFor(relatedMeta.options.serializerType);
+        }
+        if (Ember.isArray(relatedSnapshots)) {
+            data.data = relatedSnapshots.map(relatedSnapshot =&gt; {
+                var item = {};
+                serializer.serializeIntoHash(
+                    item,
+                    store.modelFor(type),
+                    relatedSnapshot, {
+                        forRelationship: true,
+                        isBulk: isBulk
+                    }
+                );
+                if (Ember.isArray(item.data) &amp;&amp; item.data.length === 1) {
+                    return item.data[0];
+                }
+                return item.data;
+            });
+        } else {
+            serializer.serializeIntoHash(
+                data,
+                store.modelFor(type),
+                relatedSnapshots, {
+                    forRelationship: true,
+                    isBulk: isBulk
+                }
+            );
+        }
+        return this.ajax(url, requestMethod, {
+            data: data,
+            isBulk: isBulk
+        }).then(res =&gt; {
+            if (!Ember.$.isArray(res.data)) {
+                res.data = [res.data];
+            }
+            return res;
+        });
+    },
+    /**
+     * Delegate a series of requests based on a snapshot, relationship, and a change.
+     * The change argument can be &#x27;delete&#x27;, &#x27;remove&#x27;, &#x27;update&#x27;, &#x27;add&#x27;, &#x27;create&#x27;
+     *
+     * @method _handleRelatedRequest
+     * @private
+     * @param {DS.Store} store
+     * @param {DS.Model} type
+     * @param {DS.Snapshot} snapshot
+     * @param {String} relationship
+     * @param {String} change
+     **/
+    _handleRelatedRequest(store, type, snapshot, relationship, change) {
+        var related = snapshot.record.get(&#x60;_dirtyRelationships.${relationship}.${change}&#x60;).map(function(r) {
+            if (r._internalModel) {
+                return r;
+            }
+            return r.createSnapshot();
+        });
+        if (!related.length) {
+            return [];
+        }
+
+        var relatedMeta = snapshot.record[relationship].meta();
+        var url = this._buildRelationshipURL(snapshot, relationship);
+        var adapter = store.adapterFor(type.modelName);
+        var allowBulk = relatedMeta.options[&#x60;allowBulk${Ember.String.capitalize(change)}&#x60;];
+
+        if (related.record) {
+            related = [related];
+        }
+
+        var response;
+        response = adapter[&#x60;_${change}Related&#x60;](
+                    store,
+                    snapshot,
+                    related,
+                    relationship,
+                    url,
+                    allowBulk
+        );
+        return response;
+    },
+    updateRecord(store, type, snapshot) {
+        var relatedRequests = {};
+        var dirtyRelationships = snapshot.record.get(&#x27;_dirtyRelationships&#x27;);
+        Object.keys(dirtyRelationships).forEach(relationship =&gt; {
+            var promises = [];
+            var changed = dirtyRelationships[relationship];
+            Object.keys(changed).forEach(change =&gt; {
+                promises = promises.concat(
+                    this._handleRelatedRequest(
+                        store, type, snapshot, relationship, change
+                    ) || []
+                );
+            });
+            if (promises.length) {
+                relatedRequests[relationship] = Ember.RSVP.allSettled(promises);
+            }
+        });
+        var relatedPromise = Ember.RSVP.hashSettled(relatedRequests);
+        if (Object.keys(snapshot.record.changedAttributes()).length) {
+            return this._super(...arguments).then(response =&gt; relatedPromise.then(() =&gt; response));
+        } else {
+            return relatedPromise.then(() =&gt; null);
         }
     },
     ajaxOptions(_, __, options) {
@@ -205,7 +447,7 @@ export default DS.JSONAPIAdapter.extend(HasManyQuery.RESTAdapterMixin, DataAdapt
     pathForType(modelName) {
         var underscored = Ember.String.underscore(modelName);
         return Ember.String.pluralize(underscored);
-    },
+    }
 });
 
     </pre>

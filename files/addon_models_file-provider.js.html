@@ -38,13 +38,72 @@
                 
                         <div id="api-tabview-panel">
                             <ul id="api-classes" class="apis classes">
-                                <li><a href="../classes/EmberOSF.InfinityCustomMixin.html">EmberOSF.InfinityCustomMixin</a></li>
+                                <li><a href="../classes/Collection.html">Collection</a></li>
+                                <li><a href="../classes/Comment.html">Comment</a></li>
+                                <li><a href="../classes/comment-detail.html">comment-detail</a></li>
+                                <li><a href="../classes/comment-form.html">comment-form</a></li>
+                                <li><a href="../classes/comment-pane.html">comment-pane</a></li>
+                                <li><a href="../classes/CommentableMixin.html">CommentableMixin</a></li>
+                                <li><a href="../classes/CommentReport.html">CommentReport</a></li>
+                                <li><a href="../classes/Contributor.html">Contributor</a></li>
+                                <li><a href="../classes/current-user.html">current-user</a></li>
+                                <li><a href="../classes/DraftRegistration.html">DraftRegistration</a></li>
+                                <li><a href="../classes/dropzone-widget.html">dropzone-widget</a></li>
+                                <li><a href="../classes/FetchAllRouteMixin.html">FetchAllRouteMixin</a></li>
+                                <li><a href="../classes/File.html">File</a></li>
+                                <li><a href="../classes/file-browser.html">file-browser</a></li>
+                                <li><a href="../classes/file-browser-icon.html">file-browser-icon</a></li>
+                                <li><a href="../classes/file-chooser component.html">file-chooser component</a></li>
                                 <li><a href="../classes/file-manager.html">file-manager</a></li>
+                                <li><a href="../classes/file-renderer.html">file-renderer</a></li>
+                                <li><a href="../classes/file-version.html">file-version</a></li>
+                                <li><a href="../classes/file-widget.html">file-widget</a></li>
+                                <li><a href="../classes/FileCacheBypassMixin.html">FileCacheBypassMixin</a></li>
+                                <li><a href="../classes/FileItemMixin.html">FileItemMixin</a></li>
+                                <li><a href="../classes/FileProvider.html">FileProvider</a></li>
+                                <li><a href="../classes/FileVersion.html">FileVersion</a></li>
+                                <li><a href="../classes/InfinityCustomMixin.html">InfinityCustomMixin</a></li>
+                                <li><a href="../classes/Institution.html">Institution</a></li>
+                                <li><a href="../classes/Log.html">Log</a></li>
+                                <li><a href="../classes/Metaschema.html">Metaschema</a></li>
+                                <li><a href="../classes/Node.html">Node</a></li>
+                                <li><a href="../classes/NodeActionsMixin.html">NodeActionsMixin</a></li>
+                                <li><a href="../classes/NodeLink.html">NodeLink</a></li>
+                                <li><a href="../classes/oauth-popup.html">oauth-popup</a></li>
+                                <li><a href="../classes/osf-copyright.html">osf-copyright</a></li>
+                                <li><a href="../classes/osf-footer.html">osf-footer</a></li>
+                                <li><a href="../classes/osf-mode-footer.html">osf-mode-footer</a></li>
+                                <li><a href="../classes/osf-navbar.html">osf-navbar</a></li>
+                                <li><a href="../classes/OsfAdapter.html">OsfAdapter</a></li>
+                                <li><a href="../classes/OsfLoginControllerMixin.html">OsfLoginControllerMixin</a></li>
+                                <li><a href="../classes/OsfLoginRouteMixin.html">OsfLoginRouteMixin</a></li>
+                                <li><a href="../classes/OsfModel.html">OsfModel</a></li>
+                                <li><a href="../classes/OsfSerializer.html">OsfSerializer</a></li>
+                                <li><a href="../classes/OsfTokenAuthenticator.html">OsfTokenAuthenticator</a></li>
+                                <li><a href="../classes/OsfTokenAuthorizer.html">OsfTokenAuthorizer</a></li>
+                                <li><a href="../classes/PaginatedControllerMixin.html">PaginatedControllerMixin</a></li>
+                                <li><a href="../classes/PaginatedRouteMixin.html">PaginatedRouteMixin</a></li>
+                                <li><a href="../classes/pagination-control.html">pagination-control</a></li>
+                                <li><a href="../classes/Registration.html">Registration</a></li>
+                                <li><a href="../classes/RegistrationActionsMixin.html">RegistrationActionsMixin</a></li>
+                                <li><a href="../classes/search-dropdown.html">search-dropdown</a></li>
+                                <li><a href="../classes/sign-up.html">sign-up</a></li>
+                                <li><a href="../classes/TaggableMixin.html">TaggableMixin</a></li>
+                                <li><a href="../classes/tags-widget.html">tags-widget</a></li>
+                                <li><a href="../classes/User.html">User</a></li>
                             </ul>
                 
                 
                             <ul id="api-modules" class="apis modules">
-                                <li><a href="../modules/ember-osf_mixins_infinity-custom.html">ember-osf/mixins/infinity-custom</a></li>
+                                <li><a href="../modules/adapters.html">adapters</a></li>
+                                <li><a href="../modules/authenticators.html">authenticators</a></li>
+                                <li><a href="../modules/authorizers.html">authorizers</a></li>
+                                <li><a href="../modules/components.html">components</a></li>
+                                <li><a href="../modules/ember-osf.html">ember-osf</a></li>
+                                <li><a href="../modules/mixins.html">mixins</a></li>
+                                <li><a href="../modules/models.html">models</a></li>
+                                <li><a href="../modules/serializers.html">serializers</a></li>
+                                <li><a href="../modules/services.html">services</a></li>
                             </ul>
                         </div>
                     </div>
@@ -82,29 +141,32 @@
 
 <div class="file">
     <pre class="code prettyprint linenums">
-import Ember from &#x27;ember&#x27;;
 import DS from &#x27;ember-data&#x27;;
 
 import OsfModel from &#x27;./osf-model&#x27;;
+import FileItemMixin from &#x27;ember-osf/mixins/file-item&#x27;;
+
+/**
+ * @module ember-osf
+ * @submodule models
+ */
 
 /**
  * Model for OSF APIv2 file providers. Primarily used in relationship fields.
  * This model is used for basic file provider metadata. To interact with file contents directly, see the &#x60;file-manager&#x60; service.
  * For field and usage information, see:
- *    https://api.osf.io/v2/docs/#!/v2/Node_Providers_List_GET
- *    https://api.osf.io/v2/docs/#!/v2/Node_Provider_Detail_GET
- *    https://api.osf.io/v2/docs/#!/v2/Registration_Providers_List_GET
-*/
-export default OsfModel.extend({
+ * * https://api.osf.io/v2/docs/#!/v2/Node_Providers_List_GET
+ * * https://api.osf.io/v2/docs/#!/v2/Node_Provider_Detail_GET
+ * * https://api.osf.io/v2/docs/#!/v2/Registration_Providers_List_GET
+ * @class FileProvider
+ */
+export default OsfModel.extend(FileItemMixin, {
     name: DS.attr(&#x27;string&#x27;),
     kind: DS.attr(&#x27;string&#x27;),
     path: DS.attr(&#x27;string&#x27;),
     provider: DS.attr(&#x27;string&#x27;),
     files: DS.hasMany(&#x27;file&#x27;),
-    node: DS.belongsTo(&#x27;node&#x27;),
-
-    isFolder: Ember.computed.equal(&#x27;kind&#x27;, &#x27;folder&#x27;),
-    isProvider: true
+    node: DS.belongsTo(&#x27;node&#x27;)
 });
 
     </pre>

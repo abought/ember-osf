@@ -38,13 +38,72 @@
                 
                         <div id="api-tabview-panel">
                             <ul id="api-classes" class="apis classes">
-                                <li><a href="../classes/EmberOSF.InfinityCustomMixin.html">EmberOSF.InfinityCustomMixin</a></li>
+                                <li><a href="../classes/Collection.html">Collection</a></li>
+                                <li><a href="../classes/Comment.html">Comment</a></li>
+                                <li><a href="../classes/comment-detail.html">comment-detail</a></li>
+                                <li><a href="../classes/comment-form.html">comment-form</a></li>
+                                <li><a href="../classes/comment-pane.html">comment-pane</a></li>
+                                <li><a href="../classes/CommentableMixin.html">CommentableMixin</a></li>
+                                <li><a href="../classes/CommentReport.html">CommentReport</a></li>
+                                <li><a href="../classes/Contributor.html">Contributor</a></li>
+                                <li><a href="../classes/current-user.html">current-user</a></li>
+                                <li><a href="../classes/DraftRegistration.html">DraftRegistration</a></li>
+                                <li><a href="../classes/dropzone-widget.html">dropzone-widget</a></li>
+                                <li><a href="../classes/FetchAllRouteMixin.html">FetchAllRouteMixin</a></li>
+                                <li><a href="../classes/File.html">File</a></li>
+                                <li><a href="../classes/file-browser.html">file-browser</a></li>
+                                <li><a href="../classes/file-browser-icon.html">file-browser-icon</a></li>
+                                <li><a href="../classes/file-chooser component.html">file-chooser component</a></li>
                                 <li><a href="../classes/file-manager.html">file-manager</a></li>
+                                <li><a href="../classes/file-renderer.html">file-renderer</a></li>
+                                <li><a href="../classes/file-version.html">file-version</a></li>
+                                <li><a href="../classes/file-widget.html">file-widget</a></li>
+                                <li><a href="../classes/FileCacheBypassMixin.html">FileCacheBypassMixin</a></li>
+                                <li><a href="../classes/FileItemMixin.html">FileItemMixin</a></li>
+                                <li><a href="../classes/FileProvider.html">FileProvider</a></li>
+                                <li><a href="../classes/FileVersion.html">FileVersion</a></li>
+                                <li><a href="../classes/InfinityCustomMixin.html">InfinityCustomMixin</a></li>
+                                <li><a href="../classes/Institution.html">Institution</a></li>
+                                <li><a href="../classes/Log.html">Log</a></li>
+                                <li><a href="../classes/Metaschema.html">Metaschema</a></li>
+                                <li><a href="../classes/Node.html">Node</a></li>
+                                <li><a href="../classes/NodeActionsMixin.html">NodeActionsMixin</a></li>
+                                <li><a href="../classes/NodeLink.html">NodeLink</a></li>
+                                <li><a href="../classes/oauth-popup.html">oauth-popup</a></li>
+                                <li><a href="../classes/osf-copyright.html">osf-copyright</a></li>
+                                <li><a href="../classes/osf-footer.html">osf-footer</a></li>
+                                <li><a href="../classes/osf-mode-footer.html">osf-mode-footer</a></li>
+                                <li><a href="../classes/osf-navbar.html">osf-navbar</a></li>
+                                <li><a href="../classes/OsfAdapter.html">OsfAdapter</a></li>
+                                <li><a href="../classes/OsfLoginControllerMixin.html">OsfLoginControllerMixin</a></li>
+                                <li><a href="../classes/OsfLoginRouteMixin.html">OsfLoginRouteMixin</a></li>
+                                <li><a href="../classes/OsfModel.html">OsfModel</a></li>
+                                <li><a href="../classes/OsfSerializer.html">OsfSerializer</a></li>
+                                <li><a href="../classes/OsfTokenAuthenticator.html">OsfTokenAuthenticator</a></li>
+                                <li><a href="../classes/OsfTokenAuthorizer.html">OsfTokenAuthorizer</a></li>
+                                <li><a href="../classes/PaginatedControllerMixin.html">PaginatedControllerMixin</a></li>
+                                <li><a href="../classes/PaginatedRouteMixin.html">PaginatedRouteMixin</a></li>
+                                <li><a href="../classes/pagination-control.html">pagination-control</a></li>
+                                <li><a href="../classes/Registration.html">Registration</a></li>
+                                <li><a href="../classes/RegistrationActionsMixin.html">RegistrationActionsMixin</a></li>
+                                <li><a href="../classes/search-dropdown.html">search-dropdown</a></li>
+                                <li><a href="../classes/sign-up.html">sign-up</a></li>
+                                <li><a href="../classes/TaggableMixin.html">TaggableMixin</a></li>
+                                <li><a href="../classes/tags-widget.html">tags-widget</a></li>
+                                <li><a href="../classes/User.html">User</a></li>
                             </ul>
                 
                 
                             <ul id="api-modules" class="apis modules">
-                                <li><a href="../modules/ember-osf_mixins_infinity-custom.html">ember-osf/mixins/infinity-custom</a></li>
+                                <li><a href="../modules/adapters.html">adapters</a></li>
+                                <li><a href="../modules/authenticators.html">authenticators</a></li>
+                                <li><a href="../modules/authorizers.html">authorizers</a></li>
+                                <li><a href="../modules/components.html">components</a></li>
+                                <li><a href="../modules/ember-osf.html">ember-osf</a></li>
+                                <li><a href="../modules/mixins.html">mixins</a></li>
+                                <li><a href="../modules/models.html">models</a></li>
+                                <li><a href="../modules/serializers.html">serializers</a></li>
+                                <li><a href="../modules/services.html">services</a></li>
                             </ul>
                         </div>
                     </div>
@@ -82,16 +141,42 @@
 
 <div class="file">
     <pre class="code prettyprint linenums">
-
 import Ember from &#x27;ember&#x27;;
 
+/**
+ * @module ember-osf
+ * @submodule mixins
+ */
+
+/**
+ * Controller mixin that implements common actions performed on registrations (and registration drafts).
+ * @class RegistrationActionsMixin
+ * @extends Ember.Mixin
+ */
 export default Ember.Mixin.create({
+    /**
+     * TODO: Document this parameter
+     * @property node
+     * @type DS.Model
+     */
     node: null,
+    /**
+     * The draft to perform these actions on. If not specified, defaults to the model hook.
+     * @property draft
+     * @type DS.Model
+     */
     draft: null,
     model: null,
     _draft: Ember.computed.or(&#x27;draft&#x27;, &#x27;model&#x27;),
-    /** Updates current registration metadata with new responses to questions.
-     **/
+    /**
+     * Update the current registration metadata with new responses. Takes the
+     * currentMetadata and recursively merges in the newMetadata.
+     *
+     * @method _updateMetadata
+     * @param {Object} currentMetadata The registration metadata at last save.
+     * @param {Object} newMetadata New registration metadata.
+     * @return {Object} Returns merge of currentMetadata and newMetadata
+     */
     _updateMetadata(currentMetadata, newMetadata) {
         var map = new Map(Object.entries(newMetadata));
         for (let items of map.entries()) {
@@ -106,6 +191,16 @@ export default Ember.Mixin.create({
         }
         return currentMetadata;
     },
+    /**
+     * Build the request payload used when creating a registration from a draft.
+     *
+     * @method _generateRegistrationPayload
+     * @private
+     * @param {String} draft ID of the draft registration
+     * @param {String} registrationChoice Either &quot;immediate&quot; or &quot;embargo&quot;.
+     * @param {Date} liftEmbargo if registrationChoice === &quot;embargo&quot;, liftEmbargo should be the date to lift the embargo.
+     * @return {Object} Returns the attributes portion of the payload for creating a registration.
+     */
     _generateRegistrationPayload(draft, registrationChoice, liftEmbargo) {
         var registrationPayload = {
             draftRegistration: draft.id,
@@ -117,6 +212,14 @@ export default Ember.Mixin.create({
         return registrationPayload;
     },
     actions: {
+        /**
+         * Create a draft registration of the node.
+         *
+         * @method createDraft
+         * @param {String} schemaId ID of the chosen registration schema
+         * @return {Promise} Returns a promise that resolves to the updated node - with the
+         * newly created draft registration.
+         */
         createDraft(schemaId) {
             var node = this.get(&#x27;node&#x27;);
             var draft = this.store.createRecord(&#x27;draft-registration&#x27;, {
@@ -125,9 +228,25 @@ export default Ember.Mixin.create({
             node.get(&#x27;draftRegistrations&#x27;).pushObject(draft);
             return node.save();
         },
+        /**
+         * Delete a draft registration of the node.
+         *
+         * @method deleteDraft
+         * @param {Object} draft Draft to be deleted
+         * @return {Promise} Returns a promise that resolves after the deletion of the draft.
+         */
         deleteDraft(draft) {
             return draft.destroyRecord();
         },
+        /**
+         * Edit a draft registration of the node
+         *
+         * @method editDraft
+         * @param {Object} updatedMetadata Responses to questions in the registration
+         * schema, nested in the format the registration schema expects
+         * to questions in the registration schema
+         * @return {Promise} Returns a promise that resolves to the updated draft
+         */
         editDraft(updatedMetadata) {
             var draft = this.get(&#x27;_draft&#x27;);
             var metadataClone = JSON.parse(JSON.stringify(draft.get(&#x27;registrationMetadata&#x27;)));
@@ -135,10 +254,20 @@ export default Ember.Mixin.create({
             draft.set(&#x27;registrationMetadata&#x27;, updatedRegistrationMetadata);
             return draft.save();
         },
+        /**
+         * Register a draft (creates a registration from a draft)
+         *
+         * @method registerDraft
+         * @param {Object} updatedMetadata esponses to questions in the registration
+         * schema, nested in the format the registration schema expects
+         * @param {String} registrationChoice Either &quot;immediate&quot; or &quot;embargo&quot;.
+         * @param {Date} liftEmbargo if registrationChoice === &quot;embargo&quot;, liftEmbargo should be the date to lift the embargo.
+         * @return {Promise} Returns a promise that resolves to the updated node with the newly created registration relationship
+         */
         registerDraft(updatedMetadata, registrationChoice, liftEmbargo) {
             var node = this.get(&#x27;node&#x27;);
             var draft = this.get(&#x27;_draft&#x27;);
-            // May need to update metdata one last time
+            // Update metadata one last time if changes have been made since last save.
             if (Object.keys(updatedMetadata).length !== 0) {
                 this.send(&#x27;editDraft&#x27;, updatedMetadata, &#x27;registration&#x27;);
             }

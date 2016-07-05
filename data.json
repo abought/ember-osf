@@ -9,168 +9,492 @@
     "files": {
         "addon/adapters/osf-adapter.js": {
             "name": "addon/adapters/osf-adapter.js",
+            "modules": {
+                "adapters": 1
+            },
+            "classes": {
+                "OsfAdapter": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "addon/authenticators/osf-token.js": {
+            "name": "addon/authenticators/osf-token.js",
+            "modules": {
+                "authenticators": 1
+            },
+            "classes": {
+                "OsfTokenAuthenticator": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "addon/authorizers/osf-token.js": {
+            "name": "addon/authorizers/osf-token.js",
+            "modules": {
+                "authorizers": 1
+            },
+            "classes": {
+                "OsfTokenAuthorizer": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "addon/components/comment-detail/component.js": {
+            "name": "addon/components/comment-detail/component.js",
+            "modules": {
+                "components": 1
+            },
+            "classes": {
+                "comment-detail": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "addon/components/comment-form/component.js": {
+            "name": "addon/components/comment-form/component.js",
+            "modules": {},
+            "classes": {
+                "comment-form": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "addon/components/comment-pane/component.js": {
+            "name": "addon/components/comment-pane/component.js",
+            "modules": {},
+            "classes": {
+                "comment-pane": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "addon/components/dropzone-widget/component.js": {
+            "name": "addon/components/dropzone-widget/component.js",
+            "modules": {},
+            "classes": {
+                "dropzone-widget": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "addon/components/file-browser/component.js": {
+            "name": "addon/components/file-browser/component.js",
+            "modules": {},
+            "classes": {
+                "file-browser": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "addon/components/file-browser-icon/component.js": {
+            "name": "addon/components/file-browser-icon/component.js",
+            "modules": {},
+            "classes": {
+                "file-browser-icon": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "addon/components/file-browser-item/component.js": {
+            "name": "addon/components/file-browser-item/component.js",
             "modules": {},
             "classes": {},
             "fors": {},
             "namespaces": {}
         },
-        "addon/components/file-browser-tree/component.js": {
-            "name": "addon/components/file-browser-tree/component.js",
+        "addon/components/file-chooser/component.js": {
+            "name": "addon/components/file-chooser/component.js",
             "modules": {},
-            "classes": {},
+            "classes": {
+                "file-chooser component": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "addon/components/file-renderer/component.js": {
+            "name": "addon/components/file-renderer/component.js",
+            "modules": {},
+            "classes": {
+                "file-renderer": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "addon/components/file-version/component.js": {
+            "name": "addon/components/file-version/component.js",
+            "modules": {},
+            "classes": {
+                "file-version": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "addon/components/file-widget/component.js": {
+            "name": "addon/components/file-widget/component.js",
+            "modules": {},
+            "classes": {
+                "file-widget": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "addon/components/oauth-popup/component.js": {
+            "name": "addon/components/oauth-popup/component.js",
+            "modules": {},
+            "classes": {
+                "oauth-popup": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "addon/components/osf-copyright/component.js": {
+            "name": "addon/components/osf-copyright/component.js",
+            "modules": {},
+            "classes": {
+                "osf-copyright": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "addon/components/osf-footer/component.js": {
+            "name": "addon/components/osf-footer/component.js",
+            "modules": {},
+            "classes": {
+                "osf-footer": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "addon/components/osf-mode-footer/component.js": {
+            "name": "addon/components/osf-mode-footer/component.js",
+            "modules": {},
+            "classes": {
+                "osf-mode-footer": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "addon/components/osf-navbar/component.js": {
+            "name": "addon/components/osf-navbar/component.js",
+            "modules": {},
+            "classes": {
+                "osf-navbar": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "addon/components/pagination-control/component.js": {
+            "name": "addon/components/pagination-control/component.js",
+            "modules": {},
+            "classes": {
+                "pagination-control": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "addon/components/search-dropdown/component.js": {
+            "name": "addon/components/search-dropdown/component.js",
+            "modules": {},
+            "classes": {
+                "search-dropdown": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "addon/components/sign-up/component.js": {
+            "name": "addon/components/sign-up/component.js",
+            "modules": {},
+            "classes": {
+                "sign-up": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "addon/components/tags-widget/component.js": {
+            "name": "addon/components/tags-widget/component.js",
+            "modules": {},
+            "classes": {
+                "tags-widget": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "addon/mixins/commentable.js": {
+            "name": "addon/mixins/commentable.js",
+            "modules": {
+                "mixins": 1
+            },
+            "classes": {
+                "CommentableMixin": 1
+            },
             "fors": {},
             "namespaces": {}
         },
         "addon/mixins/fetch-all-route.js": {
             "name": "addon/mixins/fetch-all-route.js",
             "modules": {},
-            "classes": {},
+            "classes": {
+                "FetchAllRouteMixin": 1
+            },
             "fors": {},
             "namespaces": {}
         },
         "addon/mixins/file-cache-bypass.js": {
             "name": "addon/mixins/file-cache-bypass.js",
             "modules": {},
-            "classes": {},
+            "classes": {
+                "FileCacheBypassMixin": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "addon/mixins/file-item.js": {
+            "name": "addon/mixins/file-item.js",
+            "modules": {},
+            "classes": {
+                "FileItemMixin": 1
+            },
             "fors": {},
             "namespaces": {}
         },
         "addon/mixins/infinity-custom.js": {
             "name": "addon/mixins/infinity-custom.js",
-            "modules": {
-                "ember-osf/mixins/infinity-custom": 1
-            },
+            "modules": {},
             "classes": {
-                "EmberOSF.InfinityCustomMixin": 1
+                "InfinityCustomMixin": 1
             },
             "fors": {},
-            "namespaces": {
-                "EmberOSF": 1
-            }
+            "namespaces": {}
         },
         "addon/mixins/node-actions.js": {
             "name": "addon/mixins/node-actions.js",
             "modules": {},
-            "classes": {},
+            "classes": {
+                "NodeActionsMixin": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "addon/mixins/osf-login-controller.js": {
+            "name": "addon/mixins/osf-login-controller.js",
+            "modules": {},
+            "classes": {
+                "OsfLoginControllerMixin": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "addon/mixins/osf-login-route.js": {
+            "name": "addon/mixins/osf-login-route.js",
+            "modules": {},
+            "classes": {
+                "OsfLoginRouteMixin": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "addon/mixins/paginated-controller.js": {
+            "name": "addon/mixins/paginated-controller.js",
+            "modules": {},
+            "classes": {
+                "PaginatedControllerMixin": 1
+            },
             "fors": {},
             "namespaces": {}
         },
         "addon/mixins/paginated-route.js": {
             "name": "addon/mixins/paginated-route.js",
             "modules": {},
-            "classes": {},
+            "classes": {
+                "PaginatedRouteMixin": 1
+            },
             "fors": {},
             "namespaces": {}
         },
         "addon/mixins/registration-actions.js": {
             "name": "addon/mixins/registration-actions.js",
             "modules": {},
-            "classes": {},
+            "classes": {
+                "RegistrationActionsMixin": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "addon/mixins/taggable-mixin.js": {
+            "name": "addon/mixins/taggable-mixin.js",
+            "modules": {},
+            "classes": {
+                "TaggableMixin": 1
+            },
             "fors": {},
             "namespaces": {}
         },
         "addon/models/collection.js": {
             "name": "addon/models/collection.js",
-            "modules": {},
-            "classes": {},
+            "modules": {
+                "models": 1
+            },
+            "classes": {
+                "Collection": 1
+            },
             "fors": {},
             "namespaces": {}
         },
         "addon/models/comment-report.js": {
             "name": "addon/models/comment-report.js",
             "modules": {},
-            "classes": {},
+            "classes": {
+                "CommentReport": 1
+            },
             "fors": {},
             "namespaces": {}
         },
         "addon/models/comment.js": {
             "name": "addon/models/comment.js",
             "modules": {},
-            "classes": {},
+            "classes": {
+                "Comment": 1
+            },
             "fors": {},
             "namespaces": {}
         },
         "addon/models/contributor.js": {
             "name": "addon/models/contributor.js",
             "modules": {},
-            "classes": {},
+            "classes": {
+                "Contributor": 1
+            },
             "fors": {},
             "namespaces": {}
         },
         "addon/models/draft-registration.js": {
             "name": "addon/models/draft-registration.js",
             "modules": {},
-            "classes": {},
+            "classes": {
+                "DraftRegistration": 1
+            },
             "fors": {},
             "namespaces": {}
         },
         "addon/models/file-provider.js": {
             "name": "addon/models/file-provider.js",
             "modules": {},
-            "classes": {},
+            "classes": {
+                "FileProvider": 1
+            },
             "fors": {},
             "namespaces": {}
         },
         "addon/models/file-version.js": {
             "name": "addon/models/file-version.js",
             "modules": {},
-            "classes": {},
+            "classes": {
+                "FileVersion": 1
+            },
             "fors": {},
             "namespaces": {}
         },
         "addon/models/file.js": {
             "name": "addon/models/file.js",
             "modules": {},
-            "classes": {},
+            "classes": {
+                "File": 1
+            },
             "fors": {},
             "namespaces": {}
         },
         "addon/models/institution.js": {
             "name": "addon/models/institution.js",
             "modules": {},
-            "classes": {},
+            "classes": {
+                "Institution": 1
+            },
             "fors": {},
             "namespaces": {}
         },
         "addon/models/log.js": {
             "name": "addon/models/log.js",
             "modules": {},
-            "classes": {},
+            "classes": {
+                "Log": 1
+            },
             "fors": {},
             "namespaces": {}
         },
         "addon/models/metaschema.js": {
             "name": "addon/models/metaschema.js",
             "modules": {},
-            "classes": {},
+            "classes": {
+                "Metaschema": 1
+            },
             "fors": {},
             "namespaces": {}
         },
         "addon/models/node-link.js": {
             "name": "addon/models/node-link.js",
             "modules": {},
-            "classes": {},
+            "classes": {
+                "NodeLink": 1
+            },
             "fors": {},
             "namespaces": {}
         },
         "addon/models/node.js": {
             "name": "addon/models/node.js",
             "modules": {},
-            "classes": {},
+            "classes": {
+                "Node": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "addon/models/osf-model.js": {
+            "name": "addon/models/osf-model.js",
+            "modules": {},
+            "classes": {
+                "OsfModel": 1
+            },
             "fors": {},
             "namespaces": {}
         },
         "addon/models/registration.js": {
             "name": "addon/models/registration.js",
             "modules": {},
-            "classes": {},
+            "classes": {
+                "Registration": 1
+            },
             "fors": {},
             "namespaces": {}
         },
         "addon/models/user.js": {
             "name": "addon/models/user.js",
             "modules": {},
-            "classes": {},
+            "classes": {
+                "User": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "addon/serializers/osf-serializer.js": {
+            "name": "addon/serializers/osf-serializer.js",
+            "modules": {
+                "serializers": 1
+            },
+            "classes": {
+                "OsfSerializer": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "addon/services/current-user.js": {
+            "name": "addon/services/current-user.js",
+            "modules": {
+                "services": 1
+            },
+            "classes": {
+                "current-user": 1
+            },
             "fors": {},
             "namespaces": {}
         },
@@ -182,54 +506,1133 @@
             },
             "fors": {},
             "namespaces": {}
-        },
-        "addon/utils/array-items-are-equal.js": {
-            "name": "addon/utils/array-items-are-equal.js",
-            "modules": {},
-            "classes": {},
-            "fors": {},
-            "namespaces": {}
-        },
-        "addon/utils/serialize-relationship.js": {
-            "name": "addon/utils/serialize-relationship.js",
-            "modules": {},
-            "classes": {},
-            "fors": {},
-            "namespaces": {}
         }
     },
     "modules": {
-        "ember-osf/mixins/infinity-custom": {
-            "name": "ember-osf/mixins/infinity-custom",
-            "submodules": {},
+        "ember-osf": {
+            "name": "ember-osf",
+            "submodules": {
+                "adapters": 1,
+                "authenticators": 1,
+                "authorizers": 1,
+                "components": 1,
+                "mixins": 1,
+                "models": 1,
+                "serializers": 1,
+                "services": 1
+            },
             "elements": {},
             "classes": {
-                "EmberOSF.InfinityCustomMixin": 1,
+                "OsfAdapter": 1,
+                "OsfTokenAuthenticator": 1,
+                "OsfTokenAuthorizer": 1,
+                "comment-detail": 1,
+                "comment-form": 1,
+                "comment-pane": 1,
+                "dropzone-widget": 1,
+                "file-browser": 1,
+                "file-browser-icon": 1,
+                "file-chooser component": 1,
+                "file-renderer": 1,
+                "file-version": 1,
+                "file-widget": 1,
+                "oauth-popup": 1,
+                "osf-copyright": 1,
+                "osf-footer": 1,
+                "osf-mode-footer": 1,
+                "osf-navbar": 1,
+                "pagination-control": 1,
+                "search-dropdown": 1,
+                "sign-up": 1,
+                "tags-widget": 1,
+                "CommentableMixin": 1,
+                "FetchAllRouteMixin": 1,
+                "FileCacheBypassMixin": 1,
+                "FileItemMixin": 1,
+                "InfinityCustomMixin": 1,
+                "NodeActionsMixin": 1,
+                "OsfLoginControllerMixin": 1,
+                "OsfLoginRouteMixin": 1,
+                "PaginatedControllerMixin": 1,
+                "PaginatedRouteMixin": 1,
+                "RegistrationActionsMixin": 1,
+                "TaggableMixin": 1,
+                "Collection": 1,
+                "CommentReport": 1,
+                "Comment": 1,
+                "Contributor": 1,
+                "DraftRegistration": 1,
+                "FileProvider": 1,
+                "FileVersion": 1,
+                "File": 1,
+                "Institution": 1,
+                "Log": 1,
+                "Metaschema": 1,
+                "NodeLink": 1,
+                "Node": 1,
+                "OsfModel": 1,
+                "Registration": 1,
+                "User": 1,
+                "OsfSerializer": 1,
+                "current-user": 1,
                 "file-manager": 1
             },
             "fors": {},
             "namespaces": {},
-            "tag": "module",
             "file": "addon/services/file-manager.js",
-            "line": 3,
-            "description": "A custom overlay on ember-infinity that supports loading infinite and paginated relationships\nFor the most part, the API and semantics are identical to ember infinity, except that the means of configuring the store find method is more flexible\n (supporting relationship queries that do not operate via store methods)"
+            "line": 8
+        },
+        "adapters": {
+            "name": "adapters",
+            "submodules": {},
+            "elements": {},
+            "classes": {
+                "OsfAdapter": 1
+            },
+            "fors": {},
+            "is_submodule": 1,
+            "namespaces": {},
+            "module": "ember-osf",
+            "namespace": "",
+            "file": "addon/adapters/osf-adapter.js",
+            "line": 15,
+            "description": "Base adapter class for all OSF APIv2 endpoints"
+        },
+        "authenticators": {
+            "name": "authenticators",
+            "submodules": {},
+            "elements": {},
+            "classes": {
+                "OsfTokenAuthenticator": 1
+            },
+            "fors": {},
+            "is_submodule": 1,
+            "namespaces": {},
+            "module": "ember-osf",
+            "namespace": "",
+            "file": "addon/authenticators/osf-token.js",
+            "line": 11,
+            "description": "Ember-simple-auth compatible authenticator based on OAuth2 bearer tokens.\n\nIntended to be used with the authenticator of the same name."
+        },
+        "authorizers": {
+            "name": "authorizers",
+            "submodules": {},
+            "elements": {},
+            "classes": {
+                "OsfTokenAuthorizer": 1
+            },
+            "fors": {},
+            "is_submodule": 1,
+            "namespaces": {},
+            "module": "ember-osf",
+            "namespace": "",
+            "file": "addon/authorizers/osf-token.js",
+            "line": 8,
+            "description": "Ember-simple-auth compatible authorizer based on OAuth2 bearer tokens.\n\nIntended to be used with the authenticator of the same name."
+        },
+        "components": {
+            "name": "components",
+            "submodules": {},
+            "elements": {},
+            "classes": {
+                "comment-detail": 1,
+                "comment-form": 1,
+                "comment-pane": 1,
+                "dropzone-widget": 1,
+                "file-browser": 1,
+                "file-browser-icon": 1,
+                "file-chooser component": 1,
+                "file-renderer": 1,
+                "file-version": 1,
+                "file-widget": 1,
+                "oauth-popup": 1,
+                "osf-copyright": 1,
+                "osf-footer": 1,
+                "osf-mode-footer": 1,
+                "osf-navbar": 1,
+                "pagination-control": 1,
+                "search-dropdown": 1,
+                "sign-up": 1,
+                "tags-widget": 1
+            },
+            "fors": {},
+            "is_submodule": 1,
+            "namespaces": {},
+            "module": "ember-osf",
+            "namespace": "",
+            "file": "addon/components/tags-widget/component.js",
+            "line": 9,
+            "description": "Display information about an individual comment, including controls to edit, delete, and report.\nThis component is typically used as part of the `comment-pane` component; see that component for further information.\n\nSample usage:\n```javascript\n{{comment-detail\n  comment=comment\n  editComment=attrs.editComment\n  deleteComment=attrs.deleteComment\n  restoreComment=attrs.restoreComment\n  reportComment=attrs.reportComment}}\n```"
+        },
+        "mixins": {
+            "name": "mixins",
+            "submodules": {},
+            "elements": {},
+            "classes": {
+                "CommentableMixin": 1,
+                "FetchAllRouteMixin": 1,
+                "FileCacheBypassMixin": 1,
+                "FileItemMixin": 1,
+                "InfinityCustomMixin": 1,
+                "NodeActionsMixin": 1,
+                "OsfLoginControllerMixin": 1,
+                "OsfLoginRouteMixin": 1,
+                "PaginatedControllerMixin": 1,
+                "PaginatedRouteMixin": 1,
+                "RegistrationActionsMixin": 1,
+                "TaggableMixin": 1
+            },
+            "fors": {},
+            "is_submodule": 1,
+            "namespaces": {},
+            "module": "ember-osf",
+            "namespace": "",
+            "file": "addon/mixins/taggable-mixin.js",
+            "line": 8,
+            "description": "Controller mixin that implements basic commenting functionality. Uses the base model in the route model hook."
+        },
+        "models": {
+            "name": "models",
+            "submodules": {},
+            "elements": {},
+            "classes": {
+                "Collection": 1,
+                "CommentReport": 1,
+                "Comment": 1,
+                "Contributor": 1,
+                "DraftRegistration": 1,
+                "FileProvider": 1,
+                "FileVersion": 1,
+                "File": 1,
+                "Institution": 1,
+                "Log": 1,
+                "Metaschema": 1,
+                "NodeLink": 1,
+                "Node": 1,
+                "OsfModel": 1,
+                "Registration": 1,
+                "User": 1
+            },
+            "fors": {},
+            "is_submodule": 1,
+            "namespaces": {},
+            "module": "ember-osf",
+            "namespace": "",
+            "file": "addon/models/user.js",
+            "line": 10,
+            "description": "Model for OSF APIv2 collections\nFor field and usage information, see:\n* https://api.osf.io/v2/docs/#!/v2/Collection_List_GET"
+        },
+        "serializers": {
+            "name": "serializers",
+            "submodules": {},
+            "elements": {},
+            "classes": {
+                "OsfSerializer": 1
+            },
+            "fors": {},
+            "is_submodule": 1,
+            "namespaces": {},
+            "module": "ember-osf",
+            "namespace": "",
+            "file": "addon/serializers/osf-serializer.js",
+            "line": 9,
+            "description": "Base serializer class for all OSF APIv2 endpoints. Provides custom behaviors for embeds, relationships, and pagination."
+        },
+        "services": {
+            "name": "services",
+            "submodules": {},
+            "elements": {},
+            "classes": {
+                "current-user": 1,
+                "file-manager": 1
+            },
+            "fors": {},
+            "is_submodule": 1,
+            "namespaces": {},
+            "module": "ember-osf",
+            "namespace": "",
+            "file": "addon/services/file-manager.js",
+            "line": 8,
+            "description": "Access information about the currently logged in user"
         }
     },
     "classes": {
-        "EmberOSF.InfinityCustomMixin": {
-            "name": "EmberOSF.InfinityCustomMixin",
-            "shortname": "EmberOSF.InfinityCustomMixin",
+        "OsfAdapter": {
+            "name": "OsfAdapter",
+            "shortname": "OsfAdapter",
             "classitems": [],
             "plugins": [],
             "extensions": [],
             "plugin_for": [],
             "extension_for": [],
-            "module": "ember-osf/mixins/infinity-custom",
-            "namespace": "EmberOSF",
+            "module": "ember-osf",
+            "submodule": "adapters",
+            "namespace": "",
+            "file": "addon/adapters/osf-adapter.js",
+            "line": 15,
+            "description": "Base adapter class for all OSF APIv2 endpoints",
+            "extends": "DS.JSONAPIAdapter",
+            "uses": [
+                "HasManyQuery.RESTAdapterMixin",
+                "DataAdapterMixin"
+            ]
+        },
+        "OsfTokenAuthenticator": {
+            "name": "OsfTokenAuthenticator",
+            "shortname": "OsfTokenAuthenticator",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "ember-osf",
+            "submodule": "authenticators",
+            "namespace": "",
+            "file": "addon/authenticators/osf-token.js",
+            "line": 11,
+            "description": "Ember-simple-auth compatible authenticator based on OAuth2 bearer tokens.\n\nIntended to be used with the authenticator of the same name.",
+            "extends": "ember-simple-auth/BaseAuthenticator"
+        },
+        "OsfTokenAuthorizer": {
+            "name": "OsfTokenAuthorizer",
+            "shortname": "OsfTokenAuthorizer",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "ember-osf",
+            "submodule": "authorizers",
+            "namespace": "",
+            "file": "addon/authorizers/osf-token.js",
+            "line": 8,
+            "description": "Ember-simple-auth compatible authorizer based on OAuth2 bearer tokens.\n\nIntended to be used with the authenticator of the same name.",
+            "extends": "ember-simple-auth/BaseAuthorizer"
+        },
+        "comment-detail": {
+            "name": "comment-detail",
+            "shortname": "comment-detail",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "ember-osf",
+            "submodule": "components",
+            "namespace": "",
+            "file": "addon/components/comment-detail/component.js",
+            "line": 9,
+            "description": "Display information about an individual comment, including controls to edit, delete, and report.\nThis component is typically used as part of the `comment-pane` component; see that component for further information.\n\nSample usage:\n```javascript\n{{comment-detail\n  comment=comment\n  editComment=attrs.editComment\n  deleteComment=attrs.deleteComment\n  restoreComment=attrs.restoreComment\n  reportComment=attrs.reportComment}}\n```",
+            "params": [
+                {
+                    "name": "comment",
+                    "description": "The comment to display",
+                    "type": "DS.Model"
+                },
+                {
+                    "name": "editComment",
+                    "description": "",
+                    "type": "Action"
+                },
+                {
+                    "name": "deleteComment",
+                    "description": "",
+                    "type": "Action"
+                },
+                {
+                    "name": "restoreComment",
+                    "description": "",
+                    "type": "Action"
+                },
+                {
+                    "name": "reportComment",
+                    "description": "",
+                    "type": "Action"
+                }
+            ]
+        },
+        "comment-form": {
+            "name": "comment-form",
+            "shortname": "comment-form",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "ember-osf",
+            "submodule": "components",
+            "namespace": "",
+            "file": "addon/components/comment-form/component.js",
+            "line": 9,
+            "description": "Allow users to add comments to a page.\n\nThis component is typically used as part of the `comment-pane` component; see that component for further information.\nSample usage:\n```javascript\n{{comment-form addComment=attrs.addComment}}\n```",
+            "params": [
+                {
+                    "name": "addComment",
+                    "description": "The action to fire when adding a new comment to the discussion. Returns a promise.",
+                    "type": "Action"
+                }
+            ]
+        },
+        "comment-pane": {
+            "name": "comment-pane",
+            "shortname": "comment-pane",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "ember-osf",
+            "submodule": "components",
+            "namespace": "",
+            "file": "addon/components/comment-pane/component.js",
+            "line": 9,
+            "description": "Display a list of comments, as well as a form to submit new comments.\nSee CommentableMixin for controller actions that can be used with this component.\n\nSample usage:\n```javascript\n{{comment-pane\n   comments=comments\n   addComment=(action 'addComment')\n   editComment=(action 'editComment')\n   deleteComment=(action 'deleteComment')\n   restoreComment=(action 'restoreComment')\n   reportComment=(action 'reportComment')}}\n```",
+            "params": [
+                {
+                    "name": "comments",
+                    "description": "An array of comments to be displayed",
+                    "type": "Array"
+                },
+                {
+                    "name": "addComment",
+                    "description": "",
+                    "type": "Action"
+                },
+                {
+                    "name": "editComment",
+                    "description": "",
+                    "type": "Action"
+                },
+                {
+                    "name": "deleteComment",
+                    "description": "",
+                    "type": "Action"
+                },
+                {
+                    "name": "restoreComment",
+                    "description": "",
+                    "type": "Action"
+                },
+                {
+                    "name": "reportComment",
+                    "description": "",
+                    "type": "Action"
+                }
+            ]
+        },
+        "dropzone-widget": {
+            "name": "dropzone-widget",
+            "shortname": "dropzone-widget",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "ember-osf",
+            "submodule": "components",
+            "namespace": "",
+            "file": "addon/components/dropzone-widget/component.js",
+            "line": 9,
+            "description": "Support file uploads via dropzone.\n\nSample usage:\n```javascript\n{{dropzone-widget\n  preUpload=attrs.preUpload\n  buildUrl=buildUrl\n  listeners=dropzoneListeners\n  options=dropzoneOptions}}\n```"
+        },
+        "file-browser": {
+            "name": "file-browser",
+            "shortname": "file-browser",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "ember-osf",
+            "submodule": "components",
+            "namespace": "",
+            "file": "addon/components/file-browser/component.js",
+            "line": 74,
+            "description": "File browser widget\n\nSample usage:\n```javascript\n{{file-browser\nrootItem=item\nopenFile=(action 'openFile')\nopenNode=(action 'openNode')}}\n```"
+        },
+        "file-browser-icon": {
+            "name": "file-browser-icon",
+            "shortname": "file-browser-icon",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "ember-osf",
+            "submodule": "components",
+            "namespace": "",
+            "file": "addon/components/file-browser-icon/component.js",
+            "line": 9,
+            "description": "Display the correct file tree icon for on the item to be displayed\n\nSample usage:\n```javascript\n{{file-browser-icon\nitem=item}}\n```"
+        },
+        "file-chooser component": {
+            "name": "file-chooser component",
+            "shortname": "file-chooser component",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "ember-osf",
+            "submodule": "components",
+            "namespace": "",
+            "file": "addon/components/file-chooser/component.js",
+            "line": 9,
+            "description": "This component lets the user choose a list of files from their computer, by\ndrag-and-drop, a file browser, or whatever method the developer wants.\n\nExposed to parent context (bindable attributes)\n - `files`: mutable list of chosen File objects\n - `multiple`: boolean (default `true`), when `false`, only keeps the most\n         recently chosen File in the list\n - `onChoose`: callback function called each time a file is added, with the\n         new File object as the only argument\n\nExposed to block context\n - `this`: the component object itself, so the block can invoke actions\n     example:\n     ```javascript\n         {{#file-chooser files=fileList as |component|}}\n             {{input type='file'\n                 change=(action 'onFileInputChange' target=component)}}\n         {{/file-chooser}}\n     ```\n\nActions\n - `onFileInputChange`: handle the `change` event on a file input\n - `onChooseFile`: add a file to the chosen list\n\nStyling\n - This component's element has the `drop-zone` class\n - While the user is holding dragged files over this component, it\n   has the `drop-zone-ready` class"
+        },
+        "file-renderer": {
+            "name": "file-renderer",
+            "shortname": "file-renderer",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "ember-osf",
+            "submodule": "components",
+            "namespace": "",
+            "file": "addon/components/file-renderer/component.js",
+            "line": 10,
+            "description": "Render the provided url in an iframe via MFR\n\nSample usage:\n```javascript\n{{file-renderer\n  download=model.links.download\n    width=\"800\" height=\"1000\"}}\n```"
+        },
+        "file-version": {
+            "name": "file-version",
+            "shortname": "file-version",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "ember-osf",
+            "submodule": "components",
+            "namespace": "",
+            "file": "addon/components/file-version/component.js",
+            "line": 9,
+            "description": "Display information about one revision of a file\n\nSample usage:\n```javascript\n{{file-version\nversion=version\ndownload='download'}}\n```"
+        },
+        "file-widget": {
+            "name": "file-widget",
+            "shortname": "file-widget",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "ember-osf",
+            "submodule": "components",
+            "namespace": "",
+            "file": "addon/components/file-widget/component.js",
+            "line": 13,
+            "description": "Widget to quickly upload a file to a selected project\n```javascript\n{{file-widget\n preUpload=(action 'preUpload')\n buildUrl=(action 'buildUrl')\n listeners=dropzoneOptions\n options=dropzoneOptions}}\n```"
+        },
+        "oauth-popup": {
+            "name": "oauth-popup",
+            "shortname": "oauth-popup",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "ember-osf",
+            "submodule": "components",
+            "namespace": "",
+            "file": "addon/components/oauth-popup/component.js",
+            "line": 13,
+            "description": "Log a user in via OAuth2 in a popup window, without requiring a redirect\n\nSample usage:\n```javascript\n{{#oauth-popup \n  authUrl=authUrl\n  loginSuccess=(action 'loginSuccess')\n  loginFail=(action 'loginFail') as |popup|}}\n   <button class=\"btn btn-default login-button\" onclick={{action 'login' target=popup}} >\n      Login to OSF\n   </button>\n{{/oauth-popup}}\n```"
+        },
+        "osf-copyright": {
+            "name": "osf-copyright",
+            "shortname": "osf-copyright",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "ember-osf",
+            "submodule": "components",
+            "namespace": "",
+            "file": "addon/components/osf-copyright/component.js",
+            "line": 9,
+            "description": "Display copyright information as a footer"
+        },
+        "osf-footer": {
+            "name": "osf-footer",
+            "shortname": "osf-footer",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "ember-osf",
+            "submodule": "components",
+            "namespace": "",
+            "file": "addon/components/osf-footer/component.js",
+            "line": 11,
+            "description": "Display the OSF footer"
+        },
+        "osf-mode-footer": {
+            "name": "osf-mode-footer",
+            "shortname": "osf-mode-footer",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "ember-osf",
+            "submodule": "components",
+            "namespace": "",
+            "file": "addon/components/osf-mode-footer/component.js",
+            "line": 11,
+            "description": "If development mode, display a red banner in the footer"
+        },
+        "osf-navbar": {
+            "name": "osf-navbar",
+            "shortname": "osf-navbar",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "ember-osf",
+            "submodule": "components",
+            "namespace": "",
+            "file": "addon/components/osf-navbar/component.js",
+            "line": 12,
+            "description": "Display the OSF navbar"
+        },
+        "pagination-control": {
+            "name": "pagination-control",
+            "shortname": "pagination-control",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "ember-osf",
+            "submodule": "components",
+            "namespace": "",
+            "file": "addon/components/pagination-control/component.js",
+            "line": 9,
+            "description": "Display a simple pagination control that advances the page. Intended for use with PaginatedRouteMixin."
+        },
+        "search-dropdown": {
+            "name": "search-dropdown",
+            "shortname": "search-dropdown",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "ember-osf",
+            "submodule": "components",
+            "namespace": "",
+            "file": "addon/components/search-dropdown/component.js",
+            "line": 10,
+            "description": "Display a search dropdown as used in the OSF navbar\n\nSample usage:\n```javascript\n  {{#search-dropdown action='toggleSearch'}}\n```"
+        },
+        "sign-up": {
+            "name": "sign-up",
+            "shortname": "sign-up",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "ember-osf",
+            "submodule": "components",
+            "namespace": "",
+            "file": "addon/components/sign-up/component.js",
+            "line": 9,
+            "description": "Display a simple signup form"
+        },
+        "tags-widget": {
+            "name": "tags-widget",
+            "shortname": "tags-widget",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "ember-osf",
+            "submodule": "components",
+            "namespace": "",
+            "file": "addon/components/tags-widget/component.js",
+            "line": 9,
+            "description": "Allow the user to view and manage tags.\nSee TaggableMixin for controller actions that can be used with this component.\n```javascript\n{{tags-widget\n  addATag=(action 'addATag')\n  removeATag=(action 'removeATag')\n  tags=model.tags}}\n```"
+        },
+        "CommentableMixin": {
+            "name": "CommentableMixin",
+            "shortname": "CommentableMixin",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "ember-osf",
+            "submodule": "mixins",
+            "namespace": "",
+            "file": "addon/mixins/commentable.js",
+            "line": 8,
+            "description": "Controller mixin that implements basic commenting functionality. Uses the base model in the route model hook.",
+            "extends": "Ember.Mixin"
+        },
+        "FetchAllRouteMixin": {
+            "name": "FetchAllRouteMixin",
+            "shortname": "FetchAllRouteMixin",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "ember-osf",
+            "submodule": "mixins",
+            "namespace": "",
+            "file": "addon/mixins/fetch-all-route.js",
+            "line": 9,
+            "description": "The FetchAllRouteMixin supports loading *all* records from a specified model or relationship.\nEssentially, it un-paginates an API\n\nThis may be useful for select applications (such as frontend-powered search boxes), but is strongly discouraged\nfor most applications. Consider using available pagination functionality instead.",
+            "access": "public",
+            "tagname": "",
+            "extends": "Ember.Mixin",
+            "uses": [
+                "InfinityCustom"
+            ]
+        },
+        "FileCacheBypassMixin": {
+            "name": "FileCacheBypassMixin",
+            "shortname": "FileCacheBypassMixin",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "ember-osf",
+            "submodule": "mixins",
+            "namespace": "",
+            "file": "addon/mixins/file-cache-bypass.js",
+            "line": 8,
+            "description": "This is a hack to resolve a server-side race condition.\nAfter creating/modifying/deleting a file through Waterbutler, it can take\na fraction of a second for the API's cache to properly update, and\ntrying to reload the file model in that time can return stale data.\n\nThis adapter mixin appends a nonce to requests that are likely to run into\nthat race condition, forcing a cache miss.",
+            "extends": "Ember.Mixin"
+        },
+        "FileItemMixin": {
+            "name": "FileItemMixin",
+            "shortname": "FileItemMixin",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "ember-osf",
+            "submodule": "mixins",
+            "namespace": "",
+            "file": "addon/mixins/file-item.js",
+            "line": 8,
+            "description": "File-like models are `node`, `file-provider`, and `file`/folder.\nThis mixin provides a polymorphic interface for file-like items, and is intended to be used with models.",
+            "extends": "Ember.Mixin"
+        },
+        "InfinityCustomMixin": {
+            "name": "InfinityCustomMixin",
+            "shortname": "InfinityCustomMixin",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "ember-osf",
+            "submodule": "mixins",
+            "namespace": "",
             "file": "addon/mixins/infinity-custom.js",
-            "line": 6,
+            "line": 11,
             "description": "A custom overlay on ember-infinity that supports loading infinite and paginated relationships\nFor the most part, the API and semantics are identical to ember infinity, except that the means of configuring the store find method is more flexible\n (supporting relationship queries that do not operate via store methods)",
-            "extends": "Ember.Mixin, InfinityRoute"
+            "extends": "Ember.Mixin",
+            "uses": [
+                "InfinityRoute"
+            ]
+        },
+        "NodeActionsMixin": {
+            "name": "NodeActionsMixin",
+            "shortname": "NodeActionsMixin",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "ember-osf",
+            "submodule": "mixins",
+            "namespace": "",
+            "file": "addon/mixins/node-actions.js",
+            "line": 8,
+            "description": "Controller mixin that implements common actions performed on nodes.",
+            "extends": "Ember.Mixin"
+        },
+        "OsfLoginControllerMixin": {
+            "name": "OsfLoginControllerMixin",
+            "shortname": "OsfLoginControllerMixin",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "ember-osf",
+            "submodule": "mixins",
+            "namespace": "",
+            "file": "addon/mixins/osf-login-controller.js",
+            "line": 10,
+            "description": "Controller mixin to add support for OAuth2 token based authentication\n\nIntended to be used in tandem with OsfLoginRouteMixin",
+            "extends": "Ember.Mixin"
+        },
+        "OsfLoginRouteMixin": {
+            "name": "OsfLoginRouteMixin",
+            "shortname": "OsfLoginRouteMixin",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "ember-osf",
+            "submodule": "mixins",
+            "namespace": "",
+            "file": "addon/mixins/osf-login-route.js",
+            "line": 13,
+            "description": "Route mixin to add support for OAuth2 token based authentication",
+            "extends": "Ember.Mixin"
+        },
+        "PaginatedControllerMixin": {
+            "name": "PaginatedControllerMixin",
+            "shortname": "PaginatedControllerMixin",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "ember-osf",
+            "submodule": "mixins",
+            "namespace": "",
+            "file": "addon/mixins/paginated-controller.js",
+            "line": 8,
+            "description": "Controller mixin to support fetching paginated results\n\nBecause this uses query parameters, it should be used in tandem with PaginatedRouteMixin",
+            "extends": "Ember.Mixin"
+        },
+        "PaginatedRouteMixin": {
+            "name": "PaginatedRouteMixin",
+            "shortname": "PaginatedRouteMixin",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "ember-osf",
+            "submodule": "mixins",
+            "namespace": "",
+            "file": "addon/mixins/paginated-route.js",
+            "line": 8,
+            "description": "Route mixin to support fetching paginated results\n\nBecause this uses query parameters, it should be used in tandem with PaginatedControllerMixin",
+            "extends": "Ember.Mixin"
+        },
+        "RegistrationActionsMixin": {
+            "name": "RegistrationActionsMixin",
+            "shortname": "RegistrationActionsMixin",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "ember-osf",
+            "submodule": "mixins",
+            "namespace": "",
+            "file": "addon/mixins/registration-actions.js",
+            "line": 8,
+            "description": "Controller mixin that implements common actions performed on registrations (and registration drafts).",
+            "extends": "Ember.Mixin"
+        },
+        "TaggableMixin": {
+            "name": "TaggableMixin",
+            "shortname": "TaggableMixin",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "ember-osf",
+            "submodule": "mixins",
+            "namespace": "",
+            "file": "addon/mixins/taggable-mixin.js",
+            "line": 8,
+            "description": "Controller mixin that implements basic tagging functionality. Uses the model defined in the model hook.",
+            "extends": "Ember.Mixin"
+        },
+        "Collection": {
+            "name": "Collection",
+            "shortname": "Collection",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "ember-osf",
+            "submodule": "models",
+            "namespace": "",
+            "file": "addon/models/collection.js",
+            "line": 10,
+            "description": "Model for OSF APIv2 collections\nFor field and usage information, see:\n* https://api.osf.io/v2/docs/#!/v2/Collection_List_GET"
+        },
+        "CommentReport": {
+            "name": "CommentReport",
+            "shortname": "CommentReport",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "ember-osf",
+            "submodule": "models",
+            "namespace": "",
+            "file": "addon/models/comment-report.js",
+            "line": 10,
+            "description": "Model for OSF APIv2 comment reports. Primarily accessed via relationship fields.\nFor field and usage information, see:\n* https://api.osf.io/v2/docs/#!/v2/Comment_Reports_List_GET"
+        },
+        "Comment": {
+            "name": "Comment",
+            "shortname": "Comment",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "ember-osf",
+            "submodule": "models",
+            "namespace": "",
+            "file": "addon/models/comment.js",
+            "line": 10,
+            "description": "Model for OSF APIv2 comments. This model may be used with one of several API endpoints. It may be queried directly,\n or accessed via relationship fields.\nFor field and usage information, see:\n* https://api.osf.io/v2/docs/#!/v2/Comment_Detail_GET\n* https://api.osf.io/v2/docs/#!/v2/Node_Comments_List_GET\n* https://api.osf.io/v2/docs/#!/v2/Registration_Comments_List_GET"
+        },
+        "Contributor": {
+            "name": "Contributor",
+            "shortname": "Contributor",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "ember-osf",
+            "submodule": "models",
+            "namespace": "",
+            "file": "addon/models/contributor.js",
+            "line": 10,
+            "description": "Model for OSF APIv2 contributors. Primarily accessed via relationship fields.\nFor field and usage information, see:\n* https://api.osf.io/v2/docs/#!/v2/Node_Contributors_List_GET"
+        },
+        "DraftRegistration": {
+            "name": "DraftRegistration",
+            "shortname": "DraftRegistration",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "ember-osf",
+            "submodule": "models",
+            "namespace": "",
+            "file": "addon/models/draft-registration.js",
+            "line": 9,
+            "description": "Model for OSF APIv2 draft registrations.\nThis model represents draft registration data and can be accessed as a relationship of a node.\nFor information on how to interact with a node's draft registrations, see:\n* https://api.osf.io/v2/docs/#!/v2/Node_Draft_Registrations_List_GET\n* https://api.osf.io/v2/docs/#!/v2/Node_Draft_Registration_Detail_GET"
+        },
+        "FileProvider": {
+            "name": "FileProvider",
+            "shortname": "FileProvider",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "ember-osf",
+            "submodule": "models",
+            "namespace": "",
+            "file": "addon/models/file-provider.js",
+            "line": 11,
+            "description": "Model for OSF APIv2 file providers. Primarily used in relationship fields.\nThis model is used for basic file provider metadata. To interact with file contents directly, see the `file-manager` service.\nFor field and usage information, see:\n* https://api.osf.io/v2/docs/#!/v2/Node_Providers_List_GET\n* https://api.osf.io/v2/docs/#!/v2/Node_Provider_Detail_GET\n* https://api.osf.io/v2/docs/#!/v2/Registration_Providers_List_GET"
+        },
+        "FileVersion": {
+            "name": "FileVersion",
+            "shortname": "FileVersion",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "ember-osf",
+            "submodule": "models",
+            "namespace": "",
+            "file": "addon/models/file-version.js",
+            "line": 10,
+            "description": "Model for OSF APIv2 file versions. Primarily used in relationship fields.\nThis model is used for basic file version metadata. To interact with file contents directly, see the `file-manager` service.\nFor field and usage information, see:\n* https://api.osf.io/v2/docs/#!/v2/File_Versions_List_GET\n* https://api.osf.io/v2/docs/#!/v2/File_Version_Detail_GET"
+        },
+        "File": {
+            "name": "File",
+            "shortname": "File",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "ember-osf",
+            "submodule": "models",
+            "namespace": "",
+            "file": "addon/models/file.js",
+            "line": 11,
+            "description": "Model for OSF APIv2 files. This model may be used with one of several API endpoints. It may be queried directly,\n or (more commonly) accessed via relationship fields.\nThis model is used for basic file metadata. To interact with file contents directly, see the `file-manager` service.\nFor field and usage information, see:\n* https://api.osf.io/v2/docs/#!/v2/File_Detail_GET\n* https://api.osf.io/v2/docs/#!/v2/Node_Files_List_GET\n* https://api.osf.io/v2/docs/#!/v2/Node_File_Detail_GET\n* https://api.osf.io/v2/docs/#!/v2/Registration_Files_List_GET\n* https://api.osf.io/v2/docs/#!/v2/Registration_File_Detail_GET"
+        },
+        "Institution": {
+            "name": "Institution",
+            "shortname": "Institution",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "ember-osf",
+            "submodule": "models",
+            "namespace": "",
+            "file": "addon/models/institution.js",
+            "line": 10,
+            "description": "Model for OSF APIv2 institutions. This model may be used with one of several API endpoints. It may be queried directly,\n or accessed via relationship fields.\nFor field and usage information, see:\n* https://api.osf.io/v2/docs/#!/v2/Institution_List_GET\n* https://api.osf.io/v2/docs/#!/v2/Institution_Detail_GET\n* https://api.osf.io/v2/docs/#!/v2/Node_Institutions_List_GET\n* https://api.osf.io/v2/docs/#!/v2/Registration_Institutions_List_GET\n* https://api.osf.io/v2/docs/#!/v2/User_Institutions_GET"
+        },
+        "Log": {
+            "name": "Log",
+            "shortname": "Log",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "ember-osf",
+            "submodule": "models",
+            "namespace": "",
+            "file": "addon/models/log.js",
+            "line": 10,
+            "description": "Model for OSF APIv2 log entries. This model may be used with one of several API endpoints. It may be queried directly,\n or accessed via relationship fields.\nFor field and usage information, see:\n* https://api.osf.io/v2/docs/#!/v2/Node_Log_Detail_GET\n* https://api.osf.io/v2/docs/#!/v2/Node_Log_List_GET\n* https://api.osf.io/v2/docs/#!/v2/Registration_Log_List_GET"
+        },
+        "Metaschema": {
+            "name": "Metaschema",
+            "shortname": "Metaschema",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "ember-osf",
+            "submodule": "models",
+            "namespace": "",
+            "file": "addon/models/metaschema.js",
+            "line": 10,
+            "description": "Model for OSF APIv2 metaschemas.\nThis model describes metaschemas and can be directly queried.\nFor information on how to retrieve metaschemas see:\n* https://api.osf.io/v2/docs/#!/v2/Meta_Schemas_List_GET\n* https://api.osf.io/v2/docs/#!/v2/Meta_Schema_Detail_GET"
+        },
+        "NodeLink": {
+            "name": "NodeLink",
+            "shortname": "NodeLink",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "ember-osf",
+            "submodule": "models",
+            "namespace": "",
+            "file": "addon/models/node-link.js",
+            "line": 10,
+            "description": "Model for OSF APIv2 node links. This model may refer to one of several API endpoints. It may be queried directly,\n or accessed via relationship fields.\nFor field and usage information, see:\n* https://api.osf.io/v2/docs/#!/v2/Node_Links_List_GET\n* https://api.osf.io/v2/docs/#!/v2/Node_Links_Detail_GET\n* https://api.osf.io/v2/docs/#!/v2/Registration_Node_Links_List_GET\n* https://api.osf.io/v2/docs/#!/v2/Registration_Node_Links_Detail_GET"
+        },
+        "Node": {
+            "name": "Node",
+            "shortname": "Node",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "ember-osf",
+            "submodule": "models",
+            "namespace": "",
+            "file": "addon/models/node.js",
+            "line": 12,
+            "description": "Model for OSF APIv2 nodes. This model may be used with one of several API endpoints. It may be queried directly,\n or accessed via relationship fields.\nFor field and usage information, see:\n* https://api.osf.io/v2/docs/#!/v2/Node_List_GET\n* https://api.osf.io/v2/docs/#!/v2/Node_Detail_GET\n* https://api.osf.io/v2/docs/#!/v2/Node_Children_List_GET\n* https://api.osf.io/v2/docs/#!/v2/Linked_Nodes_List_GET\n* https://api.osf.io/v2/docs/#!/v2/Node_Forks_List_GET\n* https://api.osf.io/v2/docs/#!/v2/User_Nodes_GET"
+        },
+        "OsfModel": {
+            "name": "OsfModel",
+            "shortname": "OsfModel",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "ember-osf",
+            "submodule": "models",
+            "namespace": "",
+            "file": "addon/models/osf-model.js",
+            "line": 11,
+            "description": "Common properties and behaviors shared by all OSF APIv2 models",
+            "access": "public",
+            "tagname": ""
+        },
+        "Registration": {
+            "name": "Registration",
+            "shortname": "Registration",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "ember-osf",
+            "submodule": "models",
+            "namespace": "",
+            "file": "addon/models/registration.js",
+            "line": 10,
+            "description": "Model for OSF APIv2 registrations. This model may be used with one of several API endpoints. It may be queried directly,\n or accessed via relationship fields.\nFor field and usage information, see:\n* https://api.osf.io/v2/docs/#!/v2/Registration_List_GET\n* https://api.osf.io/v2/docs/#!/v2/Registration_Detail_GET\n* https://api.osf.io/v2/docs/#!/v2/Registration_Children_List_GET\n* https://api.osf.io/v2/docs/#!/v2/User_Registrations_GET"
+        },
+        "User": {
+            "name": "User",
+            "shortname": "User",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "ember-osf",
+            "submodule": "models",
+            "namespace": "",
+            "file": "addon/models/user.js",
+            "line": 10,
+            "description": "Model for OSF APIv2 users. This model may be used with one of several API endpoints. It may be queried directly,\n or accessed via relationship fields.\nFor field and usage information, see:\n* https://api.osf.io/v2/docs/#!/v2/User_List_GET\n* https://api.osf.io/v2/docs/#!/v2/User_Detail_GET\n* https://api.osf.io/v2/docs/#!/v2/Institution_User_List_GET"
+        },
+        "OsfSerializer": {
+            "name": "OsfSerializer",
+            "shortname": "OsfSerializer",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "ember-osf",
+            "submodule": "serializers",
+            "namespace": "",
+            "file": "addon/serializers/osf-serializer.js",
+            "line": 9,
+            "description": "Base serializer class for all OSF APIv2 endpoints. Provides custom behaviors for embeds, relationships, and pagination.",
+            "extends": "DS.JSONAPISerializer"
+        },
+        "current-user": {
+            "name": "current-user",
+            "shortname": "current-user",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "ember-osf",
+            "submodule": "services",
+            "namespace": "",
+            "file": "addon/services/current-user.js",
+            "line": 8,
+            "description": "Access information about the currently logged in user",
+            "extends": "Ember.Service"
         },
         "file-manager": {
             "name": "file-manager",
@@ -239,10 +1642,11 @@
             "extensions": [],
             "plugin_for": [],
             "extension_for": [],
-            "module": "ember-osf/mixins/infinity-custom",
+            "module": "ember-osf",
+            "submodule": "services",
             "namespace": "",
             "file": "addon/services/file-manager.js",
-            "line": 3,
+            "line": 8,
             "description": "An Ember service for doing things to files.\nEssentially a wrapper for the Waterbutler API.\nhttp://waterbutler.readthedocs.io/",
             "extends": "Ember.Service"
         }
@@ -251,11 +1655,18 @@
     "classitems": [
         {
             "file": "addon/adapters/osf-adapter.js",
-            "line": 31,
-            "description": "Construct a URL for a relationship create/update/delete. Has the same\nsignature as buildURL, with the addition of a 'relationship' param",
+            "line": 45,
+            "description": "Construct a URL for a relationship create/update/delete.",
             "itemtype": "method",
             "name": "_buildRelationshipURL",
+            "access": "private",
+            "tagname": "",
             "params": [
+                {
+                    "name": "snapshot",
+                    "description": "",
+                    "type": "DS.Snapshot"
+                },
                 {
                     "name": "relationship",
                     "description": "the relationship to build a url for",
@@ -266,48 +1677,510 @@
                 "description": "a URL",
                 "type": "String"
             },
-            "class": "EmberOSF.InfinityCustomMixin"
+            "class": "OsfAdapter",
+            "module": "ember-osf",
+            "submodule": "adapters"
         },
         {
-            "file": "addon/components/file-browser-tree/component.js",
-            "line": 4,
-            "description": "A row could represent a node, file-provider, or file, each of which has a\ndifferent interface. RowProxy provides a consistent interface for everything\nthe file browser needs to know.\n\nImportant: Use `row.content` when passing a row model outside file-browser",
-            "class": "EmberOSF.InfinityCustomMixin"
+            "file": "addon/adapters/osf-adapter.js",
+            "line": 63,
+            "description": "Handle creation of related resources",
+            "itemtype": "method",
+            "name": "_createRelated",
+            "access": "private",
+            "tagname": "",
+            "params": [
+                {
+                    "name": "store",
+                    "description": "",
+                    "type": "DS.Store"
+                },
+                {
+                    "name": "snapshot",
+                    "description": "snapshot of inverse record",
+                    "type": "DS.Snapshot"
+                },
+                {
+                    "name": "createdSnapshots",
+                    "description": "",
+                    "type": "DS.Snapshot[]"
+                },
+                {
+                    "name": "relationship",
+                    "description": "",
+                    "type": "String"
+                },
+                {
+                    "name": "url",
+                    "description": "",
+                    "type": "String"
+                },
+                {
+                    "name": "isBulk",
+                    "description": "",
+                    "type": "Boolean"
+                }
+            ],
+            "class": "OsfAdapter",
+            "module": "ember-osf",
+            "submodule": "adapters"
         },
         {
-            "file": "addon/components/file-browser-tree/component.js",
+            "file": "addon/adapters/osf-adapter.js",
+            "line": 90,
+            "description": "Handle add(s) of related resources. This differs from CREATEs in that the related\nrecord is already saved and is just being associated with the inverse record.",
+            "itemtype": "method",
+            "name": "_addRelated",
+            "access": "private",
+            "tagname": "",
+            "params": [
+                {
+                    "name": "store",
+                    "description": "",
+                    "type": "DS.Store"
+                },
+                {
+                    "name": "snapshot",
+                    "description": "snapshot of inverse record",
+                    "type": "DS.Snapshot"
+                },
+                {
+                    "name": "addedSnapshots",
+                    "description": "",
+                    "type": "DS.Snapshot[]"
+                },
+                {
+                    "name": "relationship",
+                    "description": "",
+                    "type": "String"
+                },
+                {
+                    "name": "url",
+                    "description": "",
+                    "type": "String"
+                },
+                {
+                    "name": "isBulk",
+                    "description": "",
+                    "type": "Boolean"
+                }
+            ],
+            "class": "OsfAdapter",
+            "module": "ember-osf",
+            "submodule": "adapters"
+        },
+        {
+            "file": "addon/adapters/osf-adapter.js",
+            "line": 111,
+            "description": "Handle update(s) of related resources",
+            "itemtype": "method",
+            "name": "_updateRelated",
+            "access": "private",
+            "tagname": "",
+            "params": [
+                {
+                    "name": "store",
+                    "description": "",
+                    "type": "DS.Store"
+                },
+                {
+                    "name": "snapshot",
+                    "description": "snapshot of inverse record",
+                    "type": "DS.Snapshot"
+                },
+                {
+                    "name": "updatedSnapshots",
+                    "description": "",
+                    "type": "DS.Snapshot[]"
+                },
+                {
+                    "name": "relationship",
+                    "description": "",
+                    "type": "String"
+                },
+                {
+                    "name": "url",
+                    "description": "",
+                    "type": "String"
+                },
+                {
+                    "name": "isBulk",
+                    "description": "",
+                    "type": "Boolean"
+                }
+            ],
+            "class": "OsfAdapter",
+            "module": "ember-osf",
+            "submodule": "adapters"
+        },
+        {
+            "file": "addon/adapters/osf-adapter.js",
+            "line": 133,
+            "description": "Handle removal of related resources. This differs from DELETEs in that the related\nrecord is not deleted, just dissociated from the inverse record.",
+            "itemtype": "method",
+            "name": "_removeRelated",
+            "access": "private",
+            "tagname": "",
+            "params": [
+                {
+                    "name": "store",
+                    "description": "",
+                    "type": "DS.Store"
+                },
+                {
+                    "name": "snapshot",
+                    "description": "snapshot of inverse record",
+                    "type": "DS.Snapshot"
+                },
+                {
+                    "name": "removedSnapshots",
+                    "description": "",
+                    "type": "DS.Snapshot[]"
+                },
+                {
+                    "name": "relationship",
+                    "description": "",
+                    "type": "String"
+                },
+                {
+                    "name": "url",
+                    "description": "",
+                    "type": "String"
+                },
+                {
+                    "name": "isBulk",
+                    "description": "",
+                    "type": "Boolean"
+                }
+            ],
+            "class": "OsfAdapter",
+            "module": "ember-osf",
+            "submodule": "adapters"
+        },
+        {
+            "file": "addon/adapters/osf-adapter.js",
+            "line": 152,
+            "description": "Handle deletion of related resources",
+            "itemtype": "method",
+            "name": "_deleteRelated",
+            "access": "private",
+            "tagname": "",
+            "params": [
+                {
+                    "name": "store",
+                    "description": "",
+                    "type": "DS.Store"
+                },
+                {
+                    "name": "snapshot",
+                    "description": "snapshot of inverse record",
+                    "type": "DS.Snapshot"
+                },
+                {
+                    "name": "deletedSnapshots",
+                    "description": "",
+                    "type": "DS.Snapshot[]"
+                },
+                {
+                    "name": "relationship",
+                    "description": "",
+                    "type": "String"
+                },
+                {
+                    "name": "url",
+                    "description": "",
+                    "type": "String"
+                },
+                {
+                    "name": "isBulk",
+                    "description": "",
+                    "type": "Boolean"
+                }
+            ],
+            "class": "OsfAdapter",
+            "module": "ember-osf",
+            "submodule": "adapters"
+        },
+        {
+            "file": "addon/adapters/osf-adapter.js",
+            "line": 173,
+            "description": "A helper for making _*Related requests",
+            "itemtype": "method",
+            "name": "_doRelatedRequest",
+            "access": "private",
+            "tagname": "",
+            "params": [
+                {
+                    "name": "store",
+                    "description": "",
+                    "type": "DS.Store"
+                },
+                {
+                    "name": "snapshot",
+                    "description": "snapshot of inverse record",
+                    "type": "DS.Snapshot"
+                },
+                {
+                    "name": "relatedSnapshots",
+                    "description": "",
+                    "type": "DS.Snapshot[]"
+                },
+                {
+                    "name": "relationship",
+                    "description": "",
+                    "type": "String"
+                },
+                {
+                    "name": "url",
+                    "description": "",
+                    "type": "String"
+                },
+                {
+                    "name": "requestMethod",
+                    "description": "",
+                    "type": "String"
+                },
+                {
+                    "name": "isBulk",
+                    "description": "",
+                    "type": "Boolean"
+                }
+            ],
+            "class": "OsfAdapter",
+            "module": "ember-osf",
+            "submodule": "adapters"
+        },
+        {
+            "file": "addon/adapters/osf-adapter.js",
+            "line": 230,
+            "description": "Delegate a series of requests based on a snapshot, relationship, and a change.\nThe change argument can be 'delete', 'remove', 'update', 'add', 'create'",
+            "itemtype": "method",
+            "name": "_handleRelatedRequest",
+            "access": "private",
+            "tagname": "",
+            "params": [
+                {
+                    "name": "store",
+                    "description": "",
+                    "type": "DS.Store"
+                },
+                {
+                    "name": "type",
+                    "description": "",
+                    "type": "DS.Model"
+                },
+                {
+                    "name": "snapshot",
+                    "description": "",
+                    "type": "DS.Snapshot"
+                },
+                {
+                    "name": "relationship",
+                    "description": "",
+                    "type": "String"
+                },
+                {
+                    "name": "change",
+                    "description": "",
+                    "type": "String"
+                }
+            ],
+            "class": "OsfAdapter",
+            "module": "ember-osf",
+            "submodule": "adapters"
+        },
+        {
+            "file": "addon/components/comment-form/component.js",
+            "line": 26,
+            "description": "Call a passed-in closure action to handle submitting a comment. Reset the form if save succeeds.",
+            "itemtype": "method",
+            "name": "addComment",
+            "params": [
+                {
+                    "name": "text",
+                    "description": "The text of the comment to create",
+                    "type": "String"
+                }
+            ],
+            "class": "comment-form",
+            "module": "ember-osf",
+            "submodule": "components"
+        },
+        {
+            "file": "addon/mixins/commentable.js",
+            "line": 15,
+            "description": "The list of comments associated with a model. Defaults to using the model hook, and ensures that new comments\nare shown first (to match API convention)",
+            "access": "public",
+            "tagname": "",
+            "itemtype": "property",
+            "name": "comments",
+            "type": "Array",
+            "class": "CommentableMixin",
+            "module": "ember-osf",
+            "submodule": "mixins"
+        },
+        {
+            "file": "addon/mixins/commentable.js",
+            "line": 32,
+            "description": "Action that adds a new comment targeting the model by GUID.",
+            "itemtype": "method",
+            "name": "addComment",
+            "params": [
+                {
+                    "name": "text",
+                    "description": "The text of the new comment",
+                    "type": "String"
+                }
+            ],
+            "return": {
+                "description": "",
+                "type": "Promise"
+            },
+            "class": "CommentableMixin",
+            "module": "ember-osf",
+            "submodule": "mixins"
+        },
+        {
+            "file": "addon/mixins/commentable.js",
+            "line": 51,
+            "description": "Action that edits an existing comment.",
+            "itemtype": "method",
+            "name": "editComment",
+            "params": [
+                {
+                    "name": "comment",
+                    "description": "A comment model",
+                    "type": "DS.Model"
+                }
+            ],
+            "return": {
+                "description": "",
+                "type": "Promise"
+            },
+            "class": "CommentableMixin",
+            "module": "ember-osf",
+            "submodule": "mixins"
+        },
+        {
+            "file": "addon/mixins/commentable.js",
+            "line": 60,
+            "description": "Action that handles deletion of an existing comment.",
+            "itemtype": "method",
+            "name": "deleteComment",
+            "params": [
+                {
+                    "name": "comment",
+                    "description": ""
+                }
+            ],
+            "return": {
+                "description": "",
+                "type": "Promise"
+            },
+            "class": "CommentableMixin",
+            "module": "ember-osf",
+            "submodule": "mixins"
+        },
+        {
+            "file": "addon/mixins/commentable.js",
+            "line": 70,
+            "description": "Action that restores a deleted comment.",
+            "itemtype": "method",
+            "name": "restoreComment",
+            "params": [
+                {
+                    "name": "comment",
+                    "description": ""
+                }
+            ],
+            "return": {
+                "description": "",
+                "type": "Promise"
+            },
+            "class": "CommentableMixin",
+            "module": "ember-osf",
+            "submodule": "mixins"
+        },
+        {
+            "file": "addon/mixins/commentable.js",
+            "line": 80,
+            "description": "Action that reports a comment for administrative review",
+            "itemtype": "method",
+            "name": "reportComment",
+            "return": {
+                "description": "",
+                "type": "Promise"
+            },
+            "class": "CommentableMixin",
+            "module": "ember-osf",
+            "submodule": "mixins"
+        },
+        {
+            "file": "addon/mixins/fetch-all-route.js",
             "line": 22,
-            "description": "Load all this row's children. Concatenates `content.files` (if it exists)\nwith `content.children` (if it exists) and puts the result in\n`childTrees`.\n\nHas about the same result as:\n`childTrees: Ember.computed.union('content.files', 'content.children')`\nbut it sets `isLoading` to `true` when it starts and to `false` when it's\ndone. Computed properties don't expose the underlying promises, and a\nloading indicator seems important.\n\nTODO: But this counters ember's binding magic... If the file/node models\nchange, the tree won't automatically update. Could add another observer\non `files` and `children`, but it would be nice to find another way to\nupdate `isLoading` and get rid of this method entirely",
-            "class": "EmberOSF.InfinityCustomMixin"
+            "description": "The name of the URL parameter used by the API to control number of results per page",
+            "itemtype": "property",
+            "name": "perPageParam",
+            "type": "String",
+            "default": "page[size]",
+            "class": "FetchAllRouteMixin",
+            "module": "ember-osf",
+            "submodule": "mixins"
         },
         {
             "file": "addon/mixins/fetch-all-route.js",
-            "line": 1,
-            "description": "The FetchAllRouteMixin supports loading *all* records from a specified model or relationship.\nEssentially, it un-paginates an API\n\nThis may be useful for select applications (such as frontend-powered search boxes), but is strongly discouraged\nfor most applications. Consider using available pagination functionality instead.",
-            "class": "EmberOSF.InfinityCustomMixin"
+            "line": 28,
+            "description": "The name of the URL parameter used by the API to control the page requested",
+            "itemtype": "property",
+            "name": "pageParam",
+            "type": "String",
+            "default": "page",
+            "class": "FetchAllRouteMixin",
+            "module": "ember-osf",
+            "submodule": "mixins"
         },
         {
             "file": "addon/mixins/fetch-all-route.js",
-            "line": 17,
+            "line": 34,
+            "description": "The name of the payload field that specifies how many pages are to be loaded. For OSF APIv2, this calculated field is added by serializer.",
+            "itemtype": "property",
+            "name": "totalPagesParam",
+            "type": "String",
+            "default": "meta.total",
+            "class": "FetchAllRouteMixin",
+            "module": "ember-osf",
+            "submodule": "mixins"
+        },
+        {
+            "file": "addon/mixins/fetch-all-route.js",
+            "line": 42,
             "description": "If a string is provided, will set infinite fetch on the relationship with the specified name,\nfrom the model specified in the route's model hook",
             "itemtype": "property",
             "name": "relationshipToFetch",
             "type": "String",
             "default": "null",
-            "class": "EmberOSF.InfinityCustomMixin"
+            "class": "FetchAllRouteMixin",
+            "module": "ember-osf",
+            "submodule": "mixins"
         },
         {
             "file": "addon/mixins/fetch-all-route.js",
-            "line": 27,
+            "line": 52,
             "description": "Relationship querying reloads the relationship, so it can not be used as an in-place storage for the de-paginated list of records\nAs an ugly workaround, provide a new storage place that will not reflect mutations or updates to the list",
             "itemtype": "property",
             "name": "allRelated",
-            "class": "EmberOSF.InfinityCustomMixin"
+            "class": "FetchAllRouteMixin",
+            "module": "ember-osf",
+            "submodule": "mixins"
         },
         {
             "file": "addon/mixins/fetch-all-route.js",
-            "line": 35,
+            "line": 60,
             "description": "Sets up fetch-all query for a relationship field.",
+            "access": "public",
+            "tagname": "",
+            "itemtype": "method",
+            "name": "setupRelationshipFetch",
             "params": [
                 {
                     "name": "controller",
@@ -318,17 +2191,23 @@
                     "description": ""
                 }
             ],
-            "class": "EmberOSF.InfinityCustomMixin"
+            "class": "FetchAllRouteMixin",
+            "module": "ember-osf",
+            "submodule": "mixins"
         },
         {
             "file": "addon/mixins/fetch-all-route.js",
-            "line": 63,
+            "line": 90,
             "description": "Event listener that fetches more results automatically\nAs written, this does not handle fetch errors, and will not retry once an error is encountered",
-            "class": "EmberOSF.InfinityCustomMixin"
+            "itemtype": "method",
+            "name": "infinityModelUpdated",
+            "class": "FetchAllRouteMixin",
+            "module": "ember-osf",
+            "submodule": "mixins"
         },
         {
             "file": "addon/mixins/fetch-all-route.js",
-            "line": 71,
+            "line": 100,
             "description": "Model queries pass unchanged, but relationship queries require custom transformations to work with Ember-infinity\n\nember-data-has-many-query returns a DS.ManyArray, but Ember-infinity will not work unless given an ArrayProxy instance (with .content)",
             "itemtype": "method",
             "name": "afterInfinityModel",
@@ -342,32 +2221,35 @@
                 "description": "",
                 "type": "*"
             },
-            "class": "EmberOSF.InfinityCustomMixin"
+            "class": "FetchAllRouteMixin",
+            "module": "ember-osf",
+            "submodule": "mixins"
         },
         {
             "file": "addon/mixins/fetch-all-route.js",
-            "line": 94,
-            "description": "Convenience method for clickable buttons, mainly for use with debugging",
-            "class": "EmberOSF.InfinityCustomMixin"
-        },
-        {
-            "file": "addon/mixins/file-cache-bypass.js",
-            "line": 3,
-            "description": "This is a hack to resolve a server-side race condition.\nAfter creating/modifying/deleting a file through Waterbutler, it can take\na fraction of a second for the API's cache to properly update, and\ntrying to reload the file model in that time can return stale data.\n\nThis adapter mixin appends a nonce to requests that are likely to run into\nthat race condition, forcing a cache miss.",
-            "class": "EmberOSF.InfinityCustomMixin"
+            "line": 123,
+            "description": "Convenience action for clickable buttons, mainly for use with debugging",
+            "itemtype": "method",
+            "name": "getMore",
+            "class": "FetchAllRouteMixin",
+            "module": "ember-osf",
+            "submodule": "mixins"
         },
         {
             "file": "addon/mixins/infinity-custom.js",
-            "line": 17,
+            "line": 21,
             "description": "Repurpose an ember-infinity hook to override the method used for queries",
+            "itemtype": "property",
+            "name": "_storeFindMethod",
             "type": "{function}",
             "default": "this.store.query",
-            "class": "EmberOSF.InfinityCustomMixin",
-            "module": "ember-osf/mixins/infinity-custom"
+            "class": "InfinityCustomMixin",
+            "module": "ember-osf",
+            "submodule": "mixins"
         },
         {
             "file": "addon/mixins/infinity-custom.js",
-            "line": 24,
+            "line": 29,
             "description": "Use the infinityModel method in the place of `this.store.find('model')` to\ninitialize the Infinity Model for your route.",
             "itemtype": "method",
             "name": "infinityModel",
@@ -392,12 +2274,13 @@
                 "description": "",
                 "type": "Ember.RSVP.Promise"
             },
-            "class": "EmberOSF.InfinityCustomMixin",
-            "module": "ember-osf/mixins/infinity-custom"
+            "class": "InfinityCustomMixin",
+            "module": "ember-osf",
+            "submodule": "mixins"
         },
         {
             "file": "addon/mixins/infinity-custom.js",
-            "line": 68,
+            "line": 73,
             "description": "request the next page from the adapter",
             "access": "private",
             "tagname": "",
@@ -407,42 +2290,350 @@
                 "description": "A Promise that resolves the next page of objects",
                 "type": "Ember.RSVP.Promise"
             },
-            "class": "EmberOSF.InfinityCustomMixin",
-            "module": "ember-osf/mixins/infinity-custom"
+            "class": "InfinityCustomMixin",
+            "module": "ember-osf",
+            "submodule": "mixins"
         },
         {
             "file": "addon/mixins/node-actions.js",
-            "line": 8,
-            "class": "file-manager",
-            "module": "ember-osf/mixins/infinity-custom"
+            "line": 14,
+            "description": "The node to perform these actions on. If not specified, defaults to the model hook.",
+            "itemtype": "property",
+            "name": "node",
+            "type": "DS.Model",
+            "class": "NodeActionsMixin",
+            "module": "ember-osf",
+            "submodule": "mixins"
+        },
+        {
+            "file": "addon/mixins/node-actions.js",
+            "line": 22,
+            "description": "Helper method that maps all node contributors to format {contribId: Contributor}",
+            "itemtype": "method",
+            "name": "_generateContributorMap",
+            "access": "private",
+            "tagname": "",
+            "params": [
+                {
+                    "name": "contributors",
+                    "description": "All contributor relationships on the node",
+                    "type": "Array"
+                }
+            ],
+            "return": {
+                "description": "Returns a contributor map of the id to the contributor record",
+                "type": "Object"
+            },
+            "class": "NodeActionsMixin",
+            "module": "ember-osf",
+            "submodule": "mixins"
+        },
+        {
+            "file": "addon/mixins/node-actions.js",
+            "line": 35,
+            "description": "Helper method that affiliates an institution with a node.",
+            "itemtype": "method",
+            "name": "_affiliateNode",
+            "access": "private",
+            "tagname": "",
+            "params": [
+                {
+                    "name": "node",
+                    "description": "Node record",
+                    "type": "DS.Model"
+                },
+                {
+                    "name": "institution",
+                    "description": "Institution record",
+                    "type": "Object"
+                }
+            ],
+            "return": {
+                "description": "Returns a promise that resolves to the updated node with the newly created institution relationship",
+                "type": "Promise"
+            },
+            "class": "NodeActionsMixin",
+            "module": "ember-osf",
+            "submodule": "mixins"
+        },
+        {
+            "file": "addon/mixins/node-actions.js",
+            "line": 49,
+            "description": "Update a node",
+            "itemtype": "method",
+            "name": "updateNode",
+            "params": [
+                {
+                    "name": "title",
+                    "description": "New title of the node",
+                    "type": "String"
+                },
+                {
+                    "name": "description",
+                    "description": "New Description of the node",
+                    "type": "String"
+                },
+                {
+                    "name": "category",
+                    "description": "New node category",
+                    "type": "String"
+                },
+                {
+                    "name": "isPublic",
+                    "description": "Should this node be publicly-visible?",
+                    "type": "Boolean"
+                }
+            ],
+            "return": {
+                "description": "Returns a promise that resolves to the updated node",
+                "type": "Promise"
+            },
+            "class": "NodeActionsMixin",
+            "module": "ember-osf",
+            "submodule": "mixins"
+        },
+        {
+            "file": "addon/mixins/node-actions.js",
+            "line": 75,
+            "description": "Delete a node",
+            "itemtype": "method",
+            "name": "deleteNode",
+            "return": {
+                "description": "Returns a promise that resolves after the deletion of the node.",
+                "type": "Promise"
+            },
+            "class": "NodeActionsMixin",
+            "module": "ember-osf",
+            "submodule": "mixins"
+        },
+        {
+            "file": "addon/mixins/node-actions.js",
+            "line": 85,
+            "description": "Affiliate a node with an institution",
+            "itemtype": "method",
+            "name": "affiliateNode",
+            "params": [
+                {
+                    "name": "institutionId",
+                    "description": "ID of the institutution to be affiliated",
+                    "type": "String"
+                }
+            ],
+            "return": {
+                "description": "Returns a promise that resolves to the updated node\nwith the newly affiliated institution relationship",
+                "type": "Promise"
+            },
+            "class": "NodeActionsMixin",
+            "module": "ember-osf",
+            "submodule": "mixins"
+        },
+        {
+            "file": "addon/mixins/node-actions.js",
+            "line": 98,
+            "description": "Unaffiliate a node with an institution",
+            "itemtype": "method",
+            "name": "unaffiliateNode",
+            "params": [
+                {
+                    "name": "institution",
+                    "description": "Institution relationship to be removed from node",
+                    "type": "Object"
+                }
+            ],
+            "return": {
+                "description": "Returns a promise that resolves to the updated node\nwith the affiliated institution relationship removed.",
+                "type": "Promise"
+            },
+            "class": "NodeActionsMixin",
+            "module": "ember-osf",
+            "submodule": "mixins"
+        },
+        {
+            "file": "addon/mixins/node-actions.js",
+            "line": 111,
+            "description": "Add a contributor to a node",
+            "itemtype": "method",
+            "name": "addContributor",
+            "params": [
+                {
+                    "name": "userId",
+                    "description": "ID of user that will be a contributor on the node",
+                    "type": "String"
+                },
+                {
+                    "name": "permission",
+                    "description": "User permission level. One of \"read\", \"write\", or \"admin\". Default: \"write\".",
+                    "type": "String"
+                },
+                {
+                    "name": "isBibliographic",
+                    "description": "Whether user will be included in citations for the node. \"default: true\"",
+                    "type": "Boolean"
+                }
+            ],
+            "return": {
+                "description": "Returns a promise that resolves to the updated node\nwith the new contributor relationship.",
+                "type": "Promise"
+            },
+            "class": "NodeActionsMixin",
+            "module": "ember-osf",
+            "submodule": "mixins"
+        },
+        {
+            "file": "addon/mixins/node-actions.js",
+            "line": 131,
+            "description": "Remove a contributor from a node",
+            "itemtype": "method",
+            "name": "removeContributor",
+            "params": [
+                {
+                    "name": "contributor",
+                    "description": "Contributor relationship that will be removed from node",
+                    "type": "Object"
+                }
+            ],
+            "return": {
+                "description": "Returns a promise that will resolve upon contributor deletion.\nUser itself will not be removed.",
+                "type": "Promise"
+            },
+            "class": "NodeActionsMixin",
+            "module": "ember-osf",
+            "submodule": "mixins"
+        },
+        {
+            "file": "addon/mixins/node-actions.js",
+            "line": 146,
+            "description": "Update contributors of a node. Makes a bulk request to the APIv2.",
+            "itemtype": "method",
+            "name": "updateContributors",
+            "params": [
+                {
+                    "name": "contributors",
+                    "description": "Contributor relationships on the node.",
+                    "type": "Array"
+                },
+                {
+                    "name": "permissionsChanges",
+                    "description": "Dictionary mapping contributor ids to desired permissions.",
+                    "type": "Object"
+                },
+                {
+                    "name": "bibliographicChanges",
+                    "description": "Dictionary mapping contributor ids to desired bibliographic statuses",
+                    "type": "Object"
+                }
+            ],
+            "return": {
+                "description": "Returns a promise that resolves to the updated node\nwith edited contributor relationships.",
+                "type": "Promise"
+            },
+            "class": "NodeActionsMixin",
+            "module": "ember-osf",
+            "submodule": "mixins"
+        },
+        {
+            "file": "addon/mixins/node-actions.js",
+            "line": 167,
+            "description": "Add a child (component) to a node.",
+            "itemtype": "method",
+            "name": "addChild",
+            "params": [
+                {
+                    "name": "title",
+                    "description": "Title for the child",
+                    "type": "String"
+                },
+                {
+                    "name": "description",
+                    "description": "Description for the child",
+                    "type": "String"
+                },
+                {
+                    "name": "category",
+                    "description": "Category for the child",
+                    "type": "String"
+                }
+            ],
+            "return": {
+                "description": "Returns a promise that resolves to the updated node with the new child relationship.",
+                "type": "Promise"
+            },
+            "class": "NodeActionsMixin",
+            "module": "ember-osf",
+            "submodule": "mixins"
+        },
+        {
+            "file": "addon/mixins/node-actions.js",
+            "line": 186,
+            "description": "Add a node link (pointer) to another node",
+            "itemtype": "method",
+            "name": "addNodeLink",
+            "params": [
+                {
+                    "name": "targetNodeId",
+                    "description": "ID of the node for which you wish to create a pointer",
+                    "type": "String"
+                }
+            ],
+            "return": {
+                "description": "Returns a promise that resolves to the updated node with the\nnewly added nodeLink relationship",
+                "type": "Promise"
+            },
+            "class": "NodeActionsMixin",
+            "module": "ember-osf",
+            "submodule": "mixins"
+        },
+        {
+            "file": "addon/mixins/node-actions.js",
+            "line": 202,
+            "description": "Remove a node link (pointer) to another node",
+            "itemtype": "method",
+            "name": "removeNodeLink",
+            "params": [
+                {
+                    "name": "nodeLink",
+                    "description": "nodeLink record to be destroyed.",
+                    "type": "Object"
+                }
+            ],
+            "return": {
+                "description": "Returns a promise that resolves after the node link has been removed.  This does not delete\nthe target node itself.",
+                "type": "Promise"
+            },
+            "class": "NodeActionsMixin",
+            "module": "ember-osf",
+            "submodule": "mixins"
         },
         {
             "file": "addon/mixins/paginated-route.js",
-            "line": 14,
+            "line": 27,
             "description": "Allow configuration of the backend URL parameter used for page #",
             "itemtype": "property",
             "name": "pageParam",
             "type": "String",
             "default": "\"page\"",
-            "class": "file-manager",
-            "module": "ember-osf/mixins/infinity-custom"
+            "class": "PaginatedRouteMixin",
+            "module": "ember-osf",
+            "submodule": "mixins"
         },
         {
             "file": "addon/mixins/paginated-route.js",
-            "line": 22,
+            "line": 35,
             "description": "Allow configuration of the backend URL parameter for number of results per page",
             "itemtype": "property",
             "name": "perPageParam",
             "type": "String",
             "default": "\"page[size]\"",
-            "class": "file-manager",
-            "module": "ember-osf/mixins/infinity-custom"
+            "class": "PaginatedRouteMixin",
+            "module": "ember-osf",
+            "submodule": "mixins"
         },
         {
             "file": "addon/mixins/paginated-route.js",
-            "line": 30,
+            "line": 43,
+            "description": "Fetch a route-specified page of results from an external API\n\nTo use this argument, pass the params from the model hook as the first argument.\n```javascript\nmodel(routeParams) {\n  return this.queryForPage('user', routeParams);\n}\n```",
             "itemtype": "method",
-            "name": "queryForPage  Fetch a route-specified page of results from an external API",
+            "name": "queryForPage",
             "params": [
                 {
                     "name": "modelName",
@@ -454,130 +2645,296 @@
                 },
                 {
                     "name": "userParams",
-                    "description": "Additional user-specified query parameters"
+                    "description": "Additional user-specified query parameters to further customize the query"
                 }
             ],
             "return": {
                 "description": "",
                 "type": "Promise"
             },
-            "class": "file-manager",
-            "module": "ember-osf/mixins/infinity-custom"
+            "class": "PaginatedRouteMixin",
+            "module": "ember-osf",
+            "submodule": "mixins"
         },
         {
             "file": "addon/mixins/registration-actions.js",
-            "line": 9,
-            "class": "file-manager",
-            "module": "ember-osf/mixins/infinity-custom"
+            "line": 14,
+            "description": "TODO: Document this parameter",
+            "itemtype": "property",
+            "name": "node",
+            "type": "DS.Model",
+            "class": "RegistrationActionsMixin",
+            "module": "ember-osf",
+            "submodule": "mixins"
         },
         {
-            "file": "addon/models/collection.js",
-            "line": 6,
-            "description": "Model for OSF APIv2 collections\nFor field and usage information, see:\n https://api.osf.io/v2/docs/#!/v2/Collection_List_GET",
-            "class": "file-manager",
-            "module": "ember-osf/mixins/infinity-custom"
+            "file": "addon/mixins/registration-actions.js",
+            "line": 20,
+            "description": "The draft to perform these actions on. If not specified, defaults to the model hook.",
+            "itemtype": "property",
+            "name": "draft",
+            "type": "DS.Model",
+            "class": "RegistrationActionsMixin",
+            "module": "ember-osf",
+            "submodule": "mixins"
         },
         {
-            "file": "addon/models/comment-report.js",
-            "line": 5,
-            "description": "Model for OSF APIv2 comment reports. Primarily accessed via relationship fields.\nFor field and usage information, see:\n   https://api.osf.io/v2/docs/#!/v2/Comment_Reports_List_GET",
-            "class": "file-manager",
-            "module": "ember-osf/mixins/infinity-custom"
+            "file": "addon/mixins/registration-actions.js",
+            "line": 28,
+            "description": "Update the current registration metadata with new responses. Takes the\ncurrentMetadata and recursively merges in the newMetadata.",
+            "itemtype": "method",
+            "name": "_updateMetadata",
+            "params": [
+                {
+                    "name": "currentMetadata",
+                    "description": "The registration metadata at last save.",
+                    "type": "Object"
+                },
+                {
+                    "name": "newMetadata",
+                    "description": "New registration metadata.",
+                    "type": "Object"
+                }
+            ],
+            "return": {
+                "description": "Returns merge of currentMetadata and newMetadata",
+                "type": "Object"
+            },
+            "class": "RegistrationActionsMixin",
+            "module": "ember-osf",
+            "submodule": "mixins"
         },
         {
-            "file": "addon/models/comment.js",
-            "line": 5,
-            "description": "Model for OSF APIv2 comments. This model may be used with one of several API endpoints. It may be queried directly,\n or accessed via relationship fields.\nFor field and usage information, see:\n   https://api.osf.io/v2/docs/#!/v2/Comment_Detail_GET\n   https://api.osf.io/v2/docs/#!/v2/Node_Comments_List_GET\n   https://api.osf.io/v2/docs/#!/v2/Registration_Comments_List_GET",
-            "class": "file-manager",
-            "module": "ember-osf/mixins/infinity-custom"
+            "file": "addon/mixins/registration-actions.js",
+            "line": 51,
+            "description": "Build the request payload used when creating a registration from a draft.",
+            "itemtype": "method",
+            "name": "_generateRegistrationPayload",
+            "access": "private",
+            "tagname": "",
+            "params": [
+                {
+                    "name": "draft",
+                    "description": "ID of the draft registration",
+                    "type": "String"
+                },
+                {
+                    "name": "registrationChoice",
+                    "description": "Either \"immediate\" or \"embargo\".",
+                    "type": "String"
+                },
+                {
+                    "name": "liftEmbargo",
+                    "description": "if registrationChoice === \"embargo\", liftEmbargo should be the date to lift the embargo.",
+                    "type": "Date"
+                }
+            ],
+            "return": {
+                "description": "Returns the attributes portion of the payload for creating a registration.",
+                "type": "Object"
+            },
+            "class": "RegistrationActionsMixin",
+            "module": "ember-osf",
+            "submodule": "mixins"
         },
         {
-            "file": "addon/models/contributor.js",
-            "line": 5,
-            "description": "Model for OSF APIv2 contributors. Primarily accessed via relationship fields.\nFor field and usage information, see:\n   https://api.osf.io/v2/docs/#!/v2/Node_Contributors_List_GET",
-            "class": "file-manager",
-            "module": "ember-osf/mixins/infinity-custom"
+            "file": "addon/mixins/registration-actions.js",
+            "line": 72,
+            "description": "Create a draft registration of the node.",
+            "itemtype": "method",
+            "name": "createDraft",
+            "params": [
+                {
+                    "name": "schemaId",
+                    "description": "ID of the chosen registration schema",
+                    "type": "String"
+                }
+            ],
+            "return": {
+                "description": "Returns a promise that resolves to the updated node - with the\nnewly created draft registration.",
+                "type": "Promise"
+            },
+            "class": "RegistrationActionsMixin",
+            "module": "ember-osf",
+            "submodule": "mixins"
         },
         {
-            "file": "addon/models/draft-registration.js",
-            "line": 4,
-            "description": "Model for OSF APIv2 draft registrations.\nThis model represents draft registration data and can be accessed as a relationship of a node.\nFor information on how to interact with a node's draft registrations, see:\n   https://api.osf.io/v2/docs/#!/v2/Node_Draft_Registrations_List_GET\n   https://api.osf.io/v2/docs/#!/v2/Node_Draft_Registration_Detail_GET",
-            "class": "file-manager",
-            "module": "ember-osf/mixins/infinity-custom"
+            "file": "addon/mixins/registration-actions.js",
+            "line": 88,
+            "description": "Delete a draft registration of the node.",
+            "itemtype": "method",
+            "name": "deleteDraft",
+            "params": [
+                {
+                    "name": "draft",
+                    "description": "Draft to be deleted",
+                    "type": "Object"
+                }
+            ],
+            "return": {
+                "description": "Returns a promise that resolves after the deletion of the draft.",
+                "type": "Promise"
+            },
+            "class": "RegistrationActionsMixin",
+            "module": "ember-osf",
+            "submodule": "mixins"
         },
         {
-            "file": "addon/models/file-provider.js",
-            "line": 6,
-            "description": "Model for OSF APIv2 file providers. Primarily used in relationship fields.\nThis model is used for basic file provider metadata. To interact with file contents directly, see the `file-manager` service.\nFor field and usage information, see:\n   https://api.osf.io/v2/docs/#!/v2/Node_Providers_List_GET\n   https://api.osf.io/v2/docs/#!/v2/Node_Provider_Detail_GET\n   https://api.osf.io/v2/docs/#!/v2/Registration_Providers_List_GET",
-            "class": "file-manager",
-            "module": "ember-osf/mixins/infinity-custom"
+            "file": "addon/mixins/registration-actions.js",
+            "line": 98,
+            "description": "Edit a draft registration of the node",
+            "itemtype": "method",
+            "name": "editDraft",
+            "params": [
+                {
+                    "name": "updatedMetadata",
+                    "description": "Responses to questions in the registration\nschema, nested in the format the registration schema expects\nto questions in the registration schema",
+                    "type": "Object"
+                }
+            ],
+            "return": {
+                "description": "Returns a promise that resolves to the updated draft",
+                "type": "Promise"
+            },
+            "class": "RegistrationActionsMixin",
+            "module": "ember-osf",
+            "submodule": "mixins"
         },
         {
-            "file": "addon/models/file-version.js",
-            "line": 5,
-            "description": "Model for OSF APIv2 file versions. Primarily used in relationship fields.\nThis model is used for basic file version metadata. To interact with file contents directly, see the `file-manager` service.\nFor field and usage information, see:\n   https://api.osf.io/v2/docs/#!/v2/File_Versions_List_GET\n   https://api.osf.io/v2/docs/#!/v2/File_Version_Detail_GET",
-            "class": "file-manager",
-            "module": "ember-osf/mixins/infinity-custom"
+            "file": "addon/mixins/registration-actions.js",
+            "line": 114,
+            "description": "Register a draft (creates a registration from a draft)",
+            "itemtype": "method",
+            "name": "registerDraft",
+            "params": [
+                {
+                    "name": "updatedMetadata",
+                    "description": "esponses to questions in the registration\nschema, nested in the format the registration schema expects",
+                    "type": "Object"
+                },
+                {
+                    "name": "registrationChoice",
+                    "description": "Either \"immediate\" or \"embargo\".",
+                    "type": "String"
+                },
+                {
+                    "name": "liftEmbargo",
+                    "description": "if registrationChoice === \"embargo\", liftEmbargo should be the date to lift the embargo.",
+                    "type": "Date"
+                }
+            ],
+            "return": {
+                "description": "Returns a promise that resolves to the updated node with the newly created registration relationship",
+                "type": "Promise"
+            },
+            "class": "RegistrationActionsMixin",
+            "module": "ember-osf",
+            "submodule": "mixins"
         },
         {
-            "file": "addon/models/file.js",
-            "line": 6,
-            "description": "Model for OSF APIv2 files. This model may be used with one of several API endpoints. It may be queried directly,\n or (more commonly) accessed via relationship fields.\nThis model is used for basic file metadata. To interact with file contents directly, see the `file-manager` service.\nFor field and usage information, see:\n   https://api.osf.io/v2/docs/#!/v2/File_Detail_GET\n   https://api.osf.io/v2/docs/#!/v2/Node_Files_List_GET\n   https://api.osf.io/v2/docs/#!/v2/Node_File_Detail_GET\n   https://api.osf.io/v2/docs/#!/v2/Registration_Files_List_GET\n   https://api.osf.io/v2/docs/#!/v2/Registration_File_Detail_GET",
-            "class": "file-manager",
-            "module": "ember-osf/mixins/infinity-custom"
+            "file": "addon/mixins/taggable-mixin.js",
+            "line": 15,
+            "description": "Appends a tag to the current array of tags on the resource.  Copies current\nlist of tags, appends new tag to copy, and then sets tags on the resource\nas the modified copy.",
+            "itemtype": "method",
+            "name": "addATag",
+            "params": [
+                {
+                    "name": "tag",
+                    "description": "New tag to be added to list.",
+                    "type": "String"
+                }
+            ],
+            "class": "TaggableMixin",
+            "module": "ember-osf",
+            "submodule": "mixins"
         },
         {
-            "file": "addon/models/institution.js",
-            "line": 5,
-            "description": "Model for OSF APIv2 institutions. This model may be used with one of several API endpoints. It may be queried directly,\n or accessed via relationship fields.\nFor field and usage information, see:\n   https://api.osf.io/v2/docs/#!/v2/Institution_List_GET\n   https://api.osf.io/v2/docs/#!/v2/Institution_Detail_GET\n   https://api.osf.io/v2/docs/#!/v2/Node_Institutions_List_GET\n   https://api.osf.io/v2/docs/#!/v2/Registration_Institutions_List_GET\n   https://api.osf.io/v2/docs/#!/v2/User_Institutions_GET",
-            "class": "file-manager",
-            "module": "ember-osf/mixins/infinity-custom"
+            "file": "addon/mixins/taggable-mixin.js",
+            "line": 31,
+            "description": "Removes a tag from the current array of tags on the resource.",
+            "itemtype": "method",
+            "name": "removeATag",
+            "params": [
+                {
+                    "name": "tag",
+                    "description": "Tag to be removed from list.",
+                    "type": "String"
+                }
+            ],
+            "class": "TaggableMixin",
+            "module": "ember-osf",
+            "submodule": "mixins"
         },
         {
-            "file": "addon/models/log.js",
-            "line": 5,
-            "description": "Model for OSF APIv2 log entries. This model may be used with one of several API endpoints. It may be queried directly,\n or accessed via relationship fields.\nFor field and usage information, see:\n   https://api.osf.io/v2/docs/#!/v2/Node_Log_Detail_GET\n   https://api.osf.io/v2/docs/#!/v2/Node_Log_List_GET\n   https://api.osf.io/v2/docs/#!/v2/Registration_Log_List_GET",
-            "class": "file-manager",
-            "module": "ember-osf/mixins/infinity-custom"
+            "file": "addon/models/osf-model.js",
+            "line": 30,
+            "description": "Looks up relationship on model and returns hasManyRelationship\nor belongsToRelationship object.",
+            "itemtype": "method",
+            "name": "resolveRelationship",
+            "access": "private",
+            "tagname": "",
+            "params": [
+                {
+                    "name": "rel",
+                    "description": "Name of the relationship on the model",
+                    "type": "String"
+                }
+            ],
+            "class": "OsfModel",
+            "module": "ember-osf",
+            "submodule": "models"
         },
         {
-            "file": "addon/models/metaschema.js",
-            "line": 4,
-            "description": "Model for OSF APIv2 metaschemas.\nThis model describes metaschemas and can be directly queried.\nFor information on how to retrieve metaschemas see:\n   https://api.osf.io/v2/docs/#!/v2/Meta_Schemas_List_GET\n   https://api.osf.io/v2/docs/#!/v2/Meta_Schema_Detail_GET",
-            "class": "file-manager",
-            "module": "ember-osf/mixins/infinity-custom"
+            "file": "addon/serializers/osf-serializer.js",
+            "line": 24,
+            "description": "Extract information about records embedded inside this request",
+            "itemtype": "method",
+            "name": "_extractEmbeds",
+            "params": [
+                {
+                    "name": "resourceHash",
+                    "description": "",
+                    "type": "Object"
+                }
+            ],
+            "return": {
+                "description": "",
+                "type": "Array"
+            },
+            "access": "private",
+            "tagname": "",
+            "class": "OsfSerializer",
+            "module": "ember-osf",
+            "submodule": "serializers"
         },
         {
-            "file": "addon/models/node-link.js",
-            "line": 5,
-            "description": "Model for OSF APIv2 node links. This model may refer to one of several API endpoints. It may be queried directly,\n or accessed via relationship fields.\nFor field and usage information, see:\n   https://api.osf.io/v2/docs/#!/v2/Node_Links_List_GET\n   https://api.osf.io/v2/docs/#!/v2/Node_Links_Detail_GET\n   https://api.osf.io/v2/docs/#!/v2/Registration_Node_Links_List_GET\n   https://api.osf.io/v2/docs/#!/v2/Registration_Node_Links_Detail_GET",
-            "class": "file-manager",
-            "module": "ember-osf/mixins/infinity-custom"
+            "file": "addon/services/current-user.js",
+            "line": 17,
+            "description": "If logged in, return the ID of the current user, else return null.",
+            "itemtype": "property",
+            "name": "currentUserId",
+            "type": "{String|null}",
+            "class": "current-user",
+            "module": "ember-osf",
+            "submodule": "services"
         },
         {
-            "file": "addon/models/node.js",
-            "line": 9,
-            "description": "Model for OSF APIv2 nodes. This model may be used with one of several API endpoints. It may be queried directly,\n or accessed via relationship fields.\nFor field and usage information, see:\n   https://api.osf.io/v2/docs/#!/v2/Node_List_GET\n   https://api.osf.io/v2/docs/#!/v2/Node_Detail_GET\n   https://api.osf.io/v2/docs/#!/v2/Node_Children_List_GET\n   https://api.osf.io/v2/docs/#!/v2/Linked_Nodes_List_GET\n   https://api.osf.io/v2/docs/#!/v2/Node_Forks_List_GET\n   https://api.osf.io/v2/docs/#!/v2/User_Nodes_GET",
-            "class": "file-manager",
-            "module": "ember-osf/mixins/infinity-custom"
-        },
-        {
-            "file": "addon/models/registration.js",
-            "line": 5,
-            "description": "Model for OSF APIv2 registrations. This model may be used with one of several API endpoints. It may be queried directly,\n or accessed via relationship fields.\nFor field and usage information, see:\n   https://api.osf.io/v2/docs/#!/v2/Registration_List_GET\n   https://api.osf.io/v2/docs/#!/v2/Registration_Detail_GET\n   https://api.osf.io/v2/docs/#!/v2/Registration_Children_List_GET\n   https://api.osf.io/v2/docs/#!/v2/User_Registrations_GET",
-            "class": "file-manager",
-            "module": "ember-osf/mixins/infinity-custom"
-        },
-        {
-            "file": "addon/models/user.js",
-            "line": 5,
-            "description": "Model for OSF APIv2 users. This model may be used with one of several API endpoints. It may be queried directly,\n or accessed via relationship fields.\nFor field and usage information, see:\n   https://api.osf.io/v2/docs/#!/v2/User_List_GET\n   https://api.osf.io/v2/docs/#!/v2/User_Detail_GET\n   https://api.osf.io/v2/docs/#!/v2/Institution_User_List_GET",
-            "class": "file-manager",
-            "module": "ember-osf/mixins/infinity-custom"
+            "file": "addon/services/current-user.js",
+            "line": 31,
+            "description": "Fetch information about the currently logged in user. If no user is logged in, this method returns a rejected promise.",
+            "itemtype": "method",
+            "name": "load",
+            "return": {
+                "description": "",
+                "type": "Ember.RSVP.Promise"
+            },
+            "class": "current-user",
+            "module": "ember-osf",
+            "submodule": "services"
         },
         {
             "file": "addon/services/file-manager.js",
-            "line": 16,
+            "line": 20,
             "description": "Get a URL to download the given file.",
             "itemtype": "method",
             "name": "getDownloadUrl",
@@ -615,11 +2972,12 @@
                 "type": "String"
             },
             "class": "file-manager",
-            "module": "ember-osf/mixins/infinity-custom"
+            "module": "ember-osf",
+            "submodule": "services"
         },
         {
             "file": "addon/services/file-manager.js",
-            "line": 44,
+            "line": 48,
             "description": "Download the contents of the given file.",
             "itemtype": "method",
             "name": "getContents",
@@ -655,11 +3013,12 @@
                 "type": "Promise"
             },
             "class": "file-manager",
-            "module": "ember-osf/mixins/infinity-custom"
+            "module": "ember-osf",
+            "submodule": "services"
         },
         {
             "file": "addon/services/file-manager.js",
-            "line": 61,
+            "line": 65,
             "description": "Upload a new version of an existing file.",
             "itemtype": "method",
             "name": "updateContents",
@@ -700,11 +3059,12 @@
                 "type": "Promise"
             },
             "class": "file-manager",
-            "module": "ember-osf/mixins/infinity-custom"
+            "module": "ember-osf",
+            "submodule": "services"
         },
         {
             "file": "addon/services/file-manager.js",
-            "line": 87,
+            "line": 91,
             "description": "Check out a file, so only the current user can modify it.",
             "itemtype": "method",
             "name": "checkOut",
@@ -720,11 +3080,12 @@
                 "type": "Promise"
             },
             "class": "file-manager",
-            "module": "ember-osf/mixins/infinity-custom"
+            "module": "ember-osf",
+            "submodule": "services"
         },
         {
             "file": "addon/services/file-manager.js",
-            "line": 106,
+            "line": 110,
             "description": "Check in a file, so anyone with permission can modify it.",
             "itemtype": "method",
             "name": "checkOut",
@@ -740,11 +3101,12 @@
                 "type": "Promise"
             },
             "class": "file-manager",
-            "module": "ember-osf/mixins/infinity-custom"
+            "module": "ember-osf",
+            "submodule": "services"
         },
         {
             "file": "addon/services/file-manager.js",
-            "line": 124,
+            "line": 128,
             "description": "Create a new folder",
             "itemtype": "method",
             "name": "addSubfolder",
@@ -785,11 +3147,12 @@
                 "type": "Promise"
             },
             "class": "file-manager",
-            "module": "ember-osf/mixins/infinity-custom"
+            "module": "ember-osf",
+            "submodule": "services"
         },
         {
             "file": "addon/services/file-manager.js",
-            "line": 155,
+            "line": 159,
             "description": "Upload a file",
             "itemtype": "method",
             "name": "uploadFile",
@@ -835,11 +3198,12 @@
                 "type": "Promise"
             },
             "class": "file-manager",
-            "module": "ember-osf/mixins/infinity-custom"
+            "module": "ember-osf",
+            "submodule": "services"
         },
         {
             "file": "addon/services/file-manager.js",
-            "line": 184,
+            "line": 188,
             "description": "Rename a file or folder",
             "itemtype": "method",
             "name": "rename",
@@ -880,11 +3244,12 @@
                 "type": "Promise"
             },
             "class": "file-manager",
-            "module": "ember-osf/mixins/infinity-custom"
+            "module": "ember-osf",
+            "submodule": "services"
         },
         {
             "file": "addon/services/file-manager.js",
-            "line": 205,
+            "line": 209,
             "description": "Move (or copy) a file or folder",
             "itemtype": "method",
             "name": "move",
@@ -959,11 +3324,12 @@
                 "type": "Promise"
             },
             "class": "file-manager",
-            "module": "ember-osf/mixins/infinity-custom"
+            "module": "ember-osf",
+            "submodule": "services"
         },
         {
             "file": "addon/services/file-manager.js",
-            "line": 246,
+            "line": 250,
             "description": "Copy a file or folder.\nConvenience method for `move` with `options.copy == true`.",
             "itemtype": "method",
             "name": "copy",
@@ -1031,11 +3397,12 @@
                 "type": "Promise"
             },
             "class": "file-manager",
-            "module": "ember-osf/mixins/infinity-custom"
+            "module": "ember-osf",
+            "submodule": "services"
         },
         {
             "file": "addon/services/file-manager.js",
-            "line": 279,
+            "line": 283,
             "description": "Delete a file or folder",
             "itemtype": "method",
             "name": "deleteFile",
@@ -1071,11 +3438,12 @@
                 "type": "Promise"
             },
             "class": "file-manager",
-            "module": "ember-osf/mixins/infinity-custom"
+            "module": "ember-osf",
+            "submodule": "services"
         },
         {
             "file": "addon/services/file-manager.js",
-            "line": 305,
+            "line": 309,
             "description": "Check whether the given url corresponds to a model that is currently\nreloading after a file operation.\n\nUsed by `mixin:file-cache-bypass` to avoid a race condition where the\ncache might return stale, inaccurate data.",
             "itemtype": "method",
             "name": "isReloadingUrl",
@@ -1091,22 +3459,24 @@
                 "type": "Boolean"
             },
             "class": "file-manager",
-            "module": "ember-osf/mixins/infinity-custom"
+            "module": "ember-osf",
+            "submodule": "services"
         },
         {
             "file": "addon/services/file-manager.js",
-            "line": 321,
+            "line": 325,
             "description": "Hash set of URLs for `model.reload()` calls that are still pending.",
             "itemtype": "property",
             "name": "_reloadingUrls",
             "access": "private",
             "tagname": "",
             "class": "file-manager",
-            "module": "ember-osf/mixins/infinity-custom"
+            "module": "ember-osf",
+            "submodule": "services"
         },
         {
             "file": "addon/services/file-manager.js",
-            "line": 329,
+            "line": 333,
             "description": "Force-reload a model from the API.",
             "itemtype": "method",
             "name": "_reloadModel",
@@ -1124,11 +3494,12 @@
                 "type": "Promise"
             },
             "class": "file-manager",
-            "module": "ember-osf/mixins/infinity-custom"
+            "module": "ember-osf",
+            "submodule": "services"
         },
         {
             "file": "addon/services/file-manager.js",
-            "line": 363,
+            "line": 367,
             "description": "Make a Waterbutler request",
             "itemtype": "method",
             "name": "_waterbutlerRequest",
@@ -1171,11 +3542,12 @@
                 "type": "Promise"
             },
             "class": "file-manager",
-            "module": "ember-osf/mixins/infinity-custom"
+            "module": "ember-osf",
+            "submodule": "services"
         },
         {
             "file": "addon/services/file-manager.js",
-            "line": 400,
+            "line": 404,
             "description": "Get the `file` model for a newly created file.",
             "itemtype": "method",
             "name": "_getNewFileInfo",
@@ -1198,185 +3570,38 @@
                 "type": "Promise"
             },
             "class": "file-manager",
-            "module": "ember-osf/mixins/infinity-custom"
-        },
-        {
-            "file": "addon/utils/array-items-are-equal.js",
-            "line": 1,
-            "description": "Check that all of the items in a are in b, and that all of the items in b are\nin a.",
-            "itemtype": "method",
-            "name": "arrayItemsAreEqual",
-            "params": [
-                {
-                    "name": "a",
-                    "description": "the first array",
-                    "type": "Array"
-                },
-                {
-                    "name": "b",
-                    "description": "the second array",
-                    "type": "Array"
-                },
-                {
-                    "name": "compareItems",
-                    "description": "an optional function to use to compare array\nitems",
-                    "type": "Function"
-                }
-            ],
-            "return": {
-                "description": "",
-                "type": "Boolean"
-            },
-            "class": "",
-            "module": "ember-osf/mixins/infinity-custom"
-        },
-        {
-            "file": "addon/utils/serialize-relationship.js",
-            "line": 5,
-            "description": "Serialize the hasMany relationship of a record",
-            "itemtype": "method",
-            "name": "serializeHasMany",
-            "params": [
-                {
-                    "name": "relationship",
-                    "description": "Name of the relationship attribute as representd on the model",
-                    "type": "String"
-                },
-                {
-                    "name": "type",
-                    "description": "API type of the related resource being serialized",
-                    "type": "String"
-                },
-                {
-                    "name": "record",
-                    "description": "DS.Model instance to pull related data off of",
-                    "type": "DS.Model"
-                }
-            ],
-            "return": {
-                "description": "Serialized data",
-                "type": "Object"
-            },
-            "class": "",
-            "module": "ember-osf/mixins/infinity-custom"
+            "module": "ember-osf",
+            "submodule": "services"
         }
     ],
     "warnings": [
         {
             "message": "replacing incorrect tag: returns with return",
-            "line": " addon/mixins/fetch-all-route.js:71"
+            "line": " addon/mixins/commentable.js:32"
         },
         {
             "message": "replacing incorrect tag: returns with return",
-            "line": " addon/mixins/infinity-custom.js:68"
+            "line": " addon/mixins/commentable.js:51"
         },
         {
             "message": "replacing incorrect tag: returns with return",
-            "line": " addon/mixins/paginated-route.js:30"
+            "line": " addon/mixins/commentable.js:60"
         },
         {
-            "message": "replacing incorrect tag: function with method",
-            "line": " addon/utils/array-items-are-equal.js:1"
+            "message": "replacing incorrect tag: returns with return",
+            "line": " addon/mixins/commentable.js:70"
         },
         {
-            "message": "Missing item type\nA row could represent a node, file-provider, or file, each of which has a\ndifferent interface. RowProxy provides a consistent interface for everything\nthe file browser needs to know.\n\nImportant: Use `row.content` when passing a row model outside file-browser",
-            "line": " addon/components/file-browser-tree/component.js:4"
+            "message": "replacing incorrect tag: returns with return",
+            "line": " addon/mixins/commentable.js:80"
         },
         {
-            "message": "Missing item type\nLoad all this row's children. Concatenates `content.files` (if it exists)\nwith `content.children` (if it exists) and puts the result in\n`childTrees`.\n\nHas about the same result as:\n`childTrees: Ember.computed.union('content.files', 'content.children')`\nbut it sets `isLoading` to `true` when it starts and to `false` when it's\ndone. Computed properties don't expose the underlying promises, and a\nloading indicator seems important.\n\nTODO: But this counters ember's binding magic... If the file/node models\nchange, the tree won't automatically update. Could add another observer\non `files` and `children`, but it would be nice to find another way to\nupdate `isLoading` and get rid of this method entirely",
-            "line": " addon/components/file-browser-tree/component.js:22"
+            "message": "replacing incorrect tag: returns with return",
+            "line": " addon/serializers/osf-serializer.js:24"
         },
         {
-            "message": "Missing item type\nThe FetchAllRouteMixin supports loading *all* records from a specified model or relationship.\nEssentially, it un-paginates an API\n\nThis may be useful for select applications (such as frontend-powered search boxes), but is strongly discouraged\nfor most applications. Consider using available pagination functionality instead.",
-            "line": " addon/mixins/fetch-all-route.js:1"
-        },
-        {
-            "message": "Missing item type\nSets up fetch-all query for a relationship field.",
-            "line": " addon/mixins/fetch-all-route.js:35"
-        },
-        {
-            "message": "Missing item type\nEvent listener that fetches more results automatically\nAs written, this does not handle fetch errors, and will not retry once an error is encountered",
-            "line": " addon/mixins/fetch-all-route.js:63"
-        },
-        {
-            "message": "Missing item type\nConvenience method for clickable buttons, mainly for use with debugging",
-            "line": " addon/mixins/fetch-all-route.js:94"
-        },
-        {
-            "message": "Missing item type\nThis is a hack to resolve a server-side race condition.\nAfter creating/modifying/deleting a file through Waterbutler, it can take\na fraction of a second for the API's cache to properly update, and\ntrying to reload the file model in that time can return stale data.\n\nThis adapter mixin appends a nonce to requests that are likely to run into\nthat race condition, forcing a cache miss.",
-            "line": " addon/mixins/file-cache-bypass.js:3"
-        },
-        {
-            "message": "Missing item type\nRepurpose an ember-infinity hook to override the method used for queries",
-            "line": " addon/mixins/infinity-custom.js:17"
-        },
-        {
-            "message": "Missing item type",
-            "line": " addon/mixins/node-actions.js:8"
-        },
-        {
-            "message": "Missing item type",
-            "line": " addon/mixins/registration-actions.js:9"
-        },
-        {
-            "message": "Missing item type\nModel for OSF APIv2 collections\nFor field and usage information, see:\n https://api.osf.io/v2/docs/#!/v2/Collection_List_GET",
-            "line": " addon/models/collection.js:6"
-        },
-        {
-            "message": "Missing item type\nModel for OSF APIv2 comment reports. Primarily accessed via relationship fields.\nFor field and usage information, see:\n   https://api.osf.io/v2/docs/#!/v2/Comment_Reports_List_GET",
-            "line": " addon/models/comment-report.js:5"
-        },
-        {
-            "message": "Missing item type\nModel for OSF APIv2 comments. This model may be used with one of several API endpoints. It may be queried directly,\n or accessed via relationship fields.\nFor field and usage information, see:\n   https://api.osf.io/v2/docs/#!/v2/Comment_Detail_GET\n   https://api.osf.io/v2/docs/#!/v2/Node_Comments_List_GET\n   https://api.osf.io/v2/docs/#!/v2/Registration_Comments_List_GET",
-            "line": " addon/models/comment.js:5"
-        },
-        {
-            "message": "Missing item type\nModel for OSF APIv2 contributors. Primarily accessed via relationship fields.\nFor field and usage information, see:\n   https://api.osf.io/v2/docs/#!/v2/Node_Contributors_List_GET",
-            "line": " addon/models/contributor.js:5"
-        },
-        {
-            "message": "Missing item type\nModel for OSF APIv2 draft registrations.\nThis model represents draft registration data and can be accessed as a relationship of a node.\nFor information on how to interact with a node's draft registrations, see:\n   https://api.osf.io/v2/docs/#!/v2/Node_Draft_Registrations_List_GET\n   https://api.osf.io/v2/docs/#!/v2/Node_Draft_Registration_Detail_GET",
-            "line": " addon/models/draft-registration.js:4"
-        },
-        {
-            "message": "Missing item type\nModel for OSF APIv2 file providers. Primarily used in relationship fields.\nThis model is used for basic file provider metadata. To interact with file contents directly, see the `file-manager` service.\nFor field and usage information, see:\n   https://api.osf.io/v2/docs/#!/v2/Node_Providers_List_GET\n   https://api.osf.io/v2/docs/#!/v2/Node_Provider_Detail_GET\n   https://api.osf.io/v2/docs/#!/v2/Registration_Providers_List_GET",
-            "line": " addon/models/file-provider.js:6"
-        },
-        {
-            "message": "Missing item type\nModel for OSF APIv2 file versions. Primarily used in relationship fields.\nThis model is used for basic file version metadata. To interact with file contents directly, see the `file-manager` service.\nFor field and usage information, see:\n   https://api.osf.io/v2/docs/#!/v2/File_Versions_List_GET\n   https://api.osf.io/v2/docs/#!/v2/File_Version_Detail_GET",
-            "line": " addon/models/file-version.js:5"
-        },
-        {
-            "message": "Missing item type\nModel for OSF APIv2 files. This model may be used with one of several API endpoints. It may be queried directly,\n or (more commonly) accessed via relationship fields.\nThis model is used for basic file metadata. To interact with file contents directly, see the `file-manager` service.\nFor field and usage information, see:\n   https://api.osf.io/v2/docs/#!/v2/File_Detail_GET\n   https://api.osf.io/v2/docs/#!/v2/Node_Files_List_GET\n   https://api.osf.io/v2/docs/#!/v2/Node_File_Detail_GET\n   https://api.osf.io/v2/docs/#!/v2/Registration_Files_List_GET\n   https://api.osf.io/v2/docs/#!/v2/Registration_File_Detail_GET",
-            "line": " addon/models/file.js:6"
-        },
-        {
-            "message": "Missing item type\nModel for OSF APIv2 institutions. This model may be used with one of several API endpoints. It may be queried directly,\n or accessed via relationship fields.\nFor field and usage information, see:\n   https://api.osf.io/v2/docs/#!/v2/Institution_List_GET\n   https://api.osf.io/v2/docs/#!/v2/Institution_Detail_GET\n   https://api.osf.io/v2/docs/#!/v2/Node_Institutions_List_GET\n   https://api.osf.io/v2/docs/#!/v2/Registration_Institutions_List_GET\n   https://api.osf.io/v2/docs/#!/v2/User_Institutions_GET",
-            "line": " addon/models/institution.js:5"
-        },
-        {
-            "message": "Missing item type\nModel for OSF APIv2 log entries. This model may be used with one of several API endpoints. It may be queried directly,\n or accessed via relationship fields.\nFor field and usage information, see:\n   https://api.osf.io/v2/docs/#!/v2/Node_Log_Detail_GET\n   https://api.osf.io/v2/docs/#!/v2/Node_Log_List_GET\n   https://api.osf.io/v2/docs/#!/v2/Registration_Log_List_GET",
-            "line": " addon/models/log.js:5"
-        },
-        {
-            "message": "Missing item type\nModel for OSF APIv2 metaschemas.\nThis model describes metaschemas and can be directly queried.\nFor information on how to retrieve metaschemas see:\n   https://api.osf.io/v2/docs/#!/v2/Meta_Schemas_List_GET\n   https://api.osf.io/v2/docs/#!/v2/Meta_Schema_Detail_GET",
-            "line": " addon/models/metaschema.js:4"
-        },
-        {
-            "message": "Missing item type\nModel for OSF APIv2 node links. This model may refer to one of several API endpoints. It may be queried directly,\n or accessed via relationship fields.\nFor field and usage information, see:\n   https://api.osf.io/v2/docs/#!/v2/Node_Links_List_GET\n   https://api.osf.io/v2/docs/#!/v2/Node_Links_Detail_GET\n   https://api.osf.io/v2/docs/#!/v2/Registration_Node_Links_List_GET\n   https://api.osf.io/v2/docs/#!/v2/Registration_Node_Links_Detail_GET",
-            "line": " addon/models/node-link.js:5"
-        },
-        {
-            "message": "Missing item type\nModel for OSF APIv2 nodes. This model may be used with one of several API endpoints. It may be queried directly,\n or accessed via relationship fields.\nFor field and usage information, see:\n   https://api.osf.io/v2/docs/#!/v2/Node_List_GET\n   https://api.osf.io/v2/docs/#!/v2/Node_Detail_GET\n   https://api.osf.io/v2/docs/#!/v2/Node_Children_List_GET\n   https://api.osf.io/v2/docs/#!/v2/Linked_Nodes_List_GET\n   https://api.osf.io/v2/docs/#!/v2/Node_Forks_List_GET\n   https://api.osf.io/v2/docs/#!/v2/User_Nodes_GET",
-            "line": " addon/models/node.js:9"
-        },
-        {
-            "message": "Missing item type\nModel for OSF APIv2 registrations. This model may be used with one of several API endpoints. It may be queried directly,\n or accessed via relationship fields.\nFor field and usage information, see:\n   https://api.osf.io/v2/docs/#!/v2/Registration_List_GET\n   https://api.osf.io/v2/docs/#!/v2/Registration_Detail_GET\n   https://api.osf.io/v2/docs/#!/v2/Registration_Children_List_GET\n   https://api.osf.io/v2/docs/#!/v2/User_Registrations_GET",
-            "line": " addon/models/registration.js:5"
-        },
-        {
-            "message": "Missing item type\nModel for OSF APIv2 users. This model may be used with one of several API endpoints. It may be queried directly,\n or accessed via relationship fields.\nFor field and usage information, see:\n   https://api.osf.io/v2/docs/#!/v2/User_List_GET\n   https://api.osf.io/v2/docs/#!/v2/User_Detail_GET\n   https://api.osf.io/v2/docs/#!/v2/Institution_User_List_GET",
-            "line": " addon/models/user.js:5"
+            "message": "replacing incorrect tag: returns with return",
+            "line": " addon/services/current-user.js:31"
         }
     ]
 }

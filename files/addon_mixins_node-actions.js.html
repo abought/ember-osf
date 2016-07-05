@@ -38,13 +38,72 @@
                 
                         <div id="api-tabview-panel">
                             <ul id="api-classes" class="apis classes">
-                                <li><a href="../classes/EmberOSF.InfinityCustomMixin.html">EmberOSF.InfinityCustomMixin</a></li>
+                                <li><a href="../classes/Collection.html">Collection</a></li>
+                                <li><a href="../classes/Comment.html">Comment</a></li>
+                                <li><a href="../classes/comment-detail.html">comment-detail</a></li>
+                                <li><a href="../classes/comment-form.html">comment-form</a></li>
+                                <li><a href="../classes/comment-pane.html">comment-pane</a></li>
+                                <li><a href="../classes/CommentableMixin.html">CommentableMixin</a></li>
+                                <li><a href="../classes/CommentReport.html">CommentReport</a></li>
+                                <li><a href="../classes/Contributor.html">Contributor</a></li>
+                                <li><a href="../classes/current-user.html">current-user</a></li>
+                                <li><a href="../classes/DraftRegistration.html">DraftRegistration</a></li>
+                                <li><a href="../classes/dropzone-widget.html">dropzone-widget</a></li>
+                                <li><a href="../classes/FetchAllRouteMixin.html">FetchAllRouteMixin</a></li>
+                                <li><a href="../classes/File.html">File</a></li>
+                                <li><a href="../classes/file-browser.html">file-browser</a></li>
+                                <li><a href="../classes/file-browser-icon.html">file-browser-icon</a></li>
+                                <li><a href="../classes/file-chooser component.html">file-chooser component</a></li>
                                 <li><a href="../classes/file-manager.html">file-manager</a></li>
+                                <li><a href="../classes/file-renderer.html">file-renderer</a></li>
+                                <li><a href="../classes/file-version.html">file-version</a></li>
+                                <li><a href="../classes/file-widget.html">file-widget</a></li>
+                                <li><a href="../classes/FileCacheBypassMixin.html">FileCacheBypassMixin</a></li>
+                                <li><a href="../classes/FileItemMixin.html">FileItemMixin</a></li>
+                                <li><a href="../classes/FileProvider.html">FileProvider</a></li>
+                                <li><a href="../classes/FileVersion.html">FileVersion</a></li>
+                                <li><a href="../classes/InfinityCustomMixin.html">InfinityCustomMixin</a></li>
+                                <li><a href="../classes/Institution.html">Institution</a></li>
+                                <li><a href="../classes/Log.html">Log</a></li>
+                                <li><a href="../classes/Metaschema.html">Metaschema</a></li>
+                                <li><a href="../classes/Node.html">Node</a></li>
+                                <li><a href="../classes/NodeActionsMixin.html">NodeActionsMixin</a></li>
+                                <li><a href="../classes/NodeLink.html">NodeLink</a></li>
+                                <li><a href="../classes/oauth-popup.html">oauth-popup</a></li>
+                                <li><a href="../classes/osf-copyright.html">osf-copyright</a></li>
+                                <li><a href="../classes/osf-footer.html">osf-footer</a></li>
+                                <li><a href="../classes/osf-mode-footer.html">osf-mode-footer</a></li>
+                                <li><a href="../classes/osf-navbar.html">osf-navbar</a></li>
+                                <li><a href="../classes/OsfAdapter.html">OsfAdapter</a></li>
+                                <li><a href="../classes/OsfLoginControllerMixin.html">OsfLoginControllerMixin</a></li>
+                                <li><a href="../classes/OsfLoginRouteMixin.html">OsfLoginRouteMixin</a></li>
+                                <li><a href="../classes/OsfModel.html">OsfModel</a></li>
+                                <li><a href="../classes/OsfSerializer.html">OsfSerializer</a></li>
+                                <li><a href="../classes/OsfTokenAuthenticator.html">OsfTokenAuthenticator</a></li>
+                                <li><a href="../classes/OsfTokenAuthorizer.html">OsfTokenAuthorizer</a></li>
+                                <li><a href="../classes/PaginatedControllerMixin.html">PaginatedControllerMixin</a></li>
+                                <li><a href="../classes/PaginatedRouteMixin.html">PaginatedRouteMixin</a></li>
+                                <li><a href="../classes/pagination-control.html">pagination-control</a></li>
+                                <li><a href="../classes/Registration.html">Registration</a></li>
+                                <li><a href="../classes/RegistrationActionsMixin.html">RegistrationActionsMixin</a></li>
+                                <li><a href="../classes/search-dropdown.html">search-dropdown</a></li>
+                                <li><a href="../classes/sign-up.html">sign-up</a></li>
+                                <li><a href="../classes/TaggableMixin.html">TaggableMixin</a></li>
+                                <li><a href="../classes/tags-widget.html">tags-widget</a></li>
+                                <li><a href="../classes/User.html">User</a></li>
                             </ul>
                 
                 
                             <ul id="api-modules" class="apis modules">
-                                <li><a href="../modules/ember-osf_mixins_infinity-custom.html">ember-osf/mixins/infinity-custom</a></li>
+                                <li><a href="../modules/adapters.html">adapters</a></li>
+                                <li><a href="../modules/authenticators.html">authenticators</a></li>
+                                <li><a href="../modules/authorizers.html">authorizers</a></li>
+                                <li><a href="../modules/components.html">components</a></li>
+                                <li><a href="../modules/ember-osf.html">ember-osf</a></li>
+                                <li><a href="../modules/mixins.html">mixins</a></li>
+                                <li><a href="../modules/models.html">models</a></li>
+                                <li><a href="../modules/serializers.html">serializers</a></li>
+                                <li><a href="../modules/services.html">services</a></li>
                             </ul>
                         </div>
                     </div>
@@ -84,23 +143,62 @@
     <pre class="code prettyprint linenums">
 import Ember from &#x27;ember&#x27;;
 
+/**
+ * @module ember-osf
+ * @submodule mixins
+ */
+
+/**
+ * Controller mixin that implements common actions performed on nodes.
+ * @class NodeActionsMixin
+ * @extends Ember.Mixin
+ */
 export default Ember.Mixin.create({
+    /**
+     * The node to perform these actions on. If not specified, defaults to the model hook.
+     * @property node
+     * @type DS.Model
+     */
     node: null,
     model: null,
     _node: Ember.computed.or(&#x27;node&#x27;, &#x27;model&#x27;),
-
-    /** Maps all node contributors to format {contribID: Contributor}
-     **/
+    /**
+     * Helper method that maps all node contributors to format {contribId: Contributor}
+     *
+     * @method _generateContributorMap
+     * @private
+     * @param {Array} contributors All contributor relationships on the node
+     * @return {Object} Returns a contributor map of the id to the contributor record
+     */
     _generateContributorMap(contributors) {
         var contribMap = {};
         contributors.forEach(contrib =&gt; contribMap[contrib.id] = contrib);
         return contribMap;
     },
+    /**
+     * Helper method that affiliates an institution with a node.
+     *
+     * @method _affiliateNode
+     * @private
+     * @param {DS.Model} node Node record
+     * @param {Object} institution Institution record
+     * @return {Promise} Returns a promise that resolves to the updated node with the newly created institution relationship
+     */
     _affiliateNode(node, institution) {
         node.get(&#x27;affiliatedInstitutions&#x27;).pushObject(institution);
         return node.save();
     },
     actions: {
+        /**
+         * Update a node
+         *
+         * @method updateNode
+         * @param {String} title New title of the node
+         * @param {String} description New Description of the node
+         * @param {String} category New node category
+         * @param {Boolean} isPublic Should this node be publicly-visible?
+         * @return {Promise} Returns a promise that resolves to the updated node
+         */
         updateNode(title, description, category, isPublic) {
             var node = this.get(&#x27;_node&#x27;);
             if (title) {
@@ -117,20 +215,52 @@ export default Ember.Mixin.create({
             }
             return node.save();
         },
+        /**
+         * Delete a node
+         *
+         * @method deleteNode
+         * @return {Promise} Returns a promise that resolves after the deletion of the node.
+         */
         deleteNode() {
             var node = this.get(&#x27;_node&#x27;);
             return node.destroyRecord();
         },
+        /**
+         * Affiliate a node with an institution
+         *
+         * @method affiliateNode
+         * @param {String} institutionId ID of the institutution to be affiliated
+         * @return {Promise} Returns a promise that resolves to the updated node
+         * with the newly affiliated institution relationship
+         */
         affiliateNode(institutionId) {
             var node = this.get(&#x27;_node&#x27;);
             return this.store.findRecord(&#x27;institution&#x27;, institutionId)
                 .then(institution =&gt; this._affiliateNode(node, institution));
         },
+        /**
+         * Unaffiliate a node with an institution
+         *
+         * @method unaffiliateNode
+         * @param {Object} institution Institution relationship to be removed from node
+         * @return {Promise} Returns a promise that resolves to the updated node
+         * with the affiliated institution relationship removed.
+         */
         unaffiliateNode(institution) {
             var node = this.get(&#x27;_node&#x27;);
             node.get(&#x27;affiliatedInstitutions&#x27;).removeObject(institution);
             return node.save();
         },
+        /**
+         * Add a contributor to a node
+         *
+         * @method addContributor
+         * @param {String} userId ID of user that will be a contributor on the node
+         * @param {String} permission User permission level. One of &quot;read&quot;, &quot;write&quot;, or &quot;admin&quot;. Default: &quot;write&quot;.
+         * @param {Boolean} isBibliographic Whether user will be included in citations for the node. &quot;default: true&quot;
+         * @return {Promise} Returns a promise that resolves to the updated node
+         * with the new contributor relationship.
+         */
         addContributor(userId, permission, isBibliographic) {
             var node = this.get(&#x27;_node&#x27;);
             var contributor = this.store.createRecord(&#x27;contributor&#x27;, {
@@ -141,6 +271,14 @@ export default Ember.Mixin.create({
             node.get(&#x27;contributors&#x27;).pushObject(contributor);
             return node.save();
         },
+        /**
+         * Remove a contributor from a node
+         *
+         * @method removeContributor
+         * @param {Object} contributor Contributor relationship that will be removed from node
+         * @return {Promise} Returns a promise that will resolve upon contributor deletion.
+         * User itself will not be removed.
+         */
         removeContributor(contributor) {
             var node = this.get(&#x27;_node&#x27;);
             contributor.setProperties({
@@ -148,6 +286,16 @@ export default Ember.Mixin.create({
             });
             return contributor.destroyRecord();
         },
+        /**
+         * Update contributors of a node. Makes a bulk request to the APIv2.
+         *
+         * @method updateContributors
+         * @param {Array} contributors Contributor relationships on the node.
+         * @param {Object} permissionsChanges Dictionary mapping contributor ids to desired permissions.
+         * @param {Object} bibliographicChanges Dictionary mapping contributor ids to desired bibliographic statuses
+         * @return {Promise} Returns a promise that resolves to the updated node
+         * with edited contributor relationships.
+         */
         updateContributors(contributors, permissionsChanges, bibliographicChanges) {
             var node = this.get(&#x27;_node&#x27;);
             var contributorMap = this._generateContributorMap(contributors);
@@ -159,6 +307,15 @@ export default Ember.Mixin.create({
             }
             return node.save();
         },
+        /**
+         * Add a child (component) to a node.
+         *
+         * @method addChild
+         * @param {String} title Title for the child
+         * @param {String} description Description for the child
+         * @param {String} category Category for the child
+         * @return {Promise} Returns a promise that resolves to the updated node with the new child relationship.
+         */
         addChild(title, description, category) {
             var node = this.get(&#x27;_node&#x27;);
             var child = this.store.createRecord(&#x27;node&#x27;, {
@@ -169,6 +326,14 @@ export default Ember.Mixin.create({
             node.get(&#x27;children&#x27;).pushObject(child);
             return node.save();
         },
+        /**
+         * Add a node link (pointer) to another node
+         *
+         * @method addNodeLink
+         * @param {String} targetNodeId ID of the node for which you wish to create a pointer
+         * @return {Promise} Returns a promise that resolves to the updated node with the
+         * newly added nodeLink relationship
+         */
         addNodeLink(targetNodeId) {
             var node = this.get(&#x27;_node&#x27;);
             var nodeLink = this.store.createRecord(&#x27;node-link&#x27;, {
@@ -177,6 +342,14 @@ export default Ember.Mixin.create({
             node.get(&#x27;nodeLinks&#x27;).pushObject(nodeLink);
             return node.save();
         },
+        /**
+         * Remove a node link (pointer) to another node
+         *
+         * @method removeNodeLink
+         * @param {Object} nodeLink nodeLink record to be destroyed.
+         * @return {Promise} Returns a promise that resolves after the node link has been removed.  This does not delete
+         * the target node itself.
+         */
         removeNodeLink(nodeLink) {
             return nodeLink.destroyRecord();
         }

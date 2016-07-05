@@ -1,17 +1,115 @@
 YUI.add("yuidoc-meta", function(Y) {
    Y.YUIDoc = { meta: {
     "classes": [
-        "EmberOSF.InfinityCustomMixin",
-        "file-manager"
+        "Collection",
+        "Comment",
+        "CommentReport",
+        "CommentableMixin",
+        "Contributor",
+        "DraftRegistration",
+        "FetchAllRouteMixin",
+        "File",
+        "FileCacheBypassMixin",
+        "FileItemMixin",
+        "FileProvider",
+        "FileVersion",
+        "InfinityCustomMixin",
+        "Institution",
+        "Log",
+        "Metaschema",
+        "Node",
+        "NodeActionsMixin",
+        "NodeLink",
+        "OsfAdapter",
+        "OsfLoginControllerMixin",
+        "OsfLoginRouteMixin",
+        "OsfModel",
+        "OsfSerializer",
+        "OsfTokenAuthenticator",
+        "OsfTokenAuthorizer",
+        "PaginatedControllerMixin",
+        "PaginatedRouteMixin",
+        "Registration",
+        "RegistrationActionsMixin",
+        "TaggableMixin",
+        "User",
+        "comment-detail",
+        "comment-form",
+        "comment-pane",
+        "current-user",
+        "dropzone-widget",
+        "file-browser",
+        "file-browser-icon",
+        "file-chooser component",
+        "file-manager",
+        "file-renderer",
+        "file-version",
+        "file-widget",
+        "oauth-popup",
+        "osf-copyright",
+        "osf-footer",
+        "osf-mode-footer",
+        "osf-navbar",
+        "pagination-control",
+        "search-dropdown",
+        "sign-up",
+        "tags-widget"
     ],
     "modules": [
-        "ember-osf_mixins_infinity-custom"
+        "adapters",
+        "authenticators",
+        "authorizers",
+        "components",
+        "ember-osf",
+        "mixins",
+        "models",
+        "serializers",
+        "services"
     ],
     "allModules": [
         {
-            "displayName": "ember-osf/mixins/infinity-custom",
-            "name": "ember-osf_mixins_infinity-custom",
-            "description": "A custom overlay on ember-infinity that supports loading infinite and paginated relationships\nFor the most part, the API and semantics are identical to ember infinity, except that the means of configuring the store find method is more flexible\n (supporting relationship queries that do not operate via store methods)"
+            "displayName": "adapters",
+            "name": "adapters",
+            "description": "Base adapter class for all OSF APIv2 endpoints"
+        },
+        {
+            "displayName": "authenticators",
+            "name": "authenticators",
+            "description": "Ember-simple-auth compatible authenticator based on OAuth2 bearer tokens.\n\nIntended to be used with the authenticator of the same name."
+        },
+        {
+            "displayName": "authorizers",
+            "name": "authorizers",
+            "description": "Ember-simple-auth compatible authorizer based on OAuth2 bearer tokens.\n\nIntended to be used with the authenticator of the same name."
+        },
+        {
+            "displayName": "components",
+            "name": "components",
+            "description": "Display information about an individual comment, including controls to edit, delete, and report.\nThis component is typically used as part of the `comment-pane` component; see that component for further information.\n\nSample usage:\n```javascript\n{{comment-detail\n  comment=comment\n  editComment=attrs.editComment\n  deleteComment=attrs.deleteComment\n  restoreComment=attrs.restoreComment\n  reportComment=attrs.reportComment}}\n```"
+        },
+        {
+            "displayName": "ember-osf",
+            "name": "ember-osf"
+        },
+        {
+            "displayName": "mixins",
+            "name": "mixins",
+            "description": "Controller mixin that implements basic commenting functionality. Uses the base model in the route model hook."
+        },
+        {
+            "displayName": "models",
+            "name": "models",
+            "description": "Model for OSF APIv2 collections\nFor field and usage information, see:\n* https://api.osf.io/v2/docs/#!/v2/Collection_List_GET"
+        },
+        {
+            "displayName": "serializers",
+            "name": "serializers",
+            "description": "Base serializer class for all OSF APIv2 endpoints. Provides custom behaviors for embeds, relationships, and pagination."
+        },
+        {
+            "displayName": "services",
+            "name": "services",
+            "description": "Access information about the currently logged in user"
         }
     ],
     "elements": []

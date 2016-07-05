@@ -38,13 +38,72 @@
                 
                         <div id="api-tabview-panel">
                             <ul id="api-classes" class="apis classes">
-                                <li><a href="../classes/EmberOSF.InfinityCustomMixin.html">EmberOSF.InfinityCustomMixin</a></li>
+                                <li><a href="../classes/Collection.html">Collection</a></li>
+                                <li><a href="../classes/Comment.html">Comment</a></li>
+                                <li><a href="../classes/comment-detail.html">comment-detail</a></li>
+                                <li><a href="../classes/comment-form.html">comment-form</a></li>
+                                <li><a href="../classes/comment-pane.html">comment-pane</a></li>
+                                <li><a href="../classes/CommentableMixin.html">CommentableMixin</a></li>
+                                <li><a href="../classes/CommentReport.html">CommentReport</a></li>
+                                <li><a href="../classes/Contributor.html">Contributor</a></li>
+                                <li><a href="../classes/current-user.html">current-user</a></li>
+                                <li><a href="../classes/DraftRegistration.html">DraftRegistration</a></li>
+                                <li><a href="../classes/dropzone-widget.html">dropzone-widget</a></li>
+                                <li><a href="../classes/FetchAllRouteMixin.html">FetchAllRouteMixin</a></li>
+                                <li><a href="../classes/File.html">File</a></li>
+                                <li><a href="../classes/file-browser.html">file-browser</a></li>
+                                <li><a href="../classes/file-browser-icon.html">file-browser-icon</a></li>
+                                <li><a href="../classes/file-chooser component.html">file-chooser component</a></li>
                                 <li><a href="../classes/file-manager.html">file-manager</a></li>
+                                <li><a href="../classes/file-renderer.html">file-renderer</a></li>
+                                <li><a href="../classes/file-version.html">file-version</a></li>
+                                <li><a href="../classes/file-widget.html">file-widget</a></li>
+                                <li><a href="../classes/FileCacheBypassMixin.html">FileCacheBypassMixin</a></li>
+                                <li><a href="../classes/FileItemMixin.html">FileItemMixin</a></li>
+                                <li><a href="../classes/FileProvider.html">FileProvider</a></li>
+                                <li><a href="../classes/FileVersion.html">FileVersion</a></li>
+                                <li><a href="../classes/InfinityCustomMixin.html">InfinityCustomMixin</a></li>
+                                <li><a href="../classes/Institution.html">Institution</a></li>
+                                <li><a href="../classes/Log.html">Log</a></li>
+                                <li><a href="../classes/Metaschema.html">Metaschema</a></li>
+                                <li><a href="../classes/Node.html">Node</a></li>
+                                <li><a href="../classes/NodeActionsMixin.html">NodeActionsMixin</a></li>
+                                <li><a href="../classes/NodeLink.html">NodeLink</a></li>
+                                <li><a href="../classes/oauth-popup.html">oauth-popup</a></li>
+                                <li><a href="../classes/osf-copyright.html">osf-copyright</a></li>
+                                <li><a href="../classes/osf-footer.html">osf-footer</a></li>
+                                <li><a href="../classes/osf-mode-footer.html">osf-mode-footer</a></li>
+                                <li><a href="../classes/osf-navbar.html">osf-navbar</a></li>
+                                <li><a href="../classes/OsfAdapter.html">OsfAdapter</a></li>
+                                <li><a href="../classes/OsfLoginControllerMixin.html">OsfLoginControllerMixin</a></li>
+                                <li><a href="../classes/OsfLoginRouteMixin.html">OsfLoginRouteMixin</a></li>
+                                <li><a href="../classes/OsfModel.html">OsfModel</a></li>
+                                <li><a href="../classes/OsfSerializer.html">OsfSerializer</a></li>
+                                <li><a href="../classes/OsfTokenAuthenticator.html">OsfTokenAuthenticator</a></li>
+                                <li><a href="../classes/OsfTokenAuthorizer.html">OsfTokenAuthorizer</a></li>
+                                <li><a href="../classes/PaginatedControllerMixin.html">PaginatedControllerMixin</a></li>
+                                <li><a href="../classes/PaginatedRouteMixin.html">PaginatedRouteMixin</a></li>
+                                <li><a href="../classes/pagination-control.html">pagination-control</a></li>
+                                <li><a href="../classes/Registration.html">Registration</a></li>
+                                <li><a href="../classes/RegistrationActionsMixin.html">RegistrationActionsMixin</a></li>
+                                <li><a href="../classes/search-dropdown.html">search-dropdown</a></li>
+                                <li><a href="../classes/sign-up.html">sign-up</a></li>
+                                <li><a href="../classes/TaggableMixin.html">TaggableMixin</a></li>
+                                <li><a href="../classes/tags-widget.html">tags-widget</a></li>
+                                <li><a href="../classes/User.html">User</a></li>
                             </ul>
                 
                 
                             <ul id="api-modules" class="apis modules">
-                                <li><a href="../modules/ember-osf_mixins_infinity-custom.html">ember-osf/mixins/infinity-custom</a></li>
+                                <li><a href="../modules/adapters.html">adapters</a></li>
+                                <li><a href="../modules/authenticators.html">authenticators</a></li>
+                                <li><a href="../modules/authorizers.html">authorizers</a></li>
+                                <li><a href="../modules/components.html">components</a></li>
+                                <li><a href="../modules/ember-osf.html">ember-osf</a></li>
+                                <li><a href="../modules/mixins.html">mixins</a></li>
+                                <li><a href="../modules/models.html">models</a></li>
+                                <li><a href="../modules/serializers.html">serializers</a></li>
+                                <li><a href="../modules/services.html">services</a></li>
                             </ul>
                         </div>
                     </div>
@@ -86,22 +145,26 @@ import DS from &#x27;ember-data&#x27;;
 
 import OsfModel from &#x27;./osf-model&#x27;;
 
-import {
-    serializeHasMany
-} from &#x27;../utils/serialize-relationship&#x27;;
+import FileItemMixin from &#x27;ember-osf/mixins/file-item&#x27;;
+
+/**
+ * @module ember-osf
+ * @submodule models
+ */
 
 /**
  * Model for OSF APIv2 nodes. This model may be used with one of several API endpoints. It may be queried directly,
  *  or accessed via relationship fields.
  * For field and usage information, see:
- *    https://api.osf.io/v2/docs/#!/v2/Node_List_GET
- *    https://api.osf.io/v2/docs/#!/v2/Node_Detail_GET
- *    https://api.osf.io/v2/docs/#!/v2/Node_Children_List_GET
- *    https://api.osf.io/v2/docs/#!/v2/Linked_Nodes_List_GET
- *    https://api.osf.io/v2/docs/#!/v2/Node_Forks_List_GET
- *    https://api.osf.io/v2/docs/#!/v2/User_Nodes_GET
+ * * https://api.osf.io/v2/docs/#!/v2/Node_List_GET
+ * * https://api.osf.io/v2/docs/#!/v2/Node_Detail_GET
+ * * https://api.osf.io/v2/docs/#!/v2/Node_Children_List_GET
+ * * https://api.osf.io/v2/docs/#!/v2/Linked_Nodes_List_GET
+ * * https://api.osf.io/v2/docs/#!/v2/Node_Forks_List_GET
+ * * https://api.osf.io/v2/docs/#!/v2/User_Nodes_GET
+ * @class Node
  */
-export default OsfModel.extend({
+export default OsfModel.extend(FileItemMixin, {
     title: DS.attr(&#x27;string&#x27;),
     description: DS.attr(&#x27;string&#x27;),
     category: DS.attr(&#x27;string&#x27;),
@@ -124,72 +187,55 @@ export default OsfModel.extend({
         inverse: &#x27;children&#x27;
     }),
     children: DS.hasMany(&#x27;nodes&#x27;, {
-        inverse: &#x27;parent&#x27;,
-        updateRequest: {
-            requestType: () =&gt; &#x27;POST&#x27;
-        }
+        inverse: &#x27;parent&#x27;
     }),
     affiliatedInstitutions: DS.hasMany(&#x27;institutions&#x27;, {
-        inverse: &#x27;nodes&#x27;,
-        serializer: serializeHasMany.bind(null, &#x27;affiliatedInstitutions&#x27;, &#x27;institution&#x27;)
+        inverse: &#x27;nodes&#x27;
     }),
     comments: DS.hasMany(&#x27;comments&#x27;),
     contributors: DS.hasMany(&#x27;contributors&#x27;, {
-        updateRequest: {
-            requestType: (snapshot, relationship) =&gt; {
-                if (snapshot.hasMany(relationship).filter(each =&gt; each.record.get(&#x27;isNew&#x27;)).length) {
-                    return &#x27;POST&#x27;;
-                }
-                return &#x27;PATCH&#x27;;
-            },
-            isBulk: () =&gt; true,
-            serialized(serialized) {
-                return {
-                    data: serialized.map(function(record) {
-                        var data = record.data;
-                        return data;
-                    })
-                };
-            }
-        },
+        allowBulkUpdate: true,
+        allowBulkRemove: true,
         inverse: null
     }),
 
     files: DS.hasMany(&#x27;file-provider&#x27;),
     //forkedFrom: DS.belongsTo(&#x27;node&#x27;),
     nodeLinks: DS.hasMany(&#x27;node-links&#x27;, {
-        updateRequest: {
-            requestType: () =&gt; &#x27;POST&#x27;,
-            isBulk: () =&gt; true,
-            serialized(serialized) {
-                return {
-                    data: serialized.map(function(record) {
-                        var data = record.data;
-                        return data;
-                    })
-                };
-            }
-        },
         inverse: null
     }),
     registrations: DS.hasMany(&#x27;registrations&#x27;, {
-        inverse: &#x27;registeredFrom&#x27;,
-        updateRequest: {
-            requestType: () =&gt; &#x27;POST&#x27;
-        }
+        inverse: &#x27;registeredFrom&#x27;
     }),
 
     draftRegistrations: DS.hasMany(&#x27;draft-registrations&#x27;, {
-        inverse: &#x27;branchedFrom&#x27;,
-        updateRequest: {
-            requestType: () =&gt; &#x27;POST&#x27;
-        }
+        inverse: &#x27;branchedFrom&#x27;
     }),
 
     root: DS.belongsTo(&#x27;node&#x27;, {
         inverse: null
     }),
-    logs: DS.hasMany(&#x27;logs&#x27;)
+    logs: DS.hasMany(&#x27;logs&#x27;),
+
+    save() {
+        // Some duplicate logic from osf-model#save needed to support
+        // contributor edits being saved through the node
+        var promise = this._super(...arguments);
+        var contributors = this.hasMany(&#x27;contributors&#x27;).hasManyRelationship;
+        if (contributors.hasData &amp;&amp; contributors.hasLoaded) {
+            this.set(
+                &#x27;_dirtyRelationships.contributors.update&#x27;,
+                contributors.members.list.filter(m =&gt; !m.record.get(&#x27;isNew&#x27;) &amp;&amp; Object.keys(m.record.changedAttributes()).length &gt; 0)
+            );
+            // Contributors are a &#x27;real&#x27; delete, not just a de-reference
+            this.set(
+                &#x27;_dirtyRelationships.contributors.delete&#x27;,
+                this.get(&#x27;_dirtyRelationships.contributors.remove&#x27;)
+            );
+            this.set(&#x27;_dirtyRelationships.contributors.remove&#x27;, []);
+        }
+        return promise;
+    }
 });
 
     </pre>
