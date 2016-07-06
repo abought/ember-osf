@@ -77,7 +77,7 @@ YUI.add("yuidoc-meta", function(Y) {
         {
             "displayName": "authenticators",
             "name": "authenticators",
-            "description": "Ember-simple-auth compatible authenticator based on OAuth2 bearer tokens.\n\nIntended to be used with the authenticator of the same name."
+            "description": "Ember-simple-auth compatible authenticator based on OAuth2 bearer tokens.\n\nIntended to be used with the authorizer of the same name."
         },
         {
             "displayName": "authorizers",
@@ -87,7 +87,7 @@ YUI.add("yuidoc-meta", function(Y) {
         {
             "displayName": "components",
             "name": "components",
-            "description": "Display information about an individual comment, including controls to edit, delete, and report.\nThis component is typically used as part of the `comment-pane` component; see that component for further information.\n\nSample usage:\n```javascript\n{{comment-detail\n  comment=comment\n  editComment=attrs.editComment\n  deleteComment=attrs.deleteComment\n  restoreComment=attrs.restoreComment\n  reportComment=attrs.reportComment}}\n```"
+            "description": "Display information about an individual comment, including controls to edit, delete, and report.\nThis component is typically used as part of the `comment-pane` component; see that component for further information.\n\nSample usage:\n```handlebars\n{{comment-detail\n  comment=comment\n  editComment=attrs.editComment\n  deleteComment=attrs.deleteComment\n  restoreComment=attrs.restoreComment\n  reportComment=attrs.reportComment}}\n```"
         },
         {
             "displayName": "ember-osf",

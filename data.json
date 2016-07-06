@@ -625,7 +625,7 @@
             "namespace": "",
             "file": "addon/authenticators/osf-token.js",
             "line": 11,
-            "description": "Ember-simple-auth compatible authenticator based on OAuth2 bearer tokens.\n\nIntended to be used with the authenticator of the same name."
+            "description": "Ember-simple-auth compatible authenticator based on OAuth2 bearer tokens.\n\nIntended to be used with the authorizer of the same name."
         },
         "authorizers": {
             "name": "authorizers",
@@ -675,7 +675,7 @@
             "namespace": "",
             "file": "addon/components/tags-widget/component.js",
             "line": 9,
-            "description": "Display information about an individual comment, including controls to edit, delete, and report.\nThis component is typically used as part of the `comment-pane` component; see that component for further information.\n\nSample usage:\n```javascript\n{{comment-detail\n  comment=comment\n  editComment=attrs.editComment\n  deleteComment=attrs.deleteComment\n  restoreComment=attrs.restoreComment\n  reportComment=attrs.reportComment}}\n```"
+            "description": "Display information about an individual comment, including controls to edit, delete, and report.\nThis component is typically used as part of the `comment-pane` component; see that component for further information.\n\nSample usage:\n```handlebars\n{{comment-detail\n  comment=comment\n  editComment=attrs.editComment\n  deleteComment=attrs.deleteComment\n  restoreComment=attrs.restoreComment\n  reportComment=attrs.reportComment}}\n```"
         },
         "helpers": {
             "name": "helpers",
@@ -819,7 +819,7 @@
             "namespace": "",
             "file": "addon/authenticators/osf-token.js",
             "line": 11,
-            "description": "Ember-simple-auth compatible authenticator based on OAuth2 bearer tokens.\n\nIntended to be used with the authenticator of the same name.",
+            "description": "Ember-simple-auth compatible authenticator based on OAuth2 bearer tokens.\n\nIntended to be used with the authorizer of the same name.",
             "extends": "ember-simple-auth/BaseAuthenticator"
         },
         "OsfTokenAuthorizer": {
@@ -851,7 +851,7 @@
             "namespace": "",
             "file": "addon/components/comment-detail/component.js",
             "line": 9,
-            "description": "Display information about an individual comment, including controls to edit, delete, and report.\nThis component is typically used as part of the `comment-pane` component; see that component for further information.\n\nSample usage:\n```javascript\n{{comment-detail\n  comment=comment\n  editComment=attrs.editComment\n  deleteComment=attrs.deleteComment\n  restoreComment=attrs.restoreComment\n  reportComment=attrs.reportComment}}\n```",
+            "description": "Display information about an individual comment, including controls to edit, delete, and report.\nThis component is typically used as part of the `comment-pane` component; see that component for further information.\n\nSample usage:\n```handlebars\n{{comment-detail\n  comment=comment\n  editComment=attrs.editComment\n  deleteComment=attrs.deleteComment\n  restoreComment=attrs.restoreComment\n  reportComment=attrs.reportComment}}\n```",
             "params": [
                 {
                     "name": "comment",
@@ -893,7 +893,7 @@
             "namespace": "",
             "file": "addon/components/comment-form/component.js",
             "line": 9,
-            "description": "Allow users to add comments to a page.\n\nThis component is typically used as part of the `comment-pane` component; see that component for further information.\nSample usage:\n```javascript\n{{comment-form addComment=attrs.addComment}}\n```",
+            "description": "Allow users to add comments to a page.\n\nThis component is typically used as part of the `comment-pane` component; see that component for further information.\nSample usage:\n```handlebars\n{{comment-form addComment=attrs.addComment}}\n```",
             "params": [
                 {
                     "name": "addComment",
@@ -915,12 +915,12 @@
             "namespace": "",
             "file": "addon/components/comment-pane/component.js",
             "line": 9,
-            "description": "Display a list of comments, as well as a form to submit new comments.\nSee CommentableMixin for controller actions that can be used with this component.\n\nSample usage:\n```javascript\n{{comment-pane\n   comments=comments\n   addComment=(action 'addComment')\n   editComment=(action 'editComment')\n   deleteComment=(action 'deleteComment')\n   restoreComment=(action 'restoreComment')\n   reportComment=(action 'reportComment')}}\n```",
+            "description": "Display a list of comments, as well as a form to submit new comments.\nSee CommentableMixin for controller actions that can be used with this component.\n\nSample usage:\n```handlebars\n{{comment-pane\n  comments=comments\n  addComment=(action 'addComment')\n  editComment=(action 'editComment')\n  deleteComment=(action 'deleteComment')\n  restoreComment=(action 'restoreComment')\n  reportComment=(action 'reportComment')}}\n```",
             "params": [
                 {
                     "name": "comments",
                     "description": "An array of comments to be displayed",
-                    "type": "Array"
+                    "type": "Comment[]"
                 },
                 {
                     "name": "addComment",
@@ -962,7 +962,7 @@
             "namespace": "",
             "file": "addon/components/dropzone-widget/component.js",
             "line": 9,
-            "description": "Support file uploads via dropzone.\n\nSample usage:\n```javascript\n{{dropzone-widget\n  preUpload=attrs.preUpload\n  buildUrl=buildUrl\n  listeners=dropzoneListeners\n  options=dropzoneOptions}}\n```"
+            "description": "Support file uploads via dropzone.\n\nSample usage:\n```handlebars\n{{dropzone-widget\n  preUpload=attrs.preUpload\n  buildUrl=buildUrl\n  listeners=dropzoneListeners\n  options=dropzoneOptions}}\n```"
         },
         "file-browser": {
             "name": "file-browser",
@@ -977,7 +977,7 @@
             "namespace": "",
             "file": "addon/components/file-browser/component.js",
             "line": 73,
-            "description": "File browser widget\n\nSample usage:\n```javascript\n{{file-browser\n rootItem=item\n openFile=(action 'openFile')\n openNode=(action 'openNode')}}\n```"
+            "description": "File browser widget\n\nSample usage:\n```handlebars\n{{file-browser\n rootItem=item\n openFile=(action 'openFile')\n openNode=(action 'openNode')}}\n```"
         },
         "file-browser-icon": {
             "name": "file-browser-icon",
@@ -992,7 +992,7 @@
             "namespace": "",
             "file": "addon/components/file-browser-icon/component.js",
             "line": 9,
-            "description": "Display the correct file tree icon for on the item to be displayed\n\nSample usage:\n```javascript\n{{file-browser-icon\nitem=item}}\n```"
+            "description": "Display the correct file tree icon for on the item to be displayed\n\nSample usage:\n```handlebars\n{{file-browser-icon\nitem=item}}\n```"
         },
         "file-chooser component": {
             "name": "file-chooser component",
@@ -1007,7 +1007,7 @@
             "namespace": "",
             "file": "addon/components/file-chooser/component.js",
             "line": 9,
-            "description": "This component lets the user choose a list of files from their computer, by\ndrag-and-drop, a file browser, or whatever method the developer wants.\n\nExposed to parent context (bindable attributes)\n - `files`: mutable list of chosen File objects\n - `multiple`: boolean (default `true`), when `false`, only keeps the most\n         recently chosen File in the list\n - `onChoose`: callback function called each time a file is added, with the\n         new File object as the only argument\n\nExposed to block context\n - `this`: the component object itself, so the block can invoke actions\n     example:\n     ```javascript\n         {{#file-chooser files=fileList as |component|}}\n             {{input type='file'\n                 change=(action 'onFileInputChange' target=component)}}\n         {{/file-chooser}}\n     ```\n\nActions\n - `onFileInputChange`: handle the `change` event on a file input\n - `onChooseFile`: add a file to the chosen list\n\nStyling\n - This component's element has the `drop-zone` class\n - While the user is holding dragged files over this component, it\n   has the `drop-zone-ready` class"
+            "description": "This component lets the user choose a list of files from their computer, by\ndrag-and-drop, a file browser, or whatever method the developer wants.\n\nExposed to parent context (bindable attributes)\n - `files`: mutable list of chosen File objects\n - `multiple`: boolean (default `true`), when `false`, only keeps the most\n         recently chosen File in the list\n - `onChoose`: callback function called each time a file is added, with the\n         new File object as the only argument\n\nExposed to block context\n - `this`: the component object itself, so the block can invoke actions\n     example:\n     ```handlebars\n         {{#file-chooser files=fileList as |component|}}\n             {{input type='file'\n                 change=(action 'onFileInputChange' target=component)}}\n         {{/file-chooser}}\n     ```\n\nActions\n - `onFileInputChange`: handle the `change` event on a file input\n - `onChooseFile`: add a file to the chosen list\n\nStyling\n - This component's element has the `drop-zone` class\n - While the user is holding dragged files over this component, it\n   has the `drop-zone-ready` class"
         },
         "file-renderer": {
             "name": "file-renderer",
@@ -1022,7 +1022,7 @@
             "namespace": "",
             "file": "addon/components/file-renderer/component.js",
             "line": 10,
-            "description": "Render the provided url in an iframe via MFR\n\nSample usage:\n```javascript\n{{file-renderer\n  download=model.links.download\n    width=\"800\" height=\"1000\"}}\n```"
+            "description": "Render the provided url in an iframe via MFR\n\nSample usage:\n```handlebars\n{{file-renderer\n  download=model.links.download\n    width=\"800\" height=\"1000\"}}\n```"
         },
         "file-version": {
             "name": "file-version",
@@ -1037,7 +1037,7 @@
             "namespace": "",
             "file": "addon/components/file-version/component.js",
             "line": 9,
-            "description": "Display information about one revision of a file\n\nSample usage:\n```javascript\n{{file-version\nversion=version\ndownload='download'}}\n```"
+            "description": "Display information about one revision of a file\n\nSample usage:\n```handlebars\n{{file-version\nversion=version\ndownload='download'}}\n```"
         },
         "file-widget": {
             "name": "file-widget",
@@ -1052,7 +1052,7 @@
             "namespace": "",
             "file": "addon/components/file-widget/component.js",
             "line": 13,
-            "description": "Widget to quickly upload a file to a selected project\n```javascript\n{{file-widget\n preUpload=(action 'preUpload')\n buildUrl=(action 'buildUrl')\n listeners=dropzoneOptions\n options=dropzoneOptions}}\n```"
+            "description": "Widget to quickly upload a file to a selected project\n```handlebars\n{{file-widget\n  preUpload=(action 'preUpload')\n  buildUrl=(action 'buildUrl')\n  listeners=dropzoneOptions\n  options=dropzoneOptions}}\n```"
         },
         "oauth-popup": {
             "name": "oauth-popup",
@@ -1067,7 +1067,7 @@
             "namespace": "",
             "file": "addon/components/oauth-popup/component.js",
             "line": 11,
-            "description": "Log a user in via OAuth2 in a popup window, without requiring a redirect\n\nSample usage:\n```javascript\n{{#oauth-popup\n  authUrl=authUrl\n  loginSuccess=(action 'loginSuccess')\n  loginFail=(action 'loginFail') as |popup|}}\n   <button class=\"btn btn-default login-button\" onclick={{action 'login' target=popup}} >\n      Login to OSF\n   </button>\n{{/oauth-popup}}\n```"
+            "description": "Log a user in via OAuth2 in a popup window, without requiring a redirect\n\nSample usage:\n```handlebars\n{{#oauth-popup\n  authUrl=authUrl\n  loginSuccess=(action 'loginSuccess')\n  loginFail=(action 'loginFail') as |popup|}}\n   <button class=\"btn btn-default login-button\" onclick={{action 'login' target=popup}} >\n      Login to OSF\n   </button>\n{{/oauth-popup}}\n```"
         },
         "osf-copyright": {
             "name": "osf-copyright",
@@ -1157,7 +1157,7 @@
             "namespace": "",
             "file": "addon/components/search-dropdown/component.js",
             "line": 10,
-            "description": "Display a search dropdown as used in the OSF navbar\n\nSample usage:\n```javascript\n  {{#search-dropdown action='toggleSearch'}}\n```"
+            "description": "Display a search dropdown as used in the OSF navbar\n\nSample usage:\n```handlebars\n  {{#search-dropdown action='toggleSearch'}}\n```"
         },
         "sign-up": {
             "name": "sign-up",
@@ -1187,7 +1187,7 @@
             "namespace": "",
             "file": "addon/components/tags-widget/component.js",
             "line": 9,
-            "description": "Allow the user to view and manage tags.\nSee TaggableMixin for controller actions that can be used with this component.\n```javascript\n{{tags-widget\n  addATag=(action 'addATag')\n  removeATag=(action 'removeATag')\n  tags=model.tags}}\n```"
+            "description": "Allow the user to view and manage tags.\nSee TaggableMixin for controller actions that can be used with this component.\n```handlebars\n{{tags-widget\n  addATag=(action 'addATag')\n  removeATag=(action 'removeATag')\n  tags=model.tags}}\n```"
         },
         "elem-id": {
             "name": "elem-id",
@@ -2070,7 +2070,7 @@
             "tagname": "",
             "itemtype": "property",
             "name": "comments",
-            "type": "Array",
+            "type": "Comment[]",
             "class": "CommentableMixin",
             "module": "ember-osf",
             "submodule": "mixins"
@@ -2328,7 +2328,7 @@
             ],
             "return": {
                 "description": "",
-                "type": "Ember.RSVP.Promise"
+                "type": "Promise"
             },
             "class": "InfinityCustomMixin",
             "module": "ember-osf",
@@ -2344,7 +2344,7 @@
             "name": "_requestNextPage",
             "return": {
                 "description": "A Promise that resolves the next page of objects",
-                "type": "Ember.RSVP.Promise"
+                "type": "Promise"
             },
             "class": "InfinityCustomMixin",
             "module": "ember-osf",
@@ -2372,8 +2372,8 @@
             "params": [
                 {
                     "name": "contributors",
-                    "description": "All contributor relationships on the node",
-                    "type": "Array"
+                    "description": "A list of contributors to be included in the map",
+                    "type": "Contributor[]"
                 }
             ],
             "return": {
@@ -2566,7 +2566,7 @@
                 {
                     "name": "contributors",
                     "description": "Contributor relationships on the node.",
-                    "type": "Array"
+                    "type": "Contributor[]"
                 },
                 {
                     "name": "permissionsChanges",
@@ -2982,7 +2982,7 @@
             "name": "load",
             "return": {
                 "description": "",
-                "type": "Ember.RSVP.Promise"
+                "type": "Promise"
             },
             "class": "current-user",
             "module": "ember-osf",

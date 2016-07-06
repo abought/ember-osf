@@ -156,17 +156,17 @@ import layout from &#x27;./template&#x27;;
  * See CommentableMixin for controller actions that can be used with this component.
  *
  * Sample usage:
- * &#x60;&#x60;&#x60;javascript
+ * &#x60;&#x60;&#x60;handlebars
  * {{comment-pane
-    comments=comments
-    addComment=(action &#x27;addComment&#x27;)
-    editComment=(action &#x27;editComment&#x27;)
-    deleteComment=(action &#x27;deleteComment&#x27;)
-    restoreComment=(action &#x27;restoreComment&#x27;)
-    reportComment=(action &#x27;reportComment&#x27;)}}
+ *   comments=comments
+ *   addComment=(action &#x27;addComment&#x27;)
+ *   editComment=(action &#x27;editComment&#x27;)
+ *   deleteComment=(action &#x27;deleteComment&#x27;)
+ *   restoreComment=(action &#x27;restoreComment&#x27;)
+ *   reportComment=(action &#x27;reportComment&#x27;)}}
  * &#x60;&#x60;&#x60;
  * @class comment-pane
- * @param {Array} comments An array of comments to be displayed
+ * @param {Comment[]} comments An array of comments to be displayed
  * @param {action} addComment
  * @param {action} editComment
  * @param {action} deleteComment

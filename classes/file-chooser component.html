@@ -167,7 +167,7 @@ new File object as the only argument</li>
 <p>Exposed to block context</p>
 <ul>
 <li><code>this</code>: the component object itself, so the block can invoke actions
-example:<pre class="code prettyprint"><code class="language-javascript">    {{#file-chooser files=fileList as |component|}}
+example:<pre class="code prettyprint"><code class="language-handlebars">    {{#file-chooser files=fileList as |component|}}
         {{input type='file'
             change=(action 'onFileInputChange' target=component)}}
     {{/file-chooser}}
