@@ -83,6 +83,8 @@ module.exports = {
         ENV['ember-simple-auth'] = {
             authorizer: 'authorizer:osf-token'
         };
+        // Set a default authorization type. Can be overridden in consuming applications if needed.
+        ENV.authorizationType = 'token';
     },
     afterInstall: function(options) {
         if (options['ember-osf'].includeStyles) {
