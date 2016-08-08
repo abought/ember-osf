@@ -38,6 +38,8 @@
                 
                         <div id="api-tabview-panel">
                             <ul id="api-classes" class="apis classes">
+                                <li><a href="../classes/ajax-helpers.html">ajax-helpers</a></li>
+                                <li><a href="../classes/auth.html">auth</a></li>
                                 <li><a href="../classes/Collection.html">Collection</a></li>
                                 <li><a href="../classes/Comment.html">Comment</a></li>
                                 <li><a href="../classes/comment-detail.html">comment-detail</a></li>
@@ -50,6 +52,7 @@
                                 <li><a href="../classes/DraftRegistration.html">DraftRegistration</a></li>
                                 <li><a href="../classes/dropzone-widget.html">dropzone-widget</a></li>
                                 <li><a href="../classes/elem-id.html">elem-id</a></li>
+                                <li><a href="../classes/eosf-project-nav.html">eosf-project-nav</a></li>
                                 <li><a href="../classes/FetchAllRouteMixin.html">FetchAllRouteMixin</a></li>
                                 <li><a href="../classes/File.html">File</a></li>
                                 <li><a href="../classes/file-browser.html">file-browser</a></li>
@@ -63,6 +66,7 @@
                                 <li><a href="../classes/FileItemMixin.html">FileItemMixin</a></li>
                                 <li><a href="../classes/FileProvider.html">FileProvider</a></li>
                                 <li><a href="../classes/FileVersion.html">FileVersion</a></li>
+                                <li><a href="../classes/GenericDataADapter.html">GenericDataADapter</a></li>
                                 <li><a href="../classes/InfinityCustomMixin.html">InfinityCustomMixin</a></li>
                                 <li><a href="../classes/Institution.html">Institution</a></li>
                                 <li><a href="../classes/Log.html">Log</a></li>
@@ -76,12 +80,16 @@
                                 <li><a href="../classes/osf-mode-footer.html">osf-mode-footer</a></li>
                                 <li><a href="../classes/osf-navbar.html">osf-navbar</a></li>
                                 <li><a href="../classes/OsfAdapter.html">OsfAdapter</a></li>
-                                <li><a href="../classes/OsfLoginControllerMixin.html">OsfLoginControllerMixin</a></li>
-                                <li><a href="../classes/OsfLoginRouteMixin.html">OsfLoginRouteMixin</a></li>
+                                <li><a href="../classes/OsfCookieAuthenticator.html">OsfCookieAuthenticator</a></li>
+                                <li><a href="../classes/OsfCookieAuthorizer.html">OsfCookieAuthorizer</a></li>
+                                <li><a href="../classes/OsfCookieLoginController.html">OsfCookieLoginController</a></li>
+                                <li><a href="../classes/OsfCookieLoginRoute.html">OsfCookieLoginRoute</a></li>
                                 <li><a href="../classes/OsfModel.html">OsfModel</a></li>
                                 <li><a href="../classes/OsfSerializer.html">OsfSerializer</a></li>
                                 <li><a href="../classes/OsfTokenAuthenticator.html">OsfTokenAuthenticator</a></li>
                                 <li><a href="../classes/OsfTokenAuthorizer.html">OsfTokenAuthorizer</a></li>
+                                <li><a href="../classes/OsfTokenLoginControllerMixin.html">OsfTokenLoginControllerMixin</a></li>
+                                <li><a href="../classes/OsfTokenLoginRouteMixin.html">OsfTokenLoginRouteMixin</a></li>
                                 <li><a href="../classes/PaginatedControllerMixin.html">PaginatedControllerMixin</a></li>
                                 <li><a href="../classes/PaginatedRouteMixin.html">PaginatedRouteMixin</a></li>
                                 <li><a href="../classes/pagination-control.html">pagination-control</a></li>
@@ -100,12 +108,14 @@
                                 <li><a href="../modules/authenticators.html">authenticators</a></li>
                                 <li><a href="../modules/authorizers.html">authorizers</a></li>
                                 <li><a href="../modules/components.html">components</a></li>
+                                <li><a href="../modules/ember.html">ember</a></li>
                                 <li><a href="../modules/ember-osf.html">ember-osf</a></li>
                                 <li><a href="../modules/helpers.html">helpers</a></li>
                                 <li><a href="../modules/mixins.html">mixins</a></li>
                                 <li><a href="../modules/models.html">models</a></li>
                                 <li><a href="../modules/serializers.html">serializers</a></li>
                                 <li><a href="../modules/services.html">services</a></li>
+                                <li><a href="../modules/utils.html">utils</a></li>
                             </ul>
                         </div>
                     </div>
@@ -147,7 +157,7 @@
         </div>
 
         <div class="foundat">
-            Defined in: <a href="../files/addon_services_file-manager.js.html#l8"><code>addon&#x2F;services&#x2F;file-manager.js:8</code></a>
+            Defined in: <a href="../files/addon_services_file-manager.js.html#l11"><code>addon&#x2F;services&#x2F;file-manager.js:11</code></a>
         </div>
 
             Module: <a href="../modules/services.html">services</a><br>
@@ -288,7 +298,7 @@ Essentially a wrapper for the Waterbutler API.
     <div class="meta">
                 <p>
                 Defined in
-        <a href="../files/addon_services_file-manager.js.html#l404"><code>addon&#x2F;services&#x2F;file-manager.js:404</code></a>
+        <a href="../files/addon_services_file-manager.js.html#l409"><code>addon&#x2F;services&#x2F;file-manager.js:409</code></a>
         </p>
 
 
@@ -367,7 +377,7 @@ rejects with an error message.</p>
     <div class="meta">
                 <p>
                 Defined in
-        <a href="../files/addon_services_file-manager.js.html#l333"><code>addon&#x2F;services&#x2F;file-manager.js:333</code></a>
+        <a href="../files/addon_services_file-manager.js.html#l336"><code>addon&#x2F;services&#x2F;file-manager.js:336</code></a>
         </p>
 
 
@@ -441,7 +451,7 @@ rejects with an error message.</p>
     <div class="meta">
                 <p>
                 Defined in
-        <a href="../files/addon_services_file-manager.js.html#l367"><code>addon&#x2F;services&#x2F;file-manager.js:367</code></a>
+        <a href="../files/addon_services_file-manager.js.html#l370"><code>addon&#x2F;services&#x2F;file-manager.js:370</code></a>
         </p>
 
 
@@ -562,7 +572,7 @@ server on success, or rejects with an error message.</p>
     <div class="meta">
                 <p>
                 Defined in
-        <a href="../files/addon_services_file-manager.js.html#l128"><code>addon&#x2F;services&#x2F;file-manager.js:128</code></a>
+        <a href="../files/addon_services_file-manager.js.html#l131"><code>addon&#x2F;services&#x2F;file-manager.js:131</code></a>
         </p>
 
 
@@ -678,7 +688,7 @@ rejects with an error message.</p>
     <div class="meta">
                 <p>
                 Defined in
-        <a href="../files/addon_services_file-manager.js.html#l91"><code>addon&#x2F;services&#x2F;file-manager.js:91</code></a>
+        <a href="../files/addon_services_file-manager.js.html#l94"><code>addon&#x2F;services&#x2F;file-manager.js:94</code></a>
         </p>
 
 
@@ -745,7 +755,7 @@ error message.</p>
     <div class="meta">
                 <p>
                 Defined in
-        <a href="../files/addon_services_file-manager.js.html#l110"><code>addon&#x2F;services&#x2F;file-manager.js:110</code></a>
+        <a href="../files/addon_services_file-manager.js.html#l113"><code>addon&#x2F;services&#x2F;file-manager.js:113</code></a>
         </p>
 
 
@@ -818,7 +828,7 @@ error message.</p>
     <div class="meta">
                 <p>
                 Defined in
-        <a href="../files/addon_services_file-manager.js.html#l250"><code>addon&#x2F;services&#x2F;file-manager.js:250</code></a>
+        <a href="../files/addon_services_file-manager.js.html#l253"><code>addon&#x2F;services&#x2F;file-manager.js:253</code></a>
         </p>
 
 
@@ -982,7 +992,7 @@ rejects with an error message.</p>
     <div class="meta">
                 <p>
                 Defined in
-        <a href="../files/addon_services_file-manager.js.html#l283"><code>addon&#x2F;services&#x2F;file-manager.js:283</code></a>
+        <a href="../files/addon_services_file-manager.js.html#l286"><code>addon&#x2F;services&#x2F;file-manager.js:286</code></a>
         </p>
 
 
@@ -1089,7 +1099,7 @@ error message.</p>
     <div class="meta">
                 <p>
                 Defined in
-        <a href="../files/addon_services_file-manager.js.html#l48"><code>addon&#x2F;services&#x2F;file-manager.js:48</code></a>
+        <a href="../files/addon_services_file-manager.js.html#l51"><code>addon&#x2F;services&#x2F;file-manager.js:51</code></a>
         </p>
 
 
@@ -1196,7 +1206,7 @@ with an error message.</p>
     <div class="meta">
                 <p>
                 Defined in
-        <a href="../files/addon_services_file-manager.js.html#l20"><code>addon&#x2F;services&#x2F;file-manager.js:20</code></a>
+        <a href="../files/addon_services_file-manager.js.html#l23"><code>addon&#x2F;services&#x2F;file-manager.js:23</code></a>
         </p>
 
 
@@ -1299,7 +1309,7 @@ add to the URL.</p>
     <div class="meta">
                 <p>
                 Defined in
-        <a href="../files/addon_services_file-manager.js.html#l309"><code>addon&#x2F;services&#x2F;file-manager.js:309</code></a>
+        <a href="../files/addon_services_file-manager.js.html#l312"><code>addon&#x2F;services&#x2F;file-manager.js:312</code></a>
         </p>
 
 
@@ -1374,7 +1384,7 @@ model immediately after a Waterbutler action, otherwise <code>false</code>.</p>
     <div class="meta">
                 <p>
                 Defined in
-        <a href="../files/addon_services_file-manager.js.html#l209"><code>addon&#x2F;services&#x2F;file-manager.js:209</code></a>
+        <a href="../files/addon_services_file-manager.js.html#l212"><code>addon&#x2F;services&#x2F;file-manager.js:212</code></a>
         </p>
 
 
@@ -1549,7 +1559,7 @@ created) <code>file</code> model or rejects with an error message.</p>
     <div class="meta">
                 <p>
                 Defined in
-        <a href="../files/addon_services_file-manager.js.html#l188"><code>addon&#x2F;services&#x2F;file-manager.js:188</code></a>
+        <a href="../files/addon_services_file-manager.js.html#l191"><code>addon&#x2F;services&#x2F;file-manager.js:191</code></a>
         </p>
 
 
@@ -1670,7 +1680,7 @@ rejects with an error message.</p>
     <div class="meta">
                 <p>
                 Defined in
-        <a href="../files/addon_services_file-manager.js.html#l65"><code>addon&#x2F;services&#x2F;file-manager.js:65</code></a>
+        <a href="../files/addon_services_file-manager.js.html#l68"><code>addon&#x2F;services&#x2F;file-manager.js:68</code></a>
         </p>
 
 
@@ -1795,7 +1805,7 @@ rejects with an error message.</p>
     <div class="meta">
                 <p>
                 Defined in
-        <a href="../files/addon_services_file-manager.js.html#l159"><code>addon&#x2F;services&#x2F;file-manager.js:159</code></a>
+        <a href="../files/addon_services_file-manager.js.html#l162"><code>addon&#x2F;services&#x2F;file-manager.js:162</code></a>
         </p>
 
 
@@ -1916,7 +1926,7 @@ rejects with an error message.</p>
     <div class="meta">
                 <p>
                 Defined in
-        <a href="../files/addon_services_file-manager.js.html#l325"><code>addon&#x2F;services&#x2F;file-manager.js:325</code></a>
+        <a href="../files/addon_services_file-manager.js.html#l328"><code>addon&#x2F;services&#x2F;file-manager.js:328</code></a>
         </p>
 
 

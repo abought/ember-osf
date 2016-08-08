@@ -38,6 +38,8 @@
                 
                         <div id="api-tabview-panel">
                             <ul id="api-classes" class="apis classes">
+                                <li><a href="../classes/ajax-helpers.html">ajax-helpers</a></li>
+                                <li><a href="../classes/auth.html">auth</a></li>
                                 <li><a href="../classes/Collection.html">Collection</a></li>
                                 <li><a href="../classes/Comment.html">Comment</a></li>
                                 <li><a href="../classes/comment-detail.html">comment-detail</a></li>
@@ -50,6 +52,7 @@
                                 <li><a href="../classes/DraftRegistration.html">DraftRegistration</a></li>
                                 <li><a href="../classes/dropzone-widget.html">dropzone-widget</a></li>
                                 <li><a href="../classes/elem-id.html">elem-id</a></li>
+                                <li><a href="../classes/eosf-project-nav.html">eosf-project-nav</a></li>
                                 <li><a href="../classes/FetchAllRouteMixin.html">FetchAllRouteMixin</a></li>
                                 <li><a href="../classes/File.html">File</a></li>
                                 <li><a href="../classes/file-browser.html">file-browser</a></li>
@@ -63,6 +66,7 @@
                                 <li><a href="../classes/FileItemMixin.html">FileItemMixin</a></li>
                                 <li><a href="../classes/FileProvider.html">FileProvider</a></li>
                                 <li><a href="../classes/FileVersion.html">FileVersion</a></li>
+                                <li><a href="../classes/GenericDataADapter.html">GenericDataADapter</a></li>
                                 <li><a href="../classes/InfinityCustomMixin.html">InfinityCustomMixin</a></li>
                                 <li><a href="../classes/Institution.html">Institution</a></li>
                                 <li><a href="../classes/Log.html">Log</a></li>
@@ -76,12 +80,16 @@
                                 <li><a href="../classes/osf-mode-footer.html">osf-mode-footer</a></li>
                                 <li><a href="../classes/osf-navbar.html">osf-navbar</a></li>
                                 <li><a href="../classes/OsfAdapter.html">OsfAdapter</a></li>
-                                <li><a href="../classes/OsfLoginControllerMixin.html">OsfLoginControllerMixin</a></li>
-                                <li><a href="../classes/OsfLoginRouteMixin.html">OsfLoginRouteMixin</a></li>
+                                <li><a href="../classes/OsfCookieAuthenticator.html">OsfCookieAuthenticator</a></li>
+                                <li><a href="../classes/OsfCookieAuthorizer.html">OsfCookieAuthorizer</a></li>
+                                <li><a href="../classes/OsfCookieLoginController.html">OsfCookieLoginController</a></li>
+                                <li><a href="../classes/OsfCookieLoginRoute.html">OsfCookieLoginRoute</a></li>
                                 <li><a href="../classes/OsfModel.html">OsfModel</a></li>
                                 <li><a href="../classes/OsfSerializer.html">OsfSerializer</a></li>
                                 <li><a href="../classes/OsfTokenAuthenticator.html">OsfTokenAuthenticator</a></li>
                                 <li><a href="../classes/OsfTokenAuthorizer.html">OsfTokenAuthorizer</a></li>
+                                <li><a href="../classes/OsfTokenLoginControllerMixin.html">OsfTokenLoginControllerMixin</a></li>
+                                <li><a href="../classes/OsfTokenLoginRouteMixin.html">OsfTokenLoginRouteMixin</a></li>
                                 <li><a href="../classes/PaginatedControllerMixin.html">PaginatedControllerMixin</a></li>
                                 <li><a href="../classes/PaginatedRouteMixin.html">PaginatedRouteMixin</a></li>
                                 <li><a href="../classes/pagination-control.html">pagination-control</a></li>
@@ -100,12 +108,14 @@
                                 <li><a href="../modules/authenticators.html">authenticators</a></li>
                                 <li><a href="../modules/authorizers.html">authorizers</a></li>
                                 <li><a href="../modules/components.html">components</a></li>
+                                <li><a href="../modules/ember.html">ember</a></li>
                                 <li><a href="../modules/ember-osf.html">ember-osf</a></li>
                                 <li><a href="../modules/helpers.html">helpers</a></li>
                                 <li><a href="../modules/mixins.html">mixins</a></li>
                                 <li><a href="../modules/models.html">models</a></li>
                                 <li><a href="../modules/serializers.html">serializers</a></li>
                                 <li><a href="../modules/services.html">services</a></li>
+                                <li><a href="../modules/utils.html">utils</a></li>
                             </ul>
                         </div>
                     </div>
@@ -153,13 +163,14 @@ import layout from &#x27;./template&#x27;;
 
 /**
  * Support file uploads via dropzone.
+ * Accepts dropzone event listeners as parameters (e.g. success, error, addedfile)
  *
  * Sample usage:
  * &#x60;&#x60;&#x60;handlebars
  * {{dropzone-widget
  *   preUpload=attrs.preUpload
  *   buildUrl=buildUrl
- *   listeners=dropzoneListeners
+ *   success=attrs.success
  *   options=dropzoneOptions}}
  * &#x60;&#x60;&#x60;
  *
@@ -169,24 +180,26 @@ export default Ember.Component.extend({
     layout,
     session: Ember.inject.service(),
     classNames: [&#x27;dropzone&#x27;],
-    didRender() {
-        var preUpload = this.get(&#x27;preUpload&#x27;);
-        var dropzoneOptions = this.get(&#x27;options&#x27;);
-        var listeners = this.get(&#x27;listeners&#x27;);
-        if (!this.get(&#x27;buildUrl&#x27;) &amp;&amp; !preUpload &amp;&amp; (!dropzoneOptions || !dropzoneOptions.url)) {
+    didInsertElement() {
+        let preUpload = this.get(&#x27;preUpload&#x27;);
+        let dropzoneOptions = this.get(&#x27;options&#x27;) || {};
+
+        if (!this.get(&#x27;buildUrl&#x27;) &amp;&amp; !preUpload &amp;&amp; !dropzoneOptions.url) {
             console.error(&#x27;Need to define url somewhere&#x27;);
         }
-        var drop = new Dropzone(&#x27;#&#x27; + this.elementId, {  // jshint ignore:line
+        let drop = new Dropzone(&#x60;#${this.elementId}&#x60;, {  // jshint ignore:line
             url: file =&gt; typeof this.get(&#x27;buildUrl&#x27;) === &#x27;function&#x27; ? this.get(&#x27;buildUrl&#x27;)(file) : this.get(&#x27;buildUrl&#x27;),
             autoProcessQueue: false,
         });
 
+        // Set osf session header
         let headers = {};
         this.get(&#x27;session&#x27;).authorize(&#x27;authorizer:osf-token&#x27;, (headerName, content) =&gt; {
             headers[headerName] = content;
         });
+        dropzoneOptions.headers = headers;
 
-        drop.options.headers = headers;
+        // Attach preUpload to addedfile event
         drop.on(&#x27;addedfile&#x27;, file =&gt; {
             if (preUpload) {
                 preUpload(this, drop, file).then(() =&gt; drop.processFile(file));
@@ -194,10 +207,16 @@ export default Ember.Component.extend({
                 drop.processFile(file);
             }
         });
+
+        // Set dropzone options
         drop.options = Ember.merge(drop.options, dropzoneOptions);
-        if (listeners &amp;&amp; typeof listeners === &#x27;object&#x27;) {
-            Object.keys(listeners).map(each =&gt; drop.on(each, listeners[each]));
-        }
+
+        // Attach dropzone event listeners
+        drop.events.forEach(event =&gt; {
+            if (typeof this.get(event) === &#x27;function&#x27;) {
+                drop.on(event, (...args) =&gt; this.get(event)(this, drop, ...args));
+            }
+        });
     }
 });
 

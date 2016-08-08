@@ -18,22 +18,40 @@
             "fors": {},
             "namespaces": {}
         },
-        "addon/authenticators/osf-token.js": {
-            "name": "addon/authenticators/osf-token.js",
+        "addon/authenticators/osf-cookie.js": {
+            "name": "addon/authenticators/osf-cookie.js",
             "modules": {
                 "authenticators": 1
             },
+            "classes": {
+                "OsfCookieAuthenticator": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "addon/authenticators/osf-token.js": {
+            "name": "addon/authenticators/osf-token.js",
+            "modules": {},
             "classes": {
                 "OsfTokenAuthenticator": 1
             },
             "fors": {},
             "namespaces": {}
         },
-        "addon/authorizers/osf-token.js": {
-            "name": "addon/authorizers/osf-token.js",
+        "addon/authorizers/osf-cookie.js": {
+            "name": "addon/authorizers/osf-cookie.js",
             "modules": {
                 "authorizers": 1
             },
+            "classes": {
+                "OsfCookieAuthorizer": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "addon/authorizers/osf-token.js": {
+            "name": "addon/authorizers/osf-token.js",
+            "modules": {},
             "classes": {
                 "OsfTokenAuthorizer": 1
             },
@@ -74,6 +92,15 @@
             "modules": {},
             "classes": {
                 "dropzone-widget": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "addon/components/eosf-project-nav/component.js": {
+            "name": "addon/components/eosf-project-nav/component.js",
+            "modules": {},
+            "classes": {
+                "eosf-project-nav": 1
             },
             "fors": {},
             "namespaces": {}
@@ -220,6 +247,13 @@
             "fors": {},
             "namespaces": {}
         },
+        "addon/const/permissions.js": {
+            "name": "addon/const/permissions.js",
+            "modules": {},
+            "classes": {},
+            "fors": {},
+            "namespaces": {}
+        },
         "addon/helpers/elem-id.js": {
             "name": "addon/helpers/elem-id.js",
             "modules": {
@@ -269,6 +303,15 @@
             "fors": {},
             "namespaces": {}
         },
+        "addon/mixins/generic-data-adapter.js": {
+            "name": "addon/mixins/generic-data-adapter.js",
+            "modules": {},
+            "classes": {
+                "GenericDataADapter": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
         "addon/mixins/infinity-custom.js": {
             "name": "addon/mixins/infinity-custom.js",
             "modules": {},
@@ -287,20 +330,38 @@
             "fors": {},
             "namespaces": {}
         },
-        "addon/mixins/osf-login-controller.js": {
-            "name": "addon/mixins/osf-login-controller.js",
+        "addon/mixins/osf-cookie-login-controller.js": {
+            "name": "addon/mixins/osf-cookie-login-controller.js",
             "modules": {},
             "classes": {
-                "OsfLoginControllerMixin": 1
+                "OsfCookieLoginController": 1
             },
             "fors": {},
             "namespaces": {}
         },
-        "addon/mixins/osf-login-route.js": {
-            "name": "addon/mixins/osf-login-route.js",
+        "addon/mixins/osf-cookie-login-route.js": {
+            "name": "addon/mixins/osf-cookie-login-route.js",
             "modules": {},
             "classes": {
-                "OsfLoginRouteMixin": 1
+                "OsfCookieLoginRoute": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "addon/mixins/osf-token-login-controller.js": {
+            "name": "addon/mixins/osf-token-login-controller.js",
+            "modules": {},
+            "classes": {
+                "OsfTokenLoginControllerMixin": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "addon/mixins/osf-token-login-route.js": {
+            "name": "addon/mixins/osf-token-login-route.js",
+            "modules": {},
+            "classes": {
+                "OsfTokenLoginRouteMixin": 1
             },
             "fors": {},
             "namespaces": {}
@@ -517,6 +578,27 @@
             },
             "fors": {},
             "namespaces": {}
+        },
+        "addon/utils/ajax-helpers.js": {
+            "name": "addon/utils/ajax-helpers.js",
+            "modules": {
+                "ember-osf": 1,
+                "utils": 1
+            },
+            "classes": {
+                "ajax-helpers": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "addon/utils/auth.js": {
+            "name": "addon/utils/auth.js",
+            "modules": {},
+            "classes": {
+                "auth": 1
+            },
+            "fors": {},
+            "namespaces": {}
         }
     },
     "modules": {
@@ -536,12 +618,15 @@
             "elements": {},
             "classes": {
                 "OsfAdapter": 1,
+                "OsfCookieAuthenticator": 1,
                 "OsfTokenAuthenticator": 1,
+                "OsfCookieAuthorizer": 1,
                 "OsfTokenAuthorizer": 1,
                 "comment-detail": 1,
                 "comment-form": 1,
                 "comment-pane": 1,
                 "dropzone-widget": 1,
+                "eosf-project-nav": 1,
                 "file-browser": 1,
                 "file-browser-icon": 1,
                 "file-chooser component": 1,
@@ -562,10 +647,12 @@
                 "FetchAllRouteMixin": 1,
                 "FileCacheBypassMixin": 1,
                 "FileItemMixin": 1,
+                "GenericDataADapter": 1,
                 "InfinityCustomMixin": 1,
                 "NodeActionsMixin": 1,
-                "OsfLoginControllerMixin": 1,
-                "OsfLoginRouteMixin": 1,
+                "OsfCookieLoginController": 1,
+                "OsfTokenLoginControllerMixin": 1,
+                "OsfTokenLoginRouteMixin": 1,
                 "PaginatedControllerMixin": 1,
                 "PaginatedRouteMixin": 1,
                 "RegistrationActionsMixin": 1,
@@ -588,12 +675,15 @@
                 "User": 1,
                 "OsfSerializer": 1,
                 "current-user": 1,
-                "file-manager": 1
+                "file-manager": 1,
+                "auth": 1
             },
             "fors": {},
             "namespaces": {},
-            "file": "addon/services/file-manager.js",
-            "line": 8
+            "tag": "module",
+            "file": "addon/utils/auth.js",
+            "line": 10,
+            "description": "Helper functions for asynchronous behavior"
         },
         "adapters": {
             "name": "adapters",
@@ -616,6 +706,7 @@
             "submodules": {},
             "elements": {},
             "classes": {
+                "OsfCookieAuthenticator": 1,
                 "OsfTokenAuthenticator": 1
             },
             "fors": {},
@@ -625,13 +716,14 @@
             "namespace": "",
             "file": "addon/authenticators/osf-token.js",
             "line": 11,
-            "description": "Ember-simple-auth compatible authenticator based on OAuth2 bearer tokens.\n\nIntended to be used with the authorizer of the same name."
+            "description": "Ember-simple-auth compatible authenticator based on session cookie.\n\nIntended to be used with the authorizer of the same name."
         },
         "authorizers": {
             "name": "authorizers",
             "submodules": {},
             "elements": {},
             "classes": {
+                "OsfCookieAuthorizer": 1,
                 "OsfTokenAuthorizer": 1
             },
             "fors": {},
@@ -641,7 +733,7 @@
             "namespace": "",
             "file": "addon/authorizers/osf-token.js",
             "line": 8,
-            "description": "Ember-simple-auth compatible authorizer based on OAuth2 bearer tokens.\n\nIntended to be used with the authenticator of the same name."
+            "description": "Ember-simple-auth compatible authorizer based on session cookie.\n\nIntended to be used with the authenticator of the same name."
         },
         "components": {
             "name": "components",
@@ -652,6 +744,7 @@
                 "comment-form": 1,
                 "comment-pane": 1,
                 "dropzone-widget": 1,
+                "eosf-project-nav": 1,
                 "file-browser": 1,
                 "file-browser-icon": 1,
                 "file-chooser component": 1,
@@ -704,8 +797,10 @@
                 "FileItemMixin": 1,
                 "InfinityCustomMixin": 1,
                 "NodeActionsMixin": 1,
-                "OsfLoginControllerMixin": 1,
-                "OsfLoginRouteMixin": 1,
+                "OsfCookieLoginController": 1,
+                "OsfCookieLoginRoute": 1,
+                "OsfTokenLoginControllerMixin": 1,
+                "OsfTokenLoginRouteMixin": 1,
                 "PaginatedControllerMixin": 1,
                 "PaginatedRouteMixin": 1,
                 "RegistrationActionsMixin": 1,
@@ -719,6 +814,18 @@
             "file": "addon/mixins/taggable-mixin.js",
             "line": 8,
             "description": "Controller mixin that implements basic commenting functionality. Uses the base model in the route model hook."
+        },
+        "ember": {
+            "name": "ember",
+            "submodules": {},
+            "elements": {},
+            "classes": {
+                "OsfCookieLoginRoute": 1
+            },
+            "fors": {},
+            "namespaces": {},
+            "file": "addon/mixins/osf-cookie-login-route.js",
+            "line": 10
         },
         "models": {
             "name": "models",
@@ -748,7 +855,7 @@
             "module": "ember-osf",
             "namespace": "",
             "file": "addon/models/user.js",
-            "line": 10,
+            "line": 11,
             "description": "Model for OSF APIv2 collections\nFor field and usage information, see:\n* https://api.osf.io/v2/docs/#!/v2/Collection_List_GET"
         },
         "serializers": {
@@ -781,8 +888,24 @@
             "module": "ember-osf",
             "namespace": "",
             "file": "addon/services/file-manager.js",
-            "line": 8,
+            "line": 11,
             "description": "Access information about the currently logged in user"
+        },
+        "utils": {
+            "name": "utils",
+            "submodules": {},
+            "elements": {},
+            "classes": {
+                "ajax-helpers": 1,
+                "auth": 1
+            },
+            "fors": {},
+            "namespaces": {},
+            "tag": "module",
+            "file": "addon/utils/auth.js",
+            "line": 10,
+            "description": "Helper functions for asynchronous behavior",
+            "module": "ember-osf"
         }
     },
     "classes": {
@@ -803,8 +926,24 @@
             "extends": "DS.JSONAPIAdapter",
             "uses": [
                 "HasManyQuery.RESTAdapterMixin",
-                "DataAdapterMixin"
+                "GenericDataAdapterMixin"
             ]
+        },
+        "OsfCookieAuthenticator": {
+            "name": "OsfCookieAuthenticator",
+            "shortname": "OsfCookieAuthenticator",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "ember-osf",
+            "submodule": "authenticators",
+            "namespace": "",
+            "file": "addon/authenticators/osf-cookie.js",
+            "line": 13,
+            "description": "Ember-simple-auth compatible authenticator based on session cookie.\n\nIntended to be used with the authorizer of the same name.",
+            "extends": "ember-simple-auth/BaseAuthenticator"
         },
         "OsfTokenAuthenticator": {
             "name": "OsfTokenAuthenticator",
@@ -821,6 +960,22 @@
             "line": 11,
             "description": "Ember-simple-auth compatible authenticator based on OAuth2 bearer tokens.\n\nIntended to be used with the authorizer of the same name.",
             "extends": "ember-simple-auth/BaseAuthenticator"
+        },
+        "OsfCookieAuthorizer": {
+            "name": "OsfCookieAuthorizer",
+            "shortname": "OsfCookieAuthorizer",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "ember-osf",
+            "submodule": "authorizers",
+            "namespace": "",
+            "file": "addon/authorizers/osf-cookie.js",
+            "line": 7,
+            "description": "Ember-simple-auth compatible authorizer based on session cookie.\n\nIntended to be used with the authenticator of the same name.",
+            "extends": "ember-simple-auth/BaseAuthorizer"
         },
         "OsfTokenAuthorizer": {
             "name": "OsfTokenAuthorizer",
@@ -962,7 +1117,22 @@
             "namespace": "",
             "file": "addon/components/dropzone-widget/component.js",
             "line": 9,
-            "description": "Support file uploads via dropzone.\n\nSample usage:\n```handlebars\n{{dropzone-widget\n  preUpload=attrs.preUpload\n  buildUrl=buildUrl\n  listeners=dropzoneListeners\n  options=dropzoneOptions}}\n```"
+            "description": "Support file uploads via dropzone.\nAccepts dropzone event listeners as parameters (e.g. success, error, addedfile)\n\nSample usage:\n```handlebars\n{{dropzone-widget\n  preUpload=attrs.preUpload\n  buildUrl=buildUrl\n  success=attrs.success\n  options=dropzoneOptions}}\n```"
+        },
+        "eosf-project-nav": {
+            "name": "eosf-project-nav",
+            "shortname": "eosf-project-nav",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "ember-osf",
+            "submodule": "components",
+            "namespace": "",
+            "file": "addon/components/eosf-project-nav/component.js",
+            "line": 13,
+            "description": "Project header navigation bar, with links to various sub-pages within a project\nSample usage:\n```handlebars\n{{eosf-project-nav\n  node=node\n  user=user}}\n```"
         },
         "file-browser": {
             "name": "file-browser",
@@ -1187,7 +1357,8 @@
             "namespace": "",
             "file": "addon/components/tags-widget/component.js",
             "line": 9,
-            "description": "Allow the user to view and manage tags.\nSee TaggableMixin for controller actions that can be used with this component.\n```handlebars\n{{tags-widget\n  addATag=(action 'addATag')\n  removeATag=(action 'removeATag')\n  tags=model.tags}}\n```"
+            "description": "Allow the user to view and manage tags.\nSee TaggableMixin for controller actions that can be used with this component.\n\nFor more information on configuration options, see documentation for [jquery-tags-input](https://github.com/xoxco/jQuery-Tags-Input).\n\n```handlebars\n{{tags-widget\n  addATag=(action 'addATag')\n  removeATag=(action 'removeATag')\n  tags=model.tags}}\n```",
+            "extends": "Ember.Component"
         },
         "elem-id": {
             "name": "elem-id",
@@ -1285,6 +1456,20 @@
             "description": "File-like models are `node`, `file-provider`, and `file`/folder.\nThis mixin provides a polymorphic interface for file-like items, and is intended to be used with models.",
             "extends": "Ember.Mixin"
         },
+        "GenericDataADapter": {
+            "name": "GenericDataADapter",
+            "shortname": "GenericDataADapter",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "ember-osf",
+            "namespace": "",
+            "file": "addon/mixins/generic-data-adapter.js",
+            "line": 6,
+            "description": "Extend the Ember-Simple-Auth adapter to provide cookie support (when necessary).\nThis allows the same addon to define an adapter that works with two authentication types.\n\nThis particularly applies to local development, as without it cookies are not sent from the ember app to the api domain"
+        },
         "InfinityCustomMixin": {
             "name": "InfinityCustomMixin",
             "shortname": "InfinityCustomMixin",
@@ -1320,9 +1505,9 @@
             "description": "Controller mixin that implements common actions performed on nodes.",
             "extends": "Ember.Mixin"
         },
-        "OsfLoginControllerMixin": {
-            "name": "OsfLoginControllerMixin",
-            "shortname": "OsfLoginControllerMixin",
+        "OsfCookieLoginController": {
+            "name": "OsfCookieLoginController",
+            "shortname": "OsfCookieLoginController",
             "classitems": [],
             "plugins": [],
             "extensions": [],
@@ -1331,14 +1516,33 @@
             "module": "ember-osf",
             "submodule": "mixins",
             "namespace": "",
-            "file": "addon/mixins/osf-login-controller.js",
+            "file": "addon/mixins/osf-cookie-login-controller.js",
             "line": 10,
-            "description": "Controller mixin to add support for OAuth2 token based authentication\n\nIntended to be used in tandem with OsfLoginRouteMixin",
+            "description": "Controller mixin for login based on OSF cookie authentication. Intended to be used in tandem with OsfCookieLoginRoute mixin.\nThis auth method is not available to third-party applications.",
             "extends": "Ember.Mixin"
         },
-        "OsfLoginRouteMixin": {
-            "name": "OsfLoginRouteMixin",
-            "shortname": "OsfLoginRouteMixin",
+        "OsfCookieLoginRoute": {
+            "name": "OsfCookieLoginRoute",
+            "shortname": "OsfCookieLoginRoute",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "ember",
+            "submodule": "mixins",
+            "namespace": "",
+            "file": "addon/mixins/osf-cookie-login-route.js",
+            "line": 10,
+            "description": "Route mixin for login based on OSF cookie authentication. Intended to be used in tandem with OsfCookieLoginController mixin.\nThis auth method is not available to third-party applications.",
+            "extends": "Ember.Mixin",
+            "uses": [
+                "ember-simple-auth/UnauthenticatedRouteMixin"
+            ]
+        },
+        "OsfTokenLoginControllerMixin": {
+            "name": "OsfTokenLoginControllerMixin",
+            "shortname": "OsfTokenLoginControllerMixin",
             "classitems": [],
             "plugins": [],
             "extensions": [],
@@ -1347,9 +1551,25 @@
             "module": "ember-osf",
             "submodule": "mixins",
             "namespace": "",
-            "file": "addon/mixins/osf-login-route.js",
+            "file": "addon/mixins/osf-token-login-controller.js",
+            "line": 10,
+            "description": "Controller mixin to add support for OAuth2 token based authentication\n\nIntended to be used in tandem with OsfTokenLoginRouteMixin",
+            "extends": "Ember.Mixin"
+        },
+        "OsfTokenLoginRouteMixin": {
+            "name": "OsfTokenLoginRouteMixin",
+            "shortname": "OsfTokenLoginRouteMixin",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "ember-osf",
+            "submodule": "mixins",
+            "namespace": "",
+            "file": "addon/mixins/osf-token-login-route.js",
             "line": 13,
-            "description": "Route mixin to add support for OAuth2 token based authentication",
+            "description": "Route mixin to add support for OAuth2 token based authentication\n\nIntended to be used in tandem with OsfTokenLoginControllerMixin",
             "extends": "Ember.Mixin"
         },
         "PaginatedControllerMixin": {
@@ -1473,7 +1693,7 @@
             "submodule": "models",
             "namespace": "",
             "file": "addon/models/contributor.js",
-            "line": 10,
+            "line": 11,
             "description": "Model for OSF APIv2 contributors. Primarily accessed via relationship fields.\nFor field and usage information, see:\n* https://api.osf.io/v2/docs/#!/v2/Node_Contributors_List_GET"
         },
         "DraftRegistration": {
@@ -1608,7 +1828,7 @@
             "submodule": "models",
             "namespace": "",
             "file": "addon/models/node.js",
-            "line": 12,
+            "line": 13,
             "description": "Model for OSF APIv2 nodes. This model may be used with one of several API endpoints. It may be queried directly,\n or accessed via relationship fields.\nFor field and usage information, see:\n* https://api.osf.io/v2/docs/#!/v2/Node_List_GET\n* https://api.osf.io/v2/docs/#!/v2/Node_Detail_GET\n* https://api.osf.io/v2/docs/#!/v2/Node_Children_List_GET\n* https://api.osf.io/v2/docs/#!/v2/Linked_Nodes_List_GET\n* https://api.osf.io/v2/docs/#!/v2/Node_Forks_List_GET\n* https://api.osf.io/v2/docs/#!/v2/User_Nodes_GET"
         },
         "OsfModel": {
@@ -1655,7 +1875,7 @@
             "submodule": "models",
             "namespace": "",
             "file": "addon/models/user.js",
-            "line": 10,
+            "line": 11,
             "description": "Model for OSF APIv2 users. This model may be used with one of several API endpoints. It may be queried directly,\n or accessed via relationship fields.\nFor field and usage information, see:\n* https://api.osf.io/v2/docs/#!/v2/User_List_GET\n* https://api.osf.io/v2/docs/#!/v2/User_Detail_GET\n* https://api.osf.io/v2/docs/#!/v2/Institution_User_List_GET"
         },
         "OsfSerializer": {
@@ -1702,9 +1922,37 @@
             "submodule": "services",
             "namespace": "",
             "file": "addon/services/file-manager.js",
-            "line": 8,
+            "line": 11,
             "description": "An Ember service for doing things to files.\nEssentially a wrapper for the Waterbutler API.\nhttp://waterbutler.readthedocs.io/",
             "extends": "Ember.Service"
+        },
+        "ajax-helpers": {
+            "name": "ajax-helpers",
+            "shortname": "ajax-helpers",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "utils",
+            "namespace": "",
+            "file": "addon/utils/ajax-helpers.js",
+            "line": 11,
+            "description": "Helper functions to support AJAX requests"
+        },
+        "auth": {
+            "name": "auth",
+            "shortname": "auth",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "ember-osf",
+            "submodule": "utils",
+            "namespace": "",
+            "file": "addon/utils/auth.js",
+            "line": 10
         }
     },
     "elements": {},
@@ -1783,7 +2031,7 @@
         },
         {
             "file": "addon/adapters/osf-adapter.js",
-            "line": 90,
+            "line": 91,
             "description": "Handle add(s) of related resources. This differs from CREATEs in that the related\nrecord is already saved and is just being associated with the inverse record.",
             "itemtype": "method",
             "name": "_addRelated",
@@ -1827,7 +2075,7 @@
         },
         {
             "file": "addon/adapters/osf-adapter.js",
-            "line": 111,
+            "line": 112,
             "description": "Handle update(s) of related resources",
             "itemtype": "method",
             "name": "_updateRelated",
@@ -1871,7 +2119,7 @@
         },
         {
             "file": "addon/adapters/osf-adapter.js",
-            "line": 133,
+            "line": 134,
             "description": "Handle removal of related resources. This differs from DELETEs in that the related\nrecord is not deleted, just dissociated from the inverse record.",
             "itemtype": "method",
             "name": "_removeRelated",
@@ -1915,7 +2163,7 @@
         },
         {
             "file": "addon/adapters/osf-adapter.js",
-            "line": 152,
+            "line": 153,
             "description": "Handle deletion of related resources",
             "itemtype": "method",
             "name": "_deleteRelated",
@@ -1959,7 +2207,7 @@
         },
         {
             "file": "addon/adapters/osf-adapter.js",
-            "line": 173,
+            "line": 170,
             "description": "A helper for making _*Related requests",
             "itemtype": "method",
             "name": "_doRelatedRequest",
@@ -2008,7 +2256,7 @@
         },
         {
             "file": "addon/adapters/osf-adapter.js",
-            "line": 230,
+            "line": 227,
             "description": "Delegate a series of requests based on a snapshot, relationship, and a change.\nThe change argument can be 'delete', 'remove', 'update', 'add', 'create'",
             "itemtype": "method",
             "name": "_handleRelatedRequest",
@@ -2046,6 +2294,36 @@
             "submodule": "adapters"
         },
         {
+            "file": "addon/authenticators/osf-cookie.js",
+            "line": 39,
+            "description": "Send a request to the flask application to trigger invalidation of session remotely",
+            "itemtype": "method",
+            "name": "invalidate",
+            "class": "OsfCookieAuthenticator",
+            "module": "ember-osf",
+            "submodule": "authenticators"
+        },
+        {
+            "file": "addon/authenticators/osf-cookie.js",
+            "line": 47,
+            "description": "For now, simply verify that a token is present and can be used",
+            "itemtype": "method",
+            "name": "authenticate",
+            "params": [
+                {
+                    "name": "code",
+                    "description": ""
+                }
+            ],
+            "return": {
+                "description": "",
+                "type": "Promise"
+            },
+            "class": "OsfCookieAuthenticator",
+            "module": "ember-osf",
+            "submodule": "authenticators"
+        },
+        {
             "file": "addon/components/comment-form/component.js",
             "line": 26,
             "description": "Call a passed-in closure action to handle submitting a comment. Reset the form if save succeeds.",
@@ -2061,6 +2339,38 @@
             "class": "comment-form",
             "module": "ember-osf",
             "submodule": "components"
+        },
+        {
+            "file": "addon/components/eosf-project-nav/component.js",
+            "line": 43,
+            "description": "If this is a withdrawn registration, hide a block of buttons.",
+            "itemtype": "property",
+            "name": "isWithdrawnRegistration",
+            "class": "eosf-project-nav",
+            "module": "ember-osf",
+            "submodule": "components"
+        },
+        {
+            "file": "addon/components/tags-widget/component.js",
+            "line": 27,
+            "description": "Whether the user is allowed to edit tags.",
+            "itemtype": "property",
+            "name": "canEdit",
+            "type": "{Boolean}",
+            "class": "tags-widget",
+            "module": "ember-osf",
+            "submodule": "components"
+        },
+        {
+            "file": "addon/const/permissions.js",
+            "line": 5,
+            "description": "Provide human-readable labels for permissions fields. Useful in dropdown UI.",
+            "itemtype": "property",
+            "name": "permissionSelector",
+            "final": 1,
+            "type": "{*[]}",
+            "class": "elem-id",
+            "module": "ember-osf"
         },
         {
             "file": "addon/mixins/commentable.js",
@@ -2661,6 +2971,19 @@
             "submodule": "mixins"
         },
         {
+            "file": "addon/mixins/osf-cookie-login-controller.js",
+            "line": 23,
+            "description": "The authorization",
+            "itemtype": "property",
+            "name": "authUrl",
+            "type": "String",
+            "access": "public",
+            "tagname": "",
+            "class": "OsfCookieLoginController",
+            "module": "ember-osf",
+            "submodule": "mixins"
+        },
+        {
             "file": "addon/mixins/paginated-route.js",
             "line": 27,
             "description": "Allow configuration of the backend URL parameter used for page #",
@@ -2922,6 +3245,60 @@
             "submodule": "mixins"
         },
         {
+            "file": "addon/models/node.js",
+            "line": 79,
+            "description": "Is this a project? Flag can be used to provide template-specific behavior for different resource types.",
+            "itemtype": "property",
+            "name": "isProject",
+            "type": "boolean",
+            "class": "Node",
+            "module": "ember-osf",
+            "submodule": "models"
+        },
+        {
+            "file": "addon/models/node.js",
+            "line": 85,
+            "description": "Is this a registration? Flag can be used to provide template-specific behavior for different resource types.",
+            "itemtype": "property",
+            "name": "isRegistration",
+            "type": "boolean",
+            "class": "Node",
+            "module": "ember-osf",
+            "submodule": "models"
+        },
+        {
+            "file": "addon/models/node.js",
+            "line": 92,
+            "description": "Is this node being viewed through an anonymized, view-only link?",
+            "itemtype": "property",
+            "name": "isAnonymous",
+            "type": "boolean",
+            "class": "Node",
+            "module": "ember-osf",
+            "submodule": "models"
+        },
+        {
+            "file": "addon/models/node.js",
+            "line": 99,
+            "description": "Determine whether the specified user ID is a contributor on this node",
+            "itemtype": "method",
+            "name": "isContributor",
+            "params": [
+                {
+                    "name": "userID",
+                    "description": "",
+                    "type": "String"
+                }
+            ],
+            "return": {
+                "description": "Whether the specified user is a contributor on this node",
+                "type": "Boolean"
+            },
+            "class": "Node",
+            "module": "ember-osf",
+            "submodule": "models"
+        },
+        {
             "file": "addon/models/osf-model.js",
             "line": 30,
             "description": "Looks up relationship on model and returns hasManyRelationship\nor belongsToRelationship object.",
@@ -2990,7 +3367,7 @@
         },
         {
             "file": "addon/services/file-manager.js",
-            "line": 20,
+            "line": 23,
             "description": "Get a URL to download the given file.",
             "itemtype": "method",
             "name": "getDownloadUrl",
@@ -3033,7 +3410,7 @@
         },
         {
             "file": "addon/services/file-manager.js",
-            "line": 48,
+            "line": 51,
             "description": "Download the contents of the given file.",
             "itemtype": "method",
             "name": "getContents",
@@ -3074,7 +3451,7 @@
         },
         {
             "file": "addon/services/file-manager.js",
-            "line": 65,
+            "line": 68,
             "description": "Upload a new version of an existing file.",
             "itemtype": "method",
             "name": "updateContents",
@@ -3120,7 +3497,7 @@
         },
         {
             "file": "addon/services/file-manager.js",
-            "line": 91,
+            "line": 94,
             "description": "Check out a file, so only the current user can modify it.",
             "itemtype": "method",
             "name": "checkOut",
@@ -3141,7 +3518,7 @@
         },
         {
             "file": "addon/services/file-manager.js",
-            "line": 110,
+            "line": 113,
             "description": "Check in a file, so anyone with permission can modify it.",
             "itemtype": "method",
             "name": "checkOut",
@@ -3162,7 +3539,7 @@
         },
         {
             "file": "addon/services/file-manager.js",
-            "line": 128,
+            "line": 131,
             "description": "Create a new folder",
             "itemtype": "method",
             "name": "addSubfolder",
@@ -3208,7 +3585,7 @@
         },
         {
             "file": "addon/services/file-manager.js",
-            "line": 159,
+            "line": 162,
             "description": "Upload a file",
             "itemtype": "method",
             "name": "uploadFile",
@@ -3259,7 +3636,7 @@
         },
         {
             "file": "addon/services/file-manager.js",
-            "line": 188,
+            "line": 191,
             "description": "Rename a file or folder",
             "itemtype": "method",
             "name": "rename",
@@ -3305,7 +3682,7 @@
         },
         {
             "file": "addon/services/file-manager.js",
-            "line": 209,
+            "line": 212,
             "description": "Move (or copy) a file or folder",
             "itemtype": "method",
             "name": "move",
@@ -3385,7 +3762,7 @@
         },
         {
             "file": "addon/services/file-manager.js",
-            "line": 250,
+            "line": 253,
             "description": "Copy a file or folder.\nConvenience method for `move` with `options.copy == true`.",
             "itemtype": "method",
             "name": "copy",
@@ -3458,7 +3835,7 @@
         },
         {
             "file": "addon/services/file-manager.js",
-            "line": 283,
+            "line": 286,
             "description": "Delete a file or folder",
             "itemtype": "method",
             "name": "deleteFile",
@@ -3499,7 +3876,7 @@
         },
         {
             "file": "addon/services/file-manager.js",
-            "line": 309,
+            "line": 312,
             "description": "Check whether the given url corresponds to a model that is currently\nreloading after a file operation.\n\nUsed by `mixin:file-cache-bypass` to avoid a race condition where the\ncache might return stale, inaccurate data.",
             "itemtype": "method",
             "name": "isReloadingUrl",
@@ -3520,7 +3897,7 @@
         },
         {
             "file": "addon/services/file-manager.js",
-            "line": 325,
+            "line": 328,
             "description": "Hash set of URLs for `model.reload()` calls that are still pending.",
             "itemtype": "property",
             "name": "_reloadingUrls",
@@ -3532,7 +3909,7 @@
         },
         {
             "file": "addon/services/file-manager.js",
-            "line": 333,
+            "line": 336,
             "description": "Force-reload a model from the API.",
             "itemtype": "method",
             "name": "_reloadModel",
@@ -3555,7 +3932,7 @@
         },
         {
             "file": "addon/services/file-manager.js",
-            "line": 367,
+            "line": 370,
             "description": "Make a Waterbutler request",
             "itemtype": "method",
             "name": "_waterbutlerRequest",
@@ -3603,7 +3980,7 @@
         },
         {
             "file": "addon/services/file-manager.js",
-            "line": 404,
+            "line": 409,
             "description": "Get the `file` model for a newly created file.",
             "itemtype": "method",
             "name": "_getNewFileInfo",
@@ -3628,7 +4005,87 @@
             "class": "file-manager",
             "module": "ember-osf",
             "submodule": "services"
+        },
+        {
+            "file": "addon/utils/ajax-helpers.js",
+            "line": 16,
+            "description": "Performs an AJAX request with any additional authorization config as needed for the configured authorization type.\nAllows manual AJAX requests to be authorization-agnostic when using this addon.\n\nPrimarily used to set XHR flags on manual AJAX requests, for cookie based authorization.",
+            "itemtype": "method",
+            "name": "authenticatedAJAX",
+            "params": [
+                {
+                    "name": "options",
+                    "description": "",
+                    "type": "Object"
+                }
+            ],
+            "return": {
+                "description": "",
+                "type": "Promise"
+            },
+            "class": "ajax-helpers",
+            "module": "utils"
+        },
+        {
+            "file": "addon/utils/auth.js",
+            "line": 14,
+            "description": "Retrieve the correct URL for OAuth 2.0 authentication in the OSF, including any additional configurable parameters",
+            "access": "private",
+            "tagname": "",
+            "itemtype": "method",
+            "name": "getOAuthUrl",
+            "return": {
+                "description": "",
+                "type": "String"
+            },
+            "class": "auth",
+            "module": "ember-osf",
+            "submodule": "utils"
+        },
+        {
+            "file": "addon/utils/auth.js",
+            "line": 24,
+            "description": "Retrieve the correct URL for cookie-based in the OSF, including any additional configurable parameters",
+            "access": "private",
+            "tagname": "",
+            "itemtype": "method",
+            "name": "getCookieAuthUrl",
+            "params": [
+                {
+                    "name": "redirectUri",
+                    "description": "Where to send the browser after a successful login request",
+                    "type": "String"
+                }
+            ],
+            "return": {
+                "description": "",
+                "type": "String"
+            },
+            "class": "auth",
+            "module": "ember-osf",
+            "submodule": "utils"
+        },
+        {
+            "file": "addon/utils/auth.js",
+            "line": 36,
+            "description": "Return the appropriate auth URL for the specified authorization mechanism (as specified in application configuration)\nCurrently supports `token` and `cookie` based authorization",
+            "access": "public",
+            "tagname": "",
+            "itemtype": "method",
+            "name": "getAuthUrl",
+            "return": {
+                "description": "",
+                "type": "String"
+            },
+            "class": "auth",
+            "module": "ember-osf",
+            "submodule": "utils"
         }
     ],
-    "warnings": []
+    "warnings": [
+        {
+            "message": "replacing incorrect tag: returns with return",
+            "line": " addon/models/node.js:99"
+        }
+    ]
 }

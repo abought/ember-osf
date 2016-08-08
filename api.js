@@ -13,6 +13,7 @@ YUI.add("yuidoc-meta", function(Y) {
         "FileItemMixin",
         "FileProvider",
         "FileVersion",
+        "GenericDataADapter",
         "InfinityCustomMixin",
         "Institution",
         "Log",
@@ -21,24 +22,31 @@ YUI.add("yuidoc-meta", function(Y) {
         "NodeActionsMixin",
         "NodeLink",
         "OsfAdapter",
-        "OsfLoginControllerMixin",
-        "OsfLoginRouteMixin",
+        "OsfCookieAuthenticator",
+        "OsfCookieAuthorizer",
+        "OsfCookieLoginController",
+        "OsfCookieLoginRoute",
         "OsfModel",
         "OsfSerializer",
         "OsfTokenAuthenticator",
         "OsfTokenAuthorizer",
+        "OsfTokenLoginControllerMixin",
+        "OsfTokenLoginRouteMixin",
         "PaginatedControllerMixin",
         "PaginatedRouteMixin",
         "Registration",
         "RegistrationActionsMixin",
         "TaggableMixin",
         "User",
+        "ajax-helpers",
+        "auth",
         "comment-detail",
         "comment-form",
         "comment-pane",
         "current-user",
         "dropzone-widget",
         "elem-id",
+        "eosf-project-nav",
         "file-browser",
         "file-browser-icon",
         "file-chooser component",
@@ -61,12 +69,14 @@ YUI.add("yuidoc-meta", function(Y) {
         "authenticators",
         "authorizers",
         "components",
+        "ember",
         "ember-osf",
         "helpers",
         "mixins",
         "models",
         "serializers",
-        "services"
+        "services",
+        "utils"
     ],
     "allModules": [
         {
@@ -77,12 +87,12 @@ YUI.add("yuidoc-meta", function(Y) {
         {
             "displayName": "authenticators",
             "name": "authenticators",
-            "description": "Ember-simple-auth compatible authenticator based on OAuth2 bearer tokens.\n\nIntended to be used with the authorizer of the same name."
+            "description": "Ember-simple-auth compatible authenticator based on session cookie.\n\nIntended to be used with the authorizer of the same name."
         },
         {
             "displayName": "authorizers",
             "name": "authorizers",
-            "description": "Ember-simple-auth compatible authorizer based on OAuth2 bearer tokens.\n\nIntended to be used with the authenticator of the same name."
+            "description": "Ember-simple-auth compatible authorizer based on session cookie.\n\nIntended to be used with the authenticator of the same name."
         },
         {
             "displayName": "components",
@@ -90,8 +100,13 @@ YUI.add("yuidoc-meta", function(Y) {
             "description": "Display information about an individual comment, including controls to edit, delete, and report.\nThis component is typically used as part of the `comment-pane` component; see that component for further information.\n\nSample usage:\n```handlebars\n{{comment-detail\n  comment=comment\n  editComment=attrs.editComment\n  deleteComment=attrs.deleteComment\n  restoreComment=attrs.restoreComment\n  reportComment=attrs.reportComment}}\n```"
         },
         {
+            "displayName": "ember",
+            "name": "ember"
+        },
+        {
             "displayName": "ember-osf",
-            "name": "ember-osf"
+            "name": "ember-osf",
+            "description": "Helper functions for asynchronous behavior"
         },
         {
             "displayName": "helpers",
@@ -117,6 +132,11 @@ YUI.add("yuidoc-meta", function(Y) {
             "displayName": "services",
             "name": "services",
             "description": "Access information about the currently logged in user"
+        },
+        {
+            "displayName": "utils",
+            "name": "utils",
+            "description": "Helper functions for asynchronous behavior"
         }
     ],
     "elements": []
