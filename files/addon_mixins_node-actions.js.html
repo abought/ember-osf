@@ -40,6 +40,7 @@
                             <ul id="api-classes" class="apis classes">
                                 <li><a href="../classes/ajax-helpers.html">ajax-helpers</a></li>
                                 <li><a href="../classes/auth.html">auth</a></li>
+                                <li><a href="../classes/CasAuthenticatedRouteMixin.html">CasAuthenticatedRouteMixin</a></li>
                                 <li><a href="../classes/Collection.html">Collection</a></li>
                                 <li><a href="../classes/Comment.html">Comment</a></li>
                                 <li><a href="../classes/comment-detail.html">comment-detail</a></li>
@@ -79,7 +80,10 @@
                                 <li><a href="../classes/osf-footer.html">osf-footer</a></li>
                                 <li><a href="../classes/osf-mode-footer.html">osf-mode-footer</a></li>
                                 <li><a href="../classes/osf-navbar.html">osf-navbar</a></li>
+                                <li><a href="../classes/osf-paginator.html">osf-paginator</a></li>
                                 <li><a href="../classes/OsfAdapter.html">OsfAdapter</a></li>
+                                <li><a href="../classes/OsfAgnosticAuthController.html">OsfAgnosticAuthController</a></li>
+                                <li><a href="../classes/OsfAgnosticAuthRoute.html">OsfAgnosticAuthRoute</a></li>
                                 <li><a href="../classes/OsfCookieAuthenticator.html">OsfCookieAuthenticator</a></li>
                                 <li><a href="../classes/OsfCookieAuthorizer.html">OsfCookieAuthorizer</a></li>
                                 <li><a href="../classes/OsfCookieLoginController.html">OsfCookieLoginController</a></li>
@@ -175,19 +179,6 @@ export default Ember.Mixin.create({
     model: null,
     _node: Ember.computed.or(&#x27;node&#x27;, &#x27;model&#x27;),
     /**
-     * Helper method that maps all node contributors to format {contribId: Contributor}
-     *
-     * @method _generateContributorMap
-     * @private
-     * @param {Contributor[]} contributors A list of contributors to be included in the map
-     * @return {Object} Returns a contributor map of the id to the contributor record
-     */
-    _generateContributorMap(contributors) {
-        var contribMap = {};
-        contributors.forEach(contrib =&gt; contribMap[contrib.id] = contrib);
-        return contribMap;
-    },
-    /**
      * Helper method that affiliates an institution with a node.
      *
      * @method _affiliateNode
@@ -270,18 +261,11 @@ export default Ember.Mixin.create({
          * @param {String} userId ID of user that will be a contributor on the node
          * @param {String} permission User permission level. One of &quot;read&quot;, &quot;write&quot;, or &quot;admin&quot;. Default: &quot;write&quot;.
          * @param {Boolean} isBibliographic Whether user will be included in citations for the node. &quot;default: true&quot;
-         * @return {Promise} Returns a promise that resolves to the updated node
-         * with the new contributor relationship.
+         * @param {Boolean} sendEmail Whether user will receive an email when added. &quot;default: true&quot;
+         * @return {Promise} Returns a promise that resolves to the newly created contributor object.
          */
-        addContributor(userId, permission, isBibliographic) {
-            var node = this.get(&#x27;_node&#x27;);
-            var contributor = this.store.createRecord(&#x27;contributor&#x27;, {
-                id: &#x60;${node.get(&#x27;id&#x27;)}-${userId}&#x60;,
-                permission: permission,
-                bibliographic: isBibliographic
-            });
-            node.get(&#x27;contributors&#x27;).pushObject(contributor);
-            return node.save();
+        addContributor(userId, permission, isBibliographic, sendEmail) { // jshint ignore:line
+            return this.get(&#x27;_node&#x27;).addContributor(...arguments);
         },
         /**
          * Remove a contributor from a node
@@ -293,10 +277,7 @@ export default Ember.Mixin.create({
          */
         removeContributor(contributor) {
             var node = this.get(&#x27;_node&#x27;);
-            contributor.setProperties({
-                nodeId: node.id
-            });
-            return contributor.destroyRecord();
+            return node.removeContributor(contributor);
         },
         /**
          * Update contributors of a node. Makes a bulk request to the APIv2.
@@ -308,16 +289,48 @@ export default Ember.Mixin.create({
          * @return {Promise} Returns a promise that resolves to the updated node
          * with edited contributor relationships.
          */
-        updateContributors(contributors, permissionsChanges, bibliographicChanges) {
-            var node = this.get(&#x27;_node&#x27;);
-            var contributorMap = this._generateContributorMap(contributors);
-            for (let contributorId in permissionsChanges) {
-                contributorMap[contributorId].set(&#x27;permission&#x27;, permissionsChanges[contributorId]);
-            }
-            for (let contributorId in bibliographicChanges) {
-                contributorMap[contributorId].set(&#x27;bibliographic&#x27;, bibliographicChanges[contributorId]);
-            }
-            return node.save();
+        updateContributors(contributors, permissionsChanges, bibliographicChanges) {  // jshint ignore:line
+            return this.get(&#x27;_node&#x27;).updateContributors(...arguments);
+        },
+
+        /**
+         * Update contributors of a node. Makes a bulk request to the APIv2.
+         *
+         * @method updateContributor
+         * @param {Contributor} contributor relationship on the node.
+         * @param {string} permissions desired permissions.
+         * @param {boolean} bibliographic desired bibliographic statuses
+         * @return {Promise} Returns a promise that resolves to the updated node
+         * with edited contributor relationships.
+         */
+        updateContributor(contributor, permissions, bibliographic) { // jshint ignore:line
+            return this.get(&#x27;_node&#x27;).updateContributor(...arguments);
+        },
+        /**
+         * Reorder contributors on a node, and manually updates store.
+         *
+         * @method reorderContributors
+         * @param {Object} contributor Contributor record to be modified
+         * @param {Integer} newIndex Contributor&#x27;s new position in the list
+         * @param {Array} contributors New contributor list in correct order
+         * @return {Promise} Returns a promise that resolves to the updated contributor.
+         */
+        reorderContributors(contributor, newIndex, contributors) {
+            contributor.set(&#x27;index&#x27;, newIndex);
+            return contributor.save().then(() =&gt; {
+                contributors.forEach((contrib, index) =&gt; {
+                    if (contrib.id !== contributor.id) {
+                        var payload = contrib.serialize();
+                        payload.data.attributes = {
+                            permission: contrib.get(&#x27;permission&#x27;),
+                            bibliographic: contrib.get(&#x27;bibliographic&#x27;),
+                            index: index
+                        };
+                        payload.data.id = contrib.get(&#x27;id&#x27;);
+                        this.store.pushPayload(payload);
+                    }
+                });
+            });
         },
         /**
          * Add a child (component) to a node.
@@ -326,25 +339,17 @@ export default Ember.Mixin.create({
          * @param {String} title Title for the child
          * @param {String} description Description for the child
          * @param {String} category Category for the child
-         * @return {Promise} Returns a promise that resolves to the updated node with the new child relationship.
+         * @return {Promise} Returns a promise that resolves to the newly created child node.
          */
         addChild(title, description, category) {
-            var node = this.get(&#x27;_node&#x27;);
-            var child = this.store.createRecord(&#x27;node&#x27;, {
-                title: title,
-                category: category || &#x27;project&#x27;,
-                description: description || null
-            });
-            node.get(&#x27;children&#x27;).pushObject(child);
-            return node.save();
+            return this.get(&#x27;_node&#x27;).addChild(title, description, category);
         },
         /**
          * Add a node link (pointer) to another node
          *
          * @method addNodeLink
          * @param {String} targetNodeId ID of the node for which you wish to create a pointer
-         * @return {Promise} Returns a promise that resolves to the updated node with the
-         * newly added nodeLink relationship
+         * @return {Promise} Returns a promise that resolves to model for the newly created NodeLink
          */
         addNodeLink(targetNodeId) {
             var node = this.get(&#x27;_node&#x27;);
@@ -352,7 +357,7 @@ export default Ember.Mixin.create({
                 target: targetNodeId
             });
             node.get(&#x27;nodeLinks&#x27;).pushObject(nodeLink);
-            return node.save();
+            return node.save().then(() =&gt; nodeLink);
         },
         /**
          * Remove a node link (pointer) to another node

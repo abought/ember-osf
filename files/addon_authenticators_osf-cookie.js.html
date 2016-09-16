@@ -40,6 +40,7 @@
                             <ul id="api-classes" class="apis classes">
                                 <li><a href="../classes/ajax-helpers.html">ajax-helpers</a></li>
                                 <li><a href="../classes/auth.html">auth</a></li>
+                                <li><a href="../classes/CasAuthenticatedRouteMixin.html">CasAuthenticatedRouteMixin</a></li>
                                 <li><a href="../classes/Collection.html">Collection</a></li>
                                 <li><a href="../classes/Comment.html">Comment</a></li>
                                 <li><a href="../classes/comment-detail.html">comment-detail</a></li>
@@ -79,7 +80,10 @@
                                 <li><a href="../classes/osf-footer.html">osf-footer</a></li>
                                 <li><a href="../classes/osf-mode-footer.html">osf-mode-footer</a></li>
                                 <li><a href="../classes/osf-navbar.html">osf-navbar</a></li>
+                                <li><a href="../classes/osf-paginator.html">osf-paginator</a></li>
                                 <li><a href="../classes/OsfAdapter.html">OsfAdapter</a></li>
+                                <li><a href="../classes/OsfAgnosticAuthController.html">OsfAgnosticAuthController</a></li>
+                                <li><a href="../classes/OsfAgnosticAuthRoute.html">OsfAgnosticAuthRoute</a></li>
                                 <li><a href="../classes/OsfCookieAuthenticator.html">OsfCookieAuthenticator</a></li>
                                 <li><a href="../classes/OsfCookieAuthorizer.html">OsfCookieAuthorizer</a></li>
                                 <li><a href="../classes/OsfCookieLoginController.html">OsfCookieLoginController</a></li>
@@ -174,6 +178,9 @@ import { authenticatedAJAX } from &#x27;ember-osf/utils/ajax-helpers&#x27;;
  * @extends ember-simple-auth/BaseAuthenticator
  */
 export default Base.extend({
+    // HACK: Lets us clear session manually, rather than after .invalidate method resolves
+    session: Ember.inject.service(&#x27;session&#x27;),
+
     _test() {
         return authenticatedAJAX({
             method: &#x27;GET&#x27;,
@@ -195,9 +202,20 @@ export default Base.extend({
      * Send a request to the flask application to trigger invalidation of session remotely
      * @method invalidate
      */
-    invalidate() {
-        // Can&#x27;t do this via AJAX request because it redirects to CAS, and AJAX + redirect = CORS issue
-        window.location = &#x60;${config.OSF.url}logout/&#x60;;
+    invalidate(data) {
+        if (!data || data.id &amp;&amp; data.status !== 401) {
+            // If invalidate is called when loading the page to check if a cookie has permissions, don&#x27;t redirect the user
+            // But if invalidate is called without arguments, or for any other reason, interpret this as a straight logout request
+            //   (and let the session get invalidated next time at the start of first page load)
+            // Can&#x27;t do this via AJAX request because it redirects to CAS, and AJAX + redirect = CORS issue
+
+            // Manually clear session before user leaves the page, since we aren&#x27;t sticking around for ESA to do so later
+            this.get(&#x27;session.session&#x27;)._clear(true)
+                .then(() =&gt; window.location = &#x60;${config.OSF.url}logout/&#x60;);
+        } else {
+            // This branch is expected to be called when a test request reveals the user to lack permissions... so session should be wiped
+            return Ember.RSVP.resolve();
+        }
     },
     /**
      * For now, simply verify that a token is present and can be used

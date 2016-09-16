@@ -40,6 +40,7 @@
                             <ul id="api-classes" class="apis classes">
                                 <li><a href="../classes/ajax-helpers.html">ajax-helpers</a></li>
                                 <li><a href="../classes/auth.html">auth</a></li>
+                                <li><a href="../classes/CasAuthenticatedRouteMixin.html">CasAuthenticatedRouteMixin</a></li>
                                 <li><a href="../classes/Collection.html">Collection</a></li>
                                 <li><a href="../classes/Comment.html">Comment</a></li>
                                 <li><a href="../classes/comment-detail.html">comment-detail</a></li>
@@ -79,7 +80,10 @@
                                 <li><a href="../classes/osf-footer.html">osf-footer</a></li>
                                 <li><a href="../classes/osf-mode-footer.html">osf-mode-footer</a></li>
                                 <li><a href="../classes/osf-navbar.html">osf-navbar</a></li>
+                                <li><a href="../classes/osf-paginator.html">osf-paginator</a></li>
                                 <li><a href="../classes/OsfAdapter.html">OsfAdapter</a></li>
+                                <li><a href="../classes/OsfAgnosticAuthController.html">OsfAgnosticAuthController</a></li>
+                                <li><a href="../classes/OsfAgnosticAuthRoute.html">OsfAgnosticAuthRoute</a></li>
                                 <li><a href="../classes/OsfCookieAuthenticator.html">OsfCookieAuthenticator</a></li>
                                 <li><a href="../classes/OsfCookieAuthorizer.html">OsfCookieAuthorizer</a></li>
                                 <li><a href="../classes/OsfCookieLoginController.html">OsfCookieLoginController</a></li>
@@ -169,13 +173,17 @@ import Ember from &#x27;ember&#x27;;
  */
 export default Ember.Mixin.create({
     itemName: Ember.computed.or(&#x27;name&#x27;, &#x27;title&#x27;),
-    isNode: Ember.computed.equal(&#x27;constructor.modelName&#x27;, &#x27;node&#x27;),
-    isProvider: Ember.computed.equal(&#x27;constructor.modelName&#x27;, &#x27;file-provider&#x27;),
+    // https://github.com/emberjs/ember.js/issues/14014
+    // isNode: Ember.computed.equal(&#x27;constructor.modelName&#x27;, &#x27;node&#x27;),
+    // isProvider: Ember.computed.equal(&#x27;constructor.modelName&#x27;, &#x27;file-provider&#x27;),
+    isNode: false,
+    isProvider: false,
     isFolder: Ember.computed.and(&#x27;_isFileModel&#x27;, &#x27;_isFolder&#x27;),
     isFile: Ember.computed.and(&#x27;_isFileModel&#x27;, &#x27;_isFile&#x27;),
     canHaveChildren: Ember.computed.or(&#x27;isNode&#x27;, &#x27;isProvider&#x27;, &#x27;isFolder&#x27;),
 
-    _isFileModel: Ember.computed.equal(&#x27;constructor.modelName&#x27;, &#x27;file&#x27;),
+    // _isFileModel: Ember.computed.equal(&#x27;constructor.modelName&#x27;, &#x27;file&#x27;),
+    _isFileModel: false,
     _isFolder: Ember.computed.equal(&#x27;kind&#x27;, &#x27;folder&#x27;),
     _isFile: Ember.computed.equal(&#x27;kind&#x27;, &#x27;file&#x27;)
 });

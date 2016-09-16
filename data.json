@@ -211,6 +211,15 @@
             "fors": {},
             "namespaces": {}
         },
+        "addon/components/osf-paginator/component.js": {
+            "name": "addon/components/osf-paginator/component.js",
+            "modules": {},
+            "classes": {
+                "osf-paginator": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
         "addon/components/pagination-control/component.js": {
             "name": "addon/components/pagination-control/component.js",
             "modules": {},
@@ -265,11 +274,20 @@
             "fors": {},
             "namespaces": {}
         },
-        "addon/mixins/commentable.js": {
-            "name": "addon/mixins/commentable.js",
+        "addon/mixins/cas-authenticated-route.js": {
+            "name": "addon/mixins/cas-authenticated-route.js",
             "modules": {
                 "mixins": 1
             },
+            "classes": {
+                "CasAuthenticatedRouteMixin": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "addon/mixins/commentable.js": {
+            "name": "addon/mixins/commentable.js",
+            "modules": {},
             "classes": {
                 "CommentableMixin": 1
             },
@@ -326,6 +344,24 @@
             "modules": {},
             "classes": {
                 "NodeActionsMixin": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "addon/mixins/osf-agnostic-auth-controller.js": {
+            "name": "addon/mixins/osf-agnostic-auth-controller.js",
+            "modules": {},
+            "classes": {
+                "OsfAgnosticAuthController": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "addon/mixins/osf-agnostic-auth-route.js": {
+            "name": "addon/mixins/osf-agnostic-auth-route.js",
+            "modules": {},
+            "classes": {
+                "OsfAgnosticAuthRoute": 1
             },
             "fors": {},
             "namespaces": {}
@@ -638,11 +674,13 @@
                 "osf-footer": 1,
                 "osf-mode-footer": 1,
                 "osf-navbar": 1,
+                "osf-paginator": 1,
                 "pagination-control": 1,
                 "search-dropdown": 1,
                 "sign-up": 1,
                 "tags-widget": 1,
                 "elem-id": 1,
+                "CasAuthenticatedRouteMixin": 1,
                 "CommentableMixin": 1,
                 "FetchAllRouteMixin": 1,
                 "FileCacheBypassMixin": 1,
@@ -650,6 +688,8 @@
                 "GenericDataADapter": 1,
                 "InfinityCustomMixin": 1,
                 "NodeActionsMixin": 1,
+                "OsfAgnosticAuthController": 1,
+                "OsfAgnosticAuthRoute": 1,
                 "OsfCookieLoginController": 1,
                 "OsfTokenLoginControllerMixin": 1,
                 "OsfTokenLoginRouteMixin": 1,
@@ -698,7 +738,7 @@
             "module": "ember-osf",
             "namespace": "",
             "file": "addon/adapters/osf-adapter.js",
-            "line": 15,
+            "line": 17,
             "description": "Base adapter class for all OSF APIv2 endpoints"
         },
         "authenticators": {
@@ -756,6 +796,7 @@
                 "osf-footer": 1,
                 "osf-mode-footer": 1,
                 "osf-navbar": 1,
+                "osf-paginator": 1,
                 "pagination-control": 1,
                 "search-dropdown": 1,
                 "sign-up": 1,
@@ -791,12 +832,15 @@
             "submodules": {},
             "elements": {},
             "classes": {
+                "CasAuthenticatedRouteMixin": 1,
                 "CommentableMixin": 1,
                 "FetchAllRouteMixin": 1,
                 "FileCacheBypassMixin": 1,
                 "FileItemMixin": 1,
                 "InfinityCustomMixin": 1,
                 "NodeActionsMixin": 1,
+                "OsfAgnosticAuthController": 1,
+                "OsfAgnosticAuthRoute": 1,
                 "OsfCookieLoginController": 1,
                 "OsfCookieLoginRoute": 1,
                 "OsfTokenLoginControllerMixin": 1,
@@ -813,7 +857,7 @@
             "namespace": "",
             "file": "addon/mixins/taggable-mixin.js",
             "line": 8,
-            "description": "Controller mixin that implements basic commenting functionality. Uses the base model in the route model hook."
+            "description": "Replacement for Ember-simple-auth AuthenticatedRouteMixin. Instead of redirecting to an internal route,\n  this mixin redirects to CAS login URL, and brings the user back to the last requested page afterwards\n\nFor OAuth this is done via the state parameter, and for cookies this is done via the service parameter. (TODO: Need a mixin that detects this!)"
         },
         "ember": {
             "name": "ember",
@@ -825,7 +869,7 @@
             "fors": {},
             "namespaces": {},
             "file": "addon/mixins/osf-cookie-login-route.js",
-            "line": 10
+            "line": 8
         },
         "models": {
             "name": "models",
@@ -921,7 +965,7 @@
             "submodule": "adapters",
             "namespace": "",
             "file": "addon/adapters/osf-adapter.js",
-            "line": 15,
+            "line": 17,
             "description": "Base adapter class for all OSF APIv2 endpoints",
             "extends": "DS.JSONAPIAdapter",
             "uses": [
@@ -1116,8 +1160,8 @@
             "submodule": "components",
             "namespace": "",
             "file": "addon/components/dropzone-widget/component.js",
-            "line": 9,
-            "description": "Support file uploads via dropzone.\nAccepts dropzone event listeners as parameters (e.g. success, error, addedfile)\n\nSample usage:\n```handlebars\n{{dropzone-widget\n  preUpload=attrs.preUpload\n  buildUrl=buildUrl\n  success=attrs.success\n  options=dropzoneOptions}}\n```"
+            "line": 11,
+            "description": "Support file uploads via dropzone.\nAccepts dropzone event listeners as parameters (e.g. success, error, addedfile)\n\nSample usage:\n```handlebars\n{{dropzone-widget\n  preUpload=attrs.preUpload\n  buildUrl=buildUrl\n  success=attrs.success\n  defaultMessage=defaultMessage\n  options=dropzoneOptions}}\n```"
         },
         "eosf-project-nav": {
             "name": "eosf-project-nav",
@@ -1192,7 +1236,7 @@
             "namespace": "",
             "file": "addon/components/file-renderer/component.js",
             "line": 10,
-            "description": "Render the provided url in an iframe via MFR\n\nSample usage:\n```handlebars\n{{file-renderer\n  download=model.links.download\n    width=\"800\" height=\"1000\"}}\n```"
+            "description": "Render the provided url in an iframe via MFR\n\nSample usage:\n```handlebars\n{{file-renderer\n  download=model.links.download\n    width=\"800\" height=\"1000\" allowfullscreen=true}}\n```"
         },
         "file-version": {
             "name": "file-version",
@@ -1266,7 +1310,7 @@
             "submodule": "components",
             "namespace": "",
             "file": "addon/components/osf-footer/component.js",
-            "line": 11,
+            "line": 9,
             "description": "Display the OSF footer"
         },
         "osf-mode-footer": {
@@ -1296,8 +1340,40 @@
             "submodule": "components",
             "namespace": "",
             "file": "addon/components/osf-navbar/component.js",
-            "line": 12,
-            "description": "Display the OSF navbar"
+            "line": 10,
+            "description": "Display the OSF navbar\n\nSample usage:\n```handlebars\n{{osf-navbar\n  loginAction=loginAction\n  hideSearch=true}}\n```"
+        },
+        "osf-paginator": {
+            "name": "osf-paginator",
+            "shortname": "osf-paginator",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "ember-osf",
+            "submodule": "components",
+            "namespace": "",
+            "file": "addon/components/osf-paginator/component.js",
+            "line": 9,
+            "description": "OSF Paginator adapted from osf/website/static/js/paginator.js\n\nSample usage:\n```handlebars\n{{osf-paginator\n  totalSearchResults=totalSearchResults\n  fetchResults=(action 'fetchResults')\n  query=query}}\n```",
+            "params": [
+                {
+                    "name": "totalSearchResults",
+                    "description": "Number of total search results to be paginated",
+                    "type": "Integer"
+                },
+                {
+                    "name": "fetchResults",
+                    "description": "- action for fetching other pages of results",
+                    "type": "Action"
+                },
+                {
+                    "name": "query",
+                    "description": "- Query needed for fetchResults action.",
+                    "type": "String"
+                }
+            ]
         },
         "pagination-control": {
             "name": "pagination-control",
@@ -1357,7 +1433,7 @@
             "namespace": "",
             "file": "addon/components/tags-widget/component.js",
             "line": 9,
-            "description": "Allow the user to view and manage tags.\nSee TaggableMixin for controller actions that can be used with this component.\n\nFor more information on configuration options, see documentation for [jquery-tags-input](https://github.com/xoxco/jQuery-Tags-Input).\n\n```handlebars\n{{tags-widget\n  addATag=(action 'addATag')\n  removeATag=(action 'removeATag')\n  tags=model.tags}}\n```",
+            "description": "Allow the user to view and manage tags.\nSee TaggableMixin for controller actions that can be used with this component.\n\nFor more information on configuration options, see documentation for [jquery-tags-input](https://github.com/xoxco/jQuery-Tags-Input).\n\n```handlebars\n{{tags-widget\n  addATag=(action 'addATag' model)\n  removeATag=(action 'removeATag' model)\n  tags=model.tags}}\n```",
             "extends": "Ember.Component"
         },
         "elem-id": {
@@ -1386,6 +1462,21 @@
                     "type": "Ember.suffix"
                 }
             ]
+        },
+        "CasAuthenticatedRouteMixin": {
+            "name": "CasAuthenticatedRouteMixin",
+            "shortname": "CasAuthenticatedRouteMixin",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "ember-osf",
+            "submodule": "mixins",
+            "namespace": "",
+            "file": "addon/mixins/cas-authenticated-route.js",
+            "line": 9,
+            "description": "Replacement for Ember-simple-auth AuthenticatedRouteMixin. Instead of redirecting to an internal route,\n  this mixin redirects to CAS login URL, and brings the user back to the last requested page afterwards\n\nFor OAuth this is done via the state parameter, and for cookies this is done via the service parameter. (TODO: Need a mixin that detects this!)"
         },
         "CommentableMixin": {
             "name": "CommentableMixin",
@@ -1505,6 +1596,46 @@
             "description": "Controller mixin that implements common actions performed on nodes.",
             "extends": "Ember.Mixin"
         },
+        "OsfAgnosticAuthController": {
+            "name": "OsfAgnosticAuthController",
+            "shortname": "OsfAgnosticAuthController",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "ember-osf",
+            "submodule": "mixins",
+            "namespace": "",
+            "file": "addon/mixins/osf-agnostic-auth-controller.js",
+            "line": 21,
+            "description": "Controller mixin for authentication-agnostic login: defines the application at runtime to use the authentication method\n  specified in environment config. Intended to be used in tandem with OsfAuthController mixin.\nSome authentication methods (eg cookies) are not available to third-party applications.\nThis has limited use, since most applications will only need to support one method. It may be useful for ember apps\n  that run inside the OSF, eg to use the standalone dev server, or to offer support for branded apps\n  on third-party domains.",
+            "extends": "Ember.Mixin",
+            "uses": [
+                "ember-osf/OsfCookieLoginController",
+                "ember-osf/OsfTokenLoginController"
+            ]
+        },
+        "OsfAgnosticAuthRoute": {
+            "name": "OsfAgnosticAuthRoute",
+            "shortname": "OsfAgnosticAuthRoute",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "ember-osf",
+            "submodule": "mixins",
+            "namespace": "",
+            "file": "addon/mixins/osf-agnostic-auth-route.js",
+            "line": 22,
+            "description": "Route mixin for authentication-agnostic login: defines the application at runtime to use the authentication method\n  specified in environment config. Intended to be used in tandem with OsfAgnosticAuthRoute mixin.\nSome authentication methods (eg cookies) are not available to third-party applications.\nThis has limited use, since most applications will only need to support one method. It may be useful for ember apps\n  that run inside the OSF, eg to use the standalone dev server, or to offer support for branded apps\n  on third-party domains.",
+            "extends": "Ember.Mixin",
+            "uses": [
+                "ember-osf/OsfCookieLoginRoute",
+                "ember-osf/OsfTokenLoginRoute"
+            ]
+        },
         "OsfCookieLoginController": {
             "name": "OsfCookieLoginController",
             "shortname": "OsfCookieLoginController",
@@ -1533,7 +1664,7 @@
             "submodule": "mixins",
             "namespace": "",
             "file": "addon/mixins/osf-cookie-login-route.js",
-            "line": 10,
+            "line": 8,
             "description": "Route mixin for login based on OSF cookie authentication. Intended to be used in tandem with OsfCookieLoginController mixin.\nThis auth method is not available to third-party applications.",
             "extends": "Ember.Mixin",
             "uses": [
@@ -1568,7 +1699,7 @@
             "submodule": "mixins",
             "namespace": "",
             "file": "addon/mixins/osf-token-login-route.js",
-            "line": 13,
+            "line": 12,
             "description": "Route mixin to add support for OAuth2 token based authentication\n\nIntended to be used in tandem with OsfTokenLoginControllerMixin",
             "extends": "Ember.Mixin"
         },
@@ -1959,7 +2090,7 @@
     "classitems": [
         {
             "file": "addon/adapters/osf-adapter.js",
-            "line": 45,
+            "line": 47,
             "description": "Construct a URL for a relationship create/update/delete.",
             "itemtype": "method",
             "name": "_buildRelationshipURL",
@@ -1987,7 +2118,7 @@
         },
         {
             "file": "addon/adapters/osf-adapter.js",
-            "line": 63,
+            "line": 65,
             "description": "Handle creation of related resources",
             "itemtype": "method",
             "name": "_createRelated",
@@ -2031,7 +2162,7 @@
         },
         {
             "file": "addon/adapters/osf-adapter.js",
-            "line": 91,
+            "line": 93,
             "description": "Handle add(s) of related resources. This differs from CREATEs in that the related\nrecord is already saved and is just being associated with the inverse record.",
             "itemtype": "method",
             "name": "_addRelated",
@@ -2075,7 +2206,7 @@
         },
         {
             "file": "addon/adapters/osf-adapter.js",
-            "line": 112,
+            "line": 114,
             "description": "Handle update(s) of related resources",
             "itemtype": "method",
             "name": "_updateRelated",
@@ -2119,7 +2250,7 @@
         },
         {
             "file": "addon/adapters/osf-adapter.js",
-            "line": 134,
+            "line": 136,
             "description": "Handle removal of related resources. This differs from DELETEs in that the related\nrecord is not deleted, just dissociated from the inverse record.",
             "itemtype": "method",
             "name": "_removeRelated",
@@ -2163,7 +2294,7 @@
         },
         {
             "file": "addon/adapters/osf-adapter.js",
-            "line": 153,
+            "line": 155,
             "description": "Handle deletion of related resources",
             "itemtype": "method",
             "name": "_deleteRelated",
@@ -2207,7 +2338,7 @@
         },
         {
             "file": "addon/adapters/osf-adapter.js",
-            "line": 170,
+            "line": 172,
             "description": "A helper for making _*Related requests",
             "itemtype": "method",
             "name": "_doRelatedRequest",
@@ -2256,7 +2387,7 @@
         },
         {
             "file": "addon/adapters/osf-adapter.js",
-            "line": 227,
+            "line": 229,
             "description": "Delegate a series of requests based on a snapshot, relationship, and a change.\nThe change argument can be 'delete', 'remove', 'update', 'add', 'create'",
             "itemtype": "method",
             "name": "_handleRelatedRequest",
@@ -2295,7 +2426,7 @@
         },
         {
             "file": "addon/authenticators/osf-cookie.js",
-            "line": 39,
+            "line": 42,
             "description": "Send a request to the flask application to trigger invalidation of session remotely",
             "itemtype": "method",
             "name": "invalidate",
@@ -2305,7 +2436,7 @@
         },
         {
             "file": "addon/authenticators/osf-cookie.js",
-            "line": 47,
+            "line": 61,
             "description": "For now, simply verify that a token is present and can be used",
             "itemtype": "method",
             "name": "authenticate",
@@ -2351,6 +2482,28 @@
             "submodule": "components"
         },
         {
+            "file": "addon/components/osf-navbar/component.js",
+            "line": 27,
+            "description": "Whether search icons and functionality show up",
+            "itemtype": "property",
+            "name": "hideSearch",
+            "type": "{Boolean}",
+            "class": "osf-navbar",
+            "module": "ember-osf",
+            "submodule": "components"
+        },
+        {
+            "file": "addon/components/osf-navbar/component.js",
+            "line": 34,
+            "description": "The URL to use for signup. May be overridden, eg for special campaign pages",
+            "itemtype": "property",
+            "name": "signupUrl",
+            "type": "{String}",
+            "class": "osf-navbar",
+            "module": "ember-osf",
+            "submodule": "components"
+        },
+        {
             "file": "addon/components/tags-widget/component.js",
             "line": 27,
             "description": "Whether the user is allowed to edit tags.",
@@ -2371,6 +2524,32 @@
             "type": "{*[]}",
             "class": "elem-id",
             "module": "ember-osf"
+        },
+        {
+            "file": "addon/mixins/cas-authenticated-route.js",
+            "line": 18,
+            "description": "The session service.",
+            "itemtype": "property",
+            "name": "session",
+            "readonly": "",
+            "type": "SessionService",
+            "access": "public",
+            "tagname": "",
+            "class": "CasAuthenticatedRouteMixin",
+            "module": "ember-osf",
+            "submodule": "mixins"
+        },
+        {
+            "file": "addon/mixins/cas-authenticated-route.js",
+            "line": 28,
+            "description": "Checks whether the session is authenticated, and if it is not, redirects to the login URL. (Sending back to this page after a successful transition)\n\n__If `beforeModel` is overridden in a route that uses this mixin, the route's\n     implementation must call `this._super(...arguments)`__ so that the mixin's\n     `beforeModel` method is actually executed.",
+            "itemtype": "method",
+            "name": "beforeModel",
+            "access": "public",
+            "tagname": "",
+            "class": "CasAuthenticatedRouteMixin",
+            "module": "ember-osf",
+            "submodule": "mixins"
         },
         {
             "file": "addon/mixins/commentable.js",
@@ -2399,7 +2578,7 @@
                 }
             ],
             "return": {
-                "description": "",
+                "description": "The newly created comment",
                 "type": "Promise"
             },
             "class": "CommentableMixin",
@@ -2674,29 +2853,6 @@
         {
             "file": "addon/mixins/node-actions.js",
             "line": 22,
-            "description": "Helper method that maps all node contributors to format {contribId: Contributor}",
-            "itemtype": "method",
-            "name": "_generateContributorMap",
-            "access": "private",
-            "tagname": "",
-            "params": [
-                {
-                    "name": "contributors",
-                    "description": "A list of contributors to be included in the map",
-                    "type": "Contributor[]"
-                }
-            ],
-            "return": {
-                "description": "Returns a contributor map of the id to the contributor record",
-                "type": "Object"
-            },
-            "class": "NodeActionsMixin",
-            "module": "ember-osf",
-            "submodule": "mixins"
-        },
-        {
-            "file": "addon/mixins/node-actions.js",
-            "line": 35,
             "description": "Helper method that affiliates an institution with a node.",
             "itemtype": "method",
             "name": "_affiliateNode",
@@ -2724,7 +2880,7 @@
         },
         {
             "file": "addon/mixins/node-actions.js",
-            "line": 49,
+            "line": 36,
             "description": "Update a node",
             "itemtype": "method",
             "name": "updateNode",
@@ -2760,7 +2916,7 @@
         },
         {
             "file": "addon/mixins/node-actions.js",
-            "line": 75,
+            "line": 62,
             "description": "Delete a node",
             "itemtype": "method",
             "name": "deleteNode",
@@ -2774,7 +2930,7 @@
         },
         {
             "file": "addon/mixins/node-actions.js",
-            "line": 85,
+            "line": 72,
             "description": "Affiliate a node with an institution",
             "itemtype": "method",
             "name": "affiliateNode",
@@ -2795,7 +2951,7 @@
         },
         {
             "file": "addon/mixins/node-actions.js",
-            "line": 98,
+            "line": 85,
             "description": "Unaffiliate a node with an institution",
             "itemtype": "method",
             "name": "unaffiliateNode",
@@ -2816,7 +2972,7 @@
         },
         {
             "file": "addon/mixins/node-actions.js",
-            "line": 111,
+            "line": 98,
             "description": "Add a contributor to a node",
             "itemtype": "method",
             "name": "addContributor",
@@ -2835,10 +2991,15 @@
                     "name": "isBibliographic",
                     "description": "Whether user will be included in citations for the node. \"default: true\"",
                     "type": "Boolean"
+                },
+                {
+                    "name": "sendEmail",
+                    "description": "Whether user will receive an email when added. \"default: true\"",
+                    "type": "Boolean"
                 }
             ],
             "return": {
-                "description": "Returns a promise that resolves to the updated node\nwith the new contributor relationship.",
+                "description": "Returns a promise that resolves to the newly created contributor object.",
                 "type": "Promise"
             },
             "class": "NodeActionsMixin",
@@ -2847,7 +3008,7 @@
         },
         {
             "file": "addon/mixins/node-actions.js",
-            "line": 131,
+            "line": 111,
             "description": "Remove a contributor from a node",
             "itemtype": "method",
             "name": "removeContributor",
@@ -2868,7 +3029,7 @@
         },
         {
             "file": "addon/mixins/node-actions.js",
-            "line": 146,
+            "line": 123,
             "description": "Update contributors of a node. Makes a bulk request to the APIv2.",
             "itemtype": "method",
             "name": "updateContributors",
@@ -2899,7 +3060,69 @@
         },
         {
             "file": "addon/mixins/node-actions.js",
-            "line": 167,
+            "line": 137,
+            "description": "Update contributors of a node. Makes a bulk request to the APIv2.",
+            "itemtype": "method",
+            "name": "updateContributor",
+            "params": [
+                {
+                    "name": "contributor",
+                    "description": "relationship on the node.",
+                    "type": "Contributor"
+                },
+                {
+                    "name": "permissions",
+                    "description": "desired permissions.",
+                    "type": "String"
+                },
+                {
+                    "name": "bibliographic",
+                    "description": "desired bibliographic statuses",
+                    "type": "Boolean"
+                }
+            ],
+            "return": {
+                "description": "Returns a promise that resolves to the updated node\nwith edited contributor relationships.",
+                "type": "Promise"
+            },
+            "class": "NodeActionsMixin",
+            "module": "ember-osf",
+            "submodule": "mixins"
+        },
+        {
+            "file": "addon/mixins/node-actions.js",
+            "line": 150,
+            "description": "Reorder contributors on a node, and manually updates store.",
+            "itemtype": "method",
+            "name": "reorderContributors",
+            "params": [
+                {
+                    "name": "contributor",
+                    "description": "Contributor record to be modified",
+                    "type": "Object"
+                },
+                {
+                    "name": "newIndex",
+                    "description": "Contributor's new position in the list",
+                    "type": "Integer"
+                },
+                {
+                    "name": "contributors",
+                    "description": "New contributor list in correct order",
+                    "type": "Array"
+                }
+            ],
+            "return": {
+                "description": "Returns a promise that resolves to the updated contributor.",
+                "type": "Promise"
+            },
+            "class": "NodeActionsMixin",
+            "module": "ember-osf",
+            "submodule": "mixins"
+        },
+        {
+            "file": "addon/mixins/node-actions.js",
+            "line": 176,
             "description": "Add a child (component) to a node.",
             "itemtype": "method",
             "name": "addChild",
@@ -2921,7 +3144,7 @@
                 }
             ],
             "return": {
-                "description": "Returns a promise that resolves to the updated node with the new child relationship.",
+                "description": "Returns a promise that resolves to the newly created child node.",
                 "type": "Promise"
             },
             "class": "NodeActionsMixin",
@@ -2930,7 +3153,7 @@
         },
         {
             "file": "addon/mixins/node-actions.js",
-            "line": 186,
+            "line": 188,
             "description": "Add a node link (pointer) to another node",
             "itemtype": "method",
             "name": "addNodeLink",
@@ -2942,7 +3165,7 @@
                 }
             ],
             "return": {
-                "description": "Returns a promise that resolves to the updated node with the\nnewly added nodeLink relationship",
+                "description": "Returns a promise that resolves to model for the newly created NodeLink",
                 "type": "Promise"
             },
             "class": "NodeActionsMixin",
@@ -2951,7 +3174,7 @@
         },
         {
             "file": "addon/mixins/node-actions.js",
-            "line": 202,
+            "line": 203,
             "description": "Remove a node link (pointer) to another node",
             "itemtype": "method",
             "name": "removeNodeLink",
@@ -2967,19 +3190,6 @@
                 "type": "Promise"
             },
             "class": "NodeActionsMixin",
-            "module": "ember-osf",
-            "submodule": "mixins"
-        },
-        {
-            "file": "addon/mixins/osf-cookie-login-controller.js",
-            "line": 23,
-            "description": "The authorization",
-            "itemtype": "property",
-            "name": "authUrl",
-            "type": "String",
-            "access": "public",
-            "tagname": "",
-            "class": "OsfCookieLoginController",
             "module": "ember-osf",
             "submodule": "mixins"
         },
@@ -3218,6 +3428,11 @@
             "name": "addATag",
             "params": [
                 {
+                    "name": "model",
+                    "description": "A model instance that supports tags functionality",
+                    "type": "DS.Model"
+                },
+                {
                     "name": "tag",
                     "description": "New tag to be added to list.",
                     "type": "String"
@@ -3235,6 +3450,11 @@
             "name": "removeATag",
             "params": [
                 {
+                    "name": "model",
+                    "description": "A model instance that supports tags functionality",
+                    "type": "DS.Model"
+                },
+                {
                     "name": "tag",
                     "description": "Tag to be removed from list.",
                     "type": "String"
@@ -3246,7 +3466,7 @@
         },
         {
             "file": "addon/models/node.js",
-            "line": 79,
+            "line": 81,
             "description": "Is this a project? Flag can be used to provide template-specific behavior for different resource types.",
             "itemtype": "property",
             "name": "isProject",
@@ -3257,7 +3477,7 @@
         },
         {
             "file": "addon/models/node.js",
-            "line": 85,
+            "line": 87,
             "description": "Is this a registration? Flag can be used to provide template-specific behavior for different resource types.",
             "itemtype": "property",
             "name": "isRegistration",
@@ -3268,7 +3488,7 @@
         },
         {
             "file": "addon/models/node.js",
-            "line": 92,
+            "line": 94,
             "description": "Is this node being viewed through an anonymized, view-only link?",
             "itemtype": "property",
             "name": "isAnonymous",
@@ -3279,13 +3499,13 @@
         },
         {
             "file": "addon/models/node.js",
-            "line": 99,
+            "line": 101,
             "description": "Determine whether the specified user ID is a contributor on this node",
             "itemtype": "method",
             "name": "isContributor",
             "params": [
                 {
-                    "name": "userID",
+                    "name": "userId",
                     "description": "",
                     "type": "String"
                 }
@@ -4034,25 +4254,9 @@
             "tagname": "",
             "itemtype": "method",
             "name": "getOAuthUrl",
-            "return": {
-                "description": "",
-                "type": "String"
-            },
-            "class": "auth",
-            "module": "ember-osf",
-            "submodule": "utils"
-        },
-        {
-            "file": "addon/utils/auth.js",
-            "line": 24,
-            "description": "Retrieve the correct URL for cookie-based in the OSF, including any additional configurable parameters",
-            "access": "private",
-            "tagname": "",
-            "itemtype": "method",
-            "name": "getCookieAuthUrl",
             "params": [
                 {
-                    "name": "redirectUri",
+                    "name": "nextUri",
                     "description": "Where to send the browser after a successful login request",
                     "type": "String"
                 }
@@ -4067,7 +4271,30 @@
         },
         {
             "file": "addon/utils/auth.js",
-            "line": 36,
+            "line": 34,
+            "description": "Retrieve the correct URL for cookie-based in the OSF, including any additional configurable parameters",
+            "access": "private",
+            "tagname": "",
+            "itemtype": "method",
+            "name": "getCookieAuthUrl",
+            "params": [
+                {
+                    "name": "nextUri",
+                    "description": "Where to send the browser after a successful login request",
+                    "type": "String"
+                }
+            ],
+            "return": {
+                "description": "",
+                "type": "String"
+            },
+            "class": "auth",
+            "module": "ember-osf",
+            "submodule": "utils"
+        },
+        {
+            "file": "addon/utils/auth.js",
+            "line": 47,
             "description": "Return the appropriate auth URL for the specified authorization mechanism (as specified in application configuration)\nCurrently supports `token` and `cookie` based authorization",
             "access": "public",
             "tagname": "",
@@ -4085,7 +4312,7 @@
     "warnings": [
         {
             "message": "replacing incorrect tag: returns with return",
-            "line": " addon/models/node.js:99"
+            "line": " addon/models/node.js:101"
         }
     ]
 }

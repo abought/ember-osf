@@ -1,6 +1,7 @@
 YUI.add("yuidoc-meta", function(Y) {
    Y.YUIDoc = { meta: {
     "classes": [
+        "CasAuthenticatedRouteMixin",
         "Collection",
         "Comment",
         "CommentReport",
@@ -22,6 +23,8 @@ YUI.add("yuidoc-meta", function(Y) {
         "NodeActionsMixin",
         "NodeLink",
         "OsfAdapter",
+        "OsfAgnosticAuthController",
+        "OsfAgnosticAuthRoute",
         "OsfCookieAuthenticator",
         "OsfCookieAuthorizer",
         "OsfCookieLoginController",
@@ -59,6 +62,7 @@ YUI.add("yuidoc-meta", function(Y) {
         "osf-footer",
         "osf-mode-footer",
         "osf-navbar",
+        "osf-paginator",
         "pagination-control",
         "search-dropdown",
         "sign-up",
@@ -116,7 +120,7 @@ YUI.add("yuidoc-meta", function(Y) {
         {
             "displayName": "mixins",
             "name": "mixins",
-            "description": "Controller mixin that implements basic commenting functionality. Uses the base model in the route model hook."
+            "description": "Replacement for Ember-simple-auth AuthenticatedRouteMixin. Instead of redirecting to an internal route,\n  this mixin redirects to CAS login URL, and brings the user back to the last requested page afterwards\n\nFor OAuth this is done via the state parameter, and for cookies this is done via the service parameter. (TODO: Need a mixin that detects this!)"
         },
         {
             "displayName": "models",

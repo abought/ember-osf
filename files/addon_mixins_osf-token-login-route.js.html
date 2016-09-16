@@ -40,6 +40,7 @@
                             <ul id="api-classes" class="apis classes">
                                 <li><a href="../classes/ajax-helpers.html">ajax-helpers</a></li>
                                 <li><a href="../classes/auth.html">auth</a></li>
+                                <li><a href="../classes/CasAuthenticatedRouteMixin.html">CasAuthenticatedRouteMixin</a></li>
                                 <li><a href="../classes/Collection.html">Collection</a></li>
                                 <li><a href="../classes/Comment.html">Comment</a></li>
                                 <li><a href="../classes/comment-detail.html">comment-detail</a></li>
@@ -79,7 +80,10 @@
                                 <li><a href="../classes/osf-footer.html">osf-footer</a></li>
                                 <li><a href="../classes/osf-mode-footer.html">osf-mode-footer</a></li>
                                 <li><a href="../classes/osf-navbar.html">osf-navbar</a></li>
+                                <li><a href="../classes/osf-paginator.html">osf-paginator</a></li>
                                 <li><a href="../classes/OsfAdapter.html">OsfAdapter</a></li>
+                                <li><a href="../classes/OsfAgnosticAuthController.html">OsfAgnosticAuthController</a></li>
+                                <li><a href="../classes/OsfAgnosticAuthRoute.html">OsfAgnosticAuthRoute</a></li>
                                 <li><a href="../classes/OsfCookieAuthenticator.html">OsfCookieAuthenticator</a></li>
                                 <li><a href="../classes/OsfCookieAuthorizer.html">OsfCookieAuthorizer</a></li>
                                 <li><a href="../classes/OsfCookieLoginController.html">OsfCookieLoginController</a></li>
@@ -154,7 +158,6 @@
 <div class="file">
     <pre class="code prettyprint linenums">
 import Ember from &#x27;ember&#x27;;
-import UnauthenticatedRouteMixin from &#x27;ember-simple-auth/mixins/unauthenticated-route-mixin&#x27;;
 
 import config from &#x27;ember-get-config&#x27;;
 
@@ -173,9 +176,12 @@ import { getTokenFromHash } from &#x27;ember-osf/utils/auth&#x27;;
  * @class OsfTokenLoginRouteMixin
  * @extends Ember.Mixin
  */
-export default Ember.Mixin.create(UnauthenticatedRouteMixin, {
+export default Ember.Mixin.create({
     session: Ember.inject.service(),
     beforeModel() {
+        // TODO: Should this check for resolution of a promise?
+        this._super(...arguments);
+
         var accessToken;
         if (config.OSF.isLocal) {
             accessToken = config.OSF.accessToken;
@@ -188,7 +194,7 @@ export default Ember.Mixin.create(UnauthenticatedRouteMixin, {
         }
 
         return this.get(&#x27;session&#x27;).authenticate(&#x27;authenticator:osf-token&#x27;, accessToken)
-            .then(() =&gt; this.transitionTo(&#x27;index&#x27;));
+            .catch(err =&gt; console.log(&#x27;Authentication failed: &#x27;, err));
     }
 });
 
